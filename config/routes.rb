@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
 
   devise_for :users
 
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :sets, only: [:show, :new, :create] do
+  resources :plays, only: [:show, :new, :create] do
     resources :user_answers, only: [:create]
   end
 end
