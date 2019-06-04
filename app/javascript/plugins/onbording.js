@@ -4,17 +4,25 @@ if (location.href.includes('full')) {
 const onboarding = document.querySelector('.onboarding');
 console.log(onboarding);
 const bookmarks = document.querySelectorAll("form input[type=\"radio\"]");
-const btnNext = document.querySelector("a.btn-next");
-btnNext.addEventListener("click", (e) => {
-  const pageNumber = parseInt(getComputedStyle(onboarding).getPropertyValue('--page-number')) + 1;
-  if (pageNumber < 4) {
-    onboarding.style.setProperty('--page-number', pageNumber);
-    bookmarks[pageNumber-1].checked = true;
-  }
-  else {
-    onboarding.style.setProperty('--page-number', 1);
-    bookmarks[0].checked = true;
-  }
+const btnNext = document.querySelectorAll("a.btn-next");
+btnNext.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const pageNumber = parseInt(getComputedStyle(onboarding).getPropertyValue('--page-number')) + 1;
+    if (pageNumber < 4) {
+      onboarding.style.setProperty('--page-number', pageNumber);
+      bookmarks[pageNumber-1].checked = true;
+      if (pageNumber === 3) {
+        btnNext.forEach((button2) => {
+          button2.classList.toggle('d-none');
+        });
+      }
+    }
+    else {
+      onboarding.style.setProperty('--page-number', 1);
+      bookmarks[0].checked = true;
+    }
+  });
+
 });
 
 
