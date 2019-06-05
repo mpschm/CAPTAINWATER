@@ -1,14 +1,3 @@
-<%= @play.inspect %>
-<!-- formulaire pour créer une instance de UserAnswer -->
-<!-- ce formulaire liste une question et ses answers -->
-<!-- NB: passer en params la step de la question présente pour choisir la  -->
-<!-- question au redirect -->
-<%= @question.content %>
-<%= simple_form_for [@play, @user_answer] do |f| %>
-  <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-<% end %>
-
-
   <div class="cards">
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
@@ -61,4 +50,29 @@
       Total score
     </div>
 
+  </div>
+
+
+  <div>
+
+    <p>Question</p>
+
+
+<%= @play.inspect %>
+    <!-- formulaire pour créer une instance de UserAnswer -->
+    <!-- ce formulaire liste une question et ses answers -->
+    <!-- NB: passer en params la step de la question présente pour choisir la  -->
+    <!-- question au redirect -->
+<%= @question.content %>
+<%= simple_form_for [@play, @user_answer] do |f| %>
+<%= f.association :answer, collection: @answers, as: :radio_buttons %>
+<% end %>
+
+    <!--   action a declancher
+     -->
+
+  </div>
+
+  <div>
+    <p> Drops Image </p>
   </div>
