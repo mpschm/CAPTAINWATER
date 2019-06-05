@@ -4,7 +4,7 @@ class PlaysController < ApplicationController
   end
 
   def new
-    authorize @play
+    authorize current_user
   end
 
   def create
