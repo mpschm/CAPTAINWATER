@@ -196,7 +196,7 @@ p answer1
 
 
 answer2 = Answer.create!({
-question: question1,
+question: question2,
 content: "Answer 2",
 correct: false,
 position: 2,
@@ -206,7 +206,7 @@ p answer2
 
 
 answer3 = Answer.create!({
-question: question1,
+question: question2,
 content: "Answer 3",
 correct: false,
 position: 3,
@@ -216,7 +216,7 @@ p answer3
 
 
 answer4 = Answer.create!({
-question: question1,
+question: question2,
 content: "Answer 4",
 correct: false,
 position: 4,

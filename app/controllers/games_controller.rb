@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
         if @game.save
-            redirect_to
+            redirect_to play_path(@play)
     authorize @game
   end
 

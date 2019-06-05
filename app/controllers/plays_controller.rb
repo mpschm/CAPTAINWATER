@@ -3,9 +3,11 @@ class PlaysController < ApplicationController
     @play = Play.find(params[:id])
     authorize @play
     @game = @play.game
-    @question = @game.questions.find_by(step: @game.current_step)
+    questions = @game.questions.where(step: @game.current_step, played: false)
+    @question = questions.first
     @answers = @question.answers
     @user_answer = UserAnswer.new
+    @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
   end
 
   # def new
