@@ -68,16 +68,16 @@ code: '333',
 p game1
 
 
-#<Play:0x00007fa1387c2fa0 id: nil, game_id: nil, user_id: nil, score: 0, eliminated: false, created_at: nil, updated_at: nil>
-#Will be generated, no seed required!!!
+# <Play:0x00007fa1387c2fa0 id: nil, game_id: nil, user_id: nil, score: 0, eliminated: false, created_at: nil, updated_at: nil>
+# Will be generated, no seed required!!!
 
-# play1 = Play.create!({
-# game: game1,
-# user: user1,
-# score: 10,
-# eliminated: false,
-# })
-# p play1
+play1 = Play.create!({
+game: game1,
+user: user1,
+score: 10,
+eliminated: false,
+})
+p play1
 
 
 #<Question:0x00007fa137567478 id: nil, game_id: nil, content: nil, kind: nil, step: nil, created_at: nil, updated_at: nil>
@@ -100,7 +100,7 @@ question2 = Question.create!({
 game: game1,
 content: 'What is the question 2?',
 kind:'fill-in-the-blancs',
-step: 1,
+step: 2,
 })
 
 p question2
@@ -111,7 +111,7 @@ question3 = Question.create!({
 game: game1,
 content: 'What is the question 3?',
 kind: 'drag-and-drop',
-step: 1,
+step: 3,
 })
 
 p question3
@@ -122,7 +122,7 @@ question4 = Question.create!({
 game: game1,
 content: 'What is the question 4?',
 kind: 'true-false',
-step: 1,
+step: 4,
 })
 
 p question4
@@ -134,7 +134,7 @@ question5 = Question.create!({
 game: game1,
 content: 'What is the question 5 (collect water drops) - Step 2?',
 kind: 'water-drop-collection',
-step: 2,
+step: 5,
 })
 
 p question5
@@ -142,7 +142,7 @@ p question5
 
 # <Answer:0x00007fa1374258a8 id: nil, question_id: nil, content: nil, correct: false, position: nil, created_at: nil, updated_at: nil>
 
-#answers_to_question1-step1
+#answers_to_question1
 
 answer1 = Answer.create!({
 question: question1,
@@ -183,7 +183,7 @@ position: 4,
 p answer4
 
 
-#answers_to_question2-step1
+#answers_to_question2
 
 answer1 = Answer.create!({
 question: question2,
@@ -225,7 +225,7 @@ position: 4,
 p answer4
 
 
-#answers_to_question3-step1
+#answers_to_question3
 
 answer1 = Answer.create!({
 question: question3,
@@ -267,7 +267,7 @@ position: 4,
 p answer4
 
 
-#answers_to_question4-step1
+#answers_to_question4
 
 answer1 = Answer.create!({
 question: question4,
@@ -309,7 +309,7 @@ position: 4,
 p answer4
 
 
-#answers_to_question5-step2
+#answers_to_question5
 
 answer1 = Answer.create!({
 question: question4,
