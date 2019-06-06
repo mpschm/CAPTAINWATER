@@ -63,6 +63,7 @@ game1 = Game.create!({
 user: user1,
 name: 'Water battle',
 code: '333',
+current_step: 1
 })
 
 p game1

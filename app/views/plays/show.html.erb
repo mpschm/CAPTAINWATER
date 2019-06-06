@@ -1,79 +1,49 @@
-<!DOCTYPE html>
-<html>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+      Water footprint
+  </div>
 
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Bootstrap Utility Classes</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  </head>
-
-
-  <body>
-
-
-  <div class="cards">
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-        Water footprint
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <div class="setters">
+      <div class="minutes-set">
+        <button data-setter="minutes-plus">+</button>
+        <button data-setter="minutes-minus">-</button>
+      </div>
+      <div class="seconds-set">
+        <button data-setter="seconds-plus">+</button>
+        <button data-setter="seconds-minus">-</button>
+      </div>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-
-          <!-- Countdown Timer -->
-
-          <!-- Timer settings -->
-
-          <div class="setters">
-            <div class="minutes-set">
-              <button data-setter="minutes-plus">+</button>
-              <button data-setter="minutes-minus">-</button>
-            </div>
-            <div class="seconds-set">
-              <button data-setter="seconds-plus">+</button>
-              <button data-setter="seconds-minus">-</button>
-            </div>
-          </div>
-
-          <!-- Create the circular countdown indicator.-->
-
-          <div class="circle">
-            <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-               <g transform="translate(110,110)">
-                  <circle r="100" class="e-c-base"/>
-                  <g transform="rotate(-90)">
-                     <circle r="100" class="e-c-progress"/>
-                     <g id="e-pointer">
-                        <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
-                     </g>
-                  </g>
-               </g>
-            </svg>
-          </div>
-
-          <!-- timer controls -->
-
-            <div class="controlls">
-              <div class="display-remain-time">00:30</div>
-              <button class="play" id="pause"></button>
-            </div>
+    <div class="circle">
+      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+         <g transform="translate(110,110)">
+            <circle r="100" class="e-c-base"/>
+              <g transform="rotate(-90)">
+                <circle r="100" class="e-c-progress"/>
+              <g id="e-pointer">
+              <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
+              </g>
+            </g>
+         </g>
+      </svg>
     </div>
 
+        <!-- timer controls -->
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-      Total score
+    <div class="controlls">
+      <div class="display-remain-time">00:30</div>
+      <button class="play" id="pause"></button>
     </div>
+  </div>
 
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    Total score
   </div>
 
 
   <div>
-
     <p>Question</p>
 
       <%= @play.inspect %>
@@ -83,22 +53,14 @@
           <!-- question au redirect -->
       <%= @question.content %>
       <%= simple_form_for [@play, @user_answer] do |f| %>
-      <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+        <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+        <%= f.submit "Save" %>
       <% end %>
-
     <!--   action a declancher
      -->
-
   </div>
 
   <div>
     <p> Drops Image </p>
   </div>
 
-
-<!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
-</body>
