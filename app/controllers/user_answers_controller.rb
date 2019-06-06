@@ -6,5 +6,8 @@ class UserAnswersController < ApplicationController
     @user_answer = UserAnswer.new
       if @user_answer.save
         redirect_to play_path(@play.game.current_step)
+      else
+        render 'plays/show'
+      end
   end
 end

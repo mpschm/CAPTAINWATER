@@ -4,10 +4,11 @@ class PlaysController < ApplicationController
     authorize @play
     @game = @play.game
     questions = @game.questions.where(step: @game.current_step, played: false)
-    @question = questions.first
+    @question = Question.new
+    # @question = questions.first
     @answers = @question.answers
     @user_answer = UserAnswer.new
-    @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
+    # @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
   end
 
   # def new
