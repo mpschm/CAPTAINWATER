@@ -2,7 +2,6 @@ class GamesController < ApplicationController
   def new
     @game = Game.new
     authorize @game
-    @game = Game.new
   end
 
   def create

@@ -46,15 +46,10 @@
           <div class="pos-f-t">
             <div class="collapse" id="ToggleExternalContent2">
               <div class="inputgame">
-                <h6>Enter the name</h6>
-                  <%= simple_form_for(@game) do |f| %>
-                    <%= f.input :name %>
-                    <%= f.submit %>
-                  <% end %>
-  <!--               <div class="form">
-                  <input class="form-control mr-1">
-                  <button class="btn btn-success center m-3"><%= link_to "Join", new_play_path %></button>
-                </div> -->
+                <%= simple_form_for(:game, url: plays_path, method: :post) do |f| %>
+                  <%= f.input :name, label: 'Enter the name', error: 'Name is mandatory, please specifiy one' %>
+                  <%= f.submit "Join", class: "create" %>
+                <% end %>
               </div>
             </div>
           </div>
