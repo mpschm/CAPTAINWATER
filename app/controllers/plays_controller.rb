@@ -8,7 +8,7 @@ class PlaysController < ApplicationController
     @question = questions.first
     @answers = @question.answers
     @user_answer = UserAnswer.new
-    @next_step = questions.count > 1 ? @game.current_step : @game.current_step.to_i + 1
+    @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
   end
 
   # def new
@@ -24,6 +24,7 @@ class PlaysController < ApplicationController
   #   authorize @play
   #   redirect_to play_path(@play)
   # end
+
   # Timer
 
   # def countdown(seconds)
@@ -35,4 +36,3 @@ class PlaysController < ApplicationController
   #   end
   # end
 end
-

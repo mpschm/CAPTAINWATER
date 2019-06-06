@@ -45,8 +45,6 @@
 
   <div>
     <p>Question</p>
-
-      <%= @play.inspect %>
           <!-- formulaire pour créer une instance de UserAnswer -->
           <!-- ce formulaire liste une question et ses answers -->
           <!-- NB: passer en params la step de la question présente pour choisir la  -->
@@ -54,6 +52,7 @@
       <%= @question.content %>
       <%= simple_form_for [@play, @user_answer] do |f| %>
         <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+        <%= f.input :next_step, input_html: { value: @next_step} %>
         <%= f.submit "Save" %>
       <% end %>
     <!--   action a declancher

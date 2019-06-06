@@ -1,4 +1,4 @@
-class UserAnswersPolicy < ApplicationPolicy
+class UserAnswerPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
