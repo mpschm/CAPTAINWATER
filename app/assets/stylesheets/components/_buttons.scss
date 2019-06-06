@@ -1,4 +1,4 @@
-#button1 {
+#button1, #button2 {
     background: #428BCA;
     color: #fff;
     font-family: "Roboto", sans-serif;
@@ -6,19 +6,19 @@
     height: 60px;
     width: 150px;
     line-height: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     border: 0;
     transition: all 0.3s ease 0s;
     text-decoration: none;
     width: 100%;
+    opacity: 1;
+}
+#button2 {
+  line-height: 50px;
 }
 
-#button1 {
-  opacity: 1;
-}
-
-#button1:hover {
+#button1:hover, #button2:hover {
   opacity: 0.75;
 }

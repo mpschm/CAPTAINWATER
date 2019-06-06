@@ -1,65 +1,65 @@
-<div class="container">
+<div class="container bg-white">
  <%= render 'shared/navbar' %>
 
-<div class="container2">
-<h1>Welcome!</h1>
-<%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+  <div class="container2">
+    <div class="text-center">
+      <h1>Welcome!</h1>
+      <div class="avatar-profile">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      </div>
 
-<a href="/water_ft_calculators/new" id="button1">Calculate your Water Footprint</a>
-<button type="button" id="button1" data-toggle="modal" data-target="#myModal">
-  Play now
-</button>
+      <%= link_to 'Your Water Sensitive', new_water_ft_calculator_path, class: 'btn', id: 'button2' %>
+      <button type="button" id="button1" data-toggle="modal" data-target="#myModal">
+        Play now
+      </button>
 
-<!-- First Modal -->
+    </div>
+  </div>
+</div>
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-dialog-centered">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-<!--         <h4 class="modal-title">Modal Header</h4> -->
+        <!-- <h4 class="modal-title">Modal Header</h4> -->
       </div>
       <div class="modal-body text-center">
-         <div>
-         <button type="button" id="button1" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        Create a new game
-      </button>
-      <div class="pos-f-t">
-  <div class="collapse" id="ToggleExternalContent">
-<div class="inputgame">
-    <h6>Give a name</h6>
-    <div class="form">
-        <input class="form-control mr-1">
-        <button class="btn btn-success center m-3">Create</button>
-    </div>
-  </div>
-       </div>
-
-         <button type="button" id="button1" data-toggle="collapse" data-target="#ToggleExternalContent2" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        Join a game
-      </button>
-       <div class="pos-f-t">
-  <div class="collapse" id="ToggleExternalContent2">
-<div class="inputgame">
-    <h6>Enter the name</h6>
-    <div class="form">
-        <input class="form-control mr-1">
-        <button class="btn btn-success center m-3"><%= link_to "Join", new_play_path %></button>
-    </div>
-  </div>
-       </div>
-
+        <div>
+          <button type="button" id="button1" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            Create a new game
+          </button>
+          <div class="pos-f-t">
+            <div class="collapse" id="ToggleExternalContent">
+              <div class="inputgame">
+                <h6>Give a name</h6>
+                <div class="form">
+                  <input class="form-control mr-1">
+                  <button class="btn btn-success center m-3">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="button1" data-toggle="collapse" data-target="#ToggleExternalContent2" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            Join a game
+          </button>
+          <div class="pos-f-t">
+            <div class="collapse" id="ToggleExternalContent2">
+              <div class="inputgame">
+                <h6>Enter the name</h6>
+                <div class="form">
+                  <input class="form-control mr-1">
+                  <button class="btn btn-success center m-3"><%= link_to "Join", new_play_path %></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-<!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
       </div>
     </div>
-
   </div>
 </div>
-
-
-
-</div>
-</div>
-
