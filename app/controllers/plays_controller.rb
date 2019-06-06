@@ -1,13 +1,37 @@
 class PlaysController < ApplicationController
   def show
-    authorize current_user
+    @play = Play.find(params[:id])
+    authorize @play
+    @game = @play.game
+    questions = @game.questions.where(step: @game.current_step, played: false)
+    @question = Question.new
+    # @question = questions.first
+    @answers = @question.answers
+    @user_answer = UserAnswer.new
+    # @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
   end
 
-  def new
-    authorize current_user
-  end
+  # def new
+  #   @play = Play.new(play_params)
+  #     if @Play.save
+  #       redirect_to
+  #   # authorize current_user
+  # end
 
   def create
+    #@play = TODO
     authorize @play
+    redirect_to play_path(@play)
   end
 end
+
+# Timer
+
+# def countdown(seconds)
+#   date1 = Time.now + seconds
+#   while Time.now < date1
+#     t = Time.at(date1.to_i - Time.now.to_i)
+#     puts t.strftime('%M:%S')
+#     sleep 1
+#   end
+# end
