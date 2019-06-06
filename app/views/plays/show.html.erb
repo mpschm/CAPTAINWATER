@@ -52,7 +52,7 @@
       <%= @question.content %>
       <%= simple_form_for [@play, @user_answer] do |f| %>
         <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-        <%= f.input :next_step, input_html: { value: @next_step} %>
+        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
         <%= f.submit "Save" %>
       <% end %>
     <!--   action a declancher

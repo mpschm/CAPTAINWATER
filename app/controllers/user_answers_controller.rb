@@ -5,15 +5,16 @@ class UserAnswersController < ApplicationController
     #  (pour choisir la prochaine question)
     @answer = Answer.find(params[:user_answer][:answer_id])
     @play = Play.find(params[:play_id])
+    @next_step = params[:user_answer][:next_step]
     @user_answer = UserAnswer.new
     @user_answer.answer = @answer
     @user_answer.play = @play
     @question = @answer.question
-    # @question.step += 1
-    # @question.save!
     authorize @user_answer
-    if @user_answer.save(user_answer_params)
-      # retrieve next step from params
+    if @user_answer.save
+      @game = @play.game
+      @game.current_step = @next_step
+      @game.save
       redirect_to play_path(@play)
     else
       render 'plays/show'
