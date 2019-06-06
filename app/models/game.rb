@@ -5,4 +5,5 @@ class Game < ApplicationRecord
   has_many :plays, dependent: :destroy
   # has_many :users, through: :plays
   has_many :players, through: :plays, class_name: "User", source: :user
+  validates :name, presence: true
 end
