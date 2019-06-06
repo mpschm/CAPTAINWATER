@@ -1,6 +1,5 @@
 class UserAnswersController < ApplicationController
   def create
-    raise
     # create une UserAnswer entre le play et la answer
     # redirect vers la show du play + params de la question de l'answer
     #  (pour choisir la prochaine question)
