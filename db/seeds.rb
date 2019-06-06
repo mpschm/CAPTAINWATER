@@ -91,6 +91,7 @@ game: game1,
 content: 'What consumes most of your water at home?',
 kind: 'images-multiple-choice',
 step: 1,
+played: false,
 })
 
 p question1
@@ -102,6 +103,7 @@ game: game1,
 content: 'What is the question 2?',
 kind:'fill-in-the-blancs',
 step: 2,
+played: false,
 })
 
 p question2
@@ -113,6 +115,7 @@ game: game1,
 content: 'What is the question 3?',
 kind: 'drag-and-drop',
 step: 3,
+played: false,
 })
 
 p question3
@@ -124,6 +127,7 @@ game: game1,
 content: 'What is the question 4?',
 kind: 'true-false',
 step: 4,
+played: false,
 })
 
 p question4
@@ -136,6 +140,7 @@ game: game1,
 content: 'What is the question 5 (collect water drops) - Step 2?',
 kind: 'water-drop-collection',
 step: 5,
+played: false,
 })
 
 p question5
