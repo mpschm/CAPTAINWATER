@@ -59,3 +59,23 @@ color: white
 .progressbar li:first-child:after{
  content: none;
 }
+
+.progressbar li.wrong:before{
+ border-color: red;
+ background: white;
+ color: black
+}
+.progressbar li.wrong:after{
+ background: red;
+ color: black;
+}
+
+.progressbar li.correct:before{
+ border-color: blue;
+ background: white;
+ color: black
+}
+.progressbar li.correct:after{
+ background: blue;
+ color: black;
+}

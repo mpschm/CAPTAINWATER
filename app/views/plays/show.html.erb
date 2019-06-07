@@ -45,9 +45,16 @@
     <ul class="progressbar">
       <% number = @play.game.current_step %>
       <% @play.game.questions.each_with_index do |question, index| %>
+        <%= @user_answers %>
         <% if index < number %>
+          <% if @play.user_answers[0].answer.correct?  %>
+            <li class="active"><%= question.step %></li>
+          <% else %>
+            <li class="wrong"><%= question.step %></li>
+          <% end %>
+        <% elsif  index == number %>
           <li class="active"><%= question.step %></li>
-        <% else %>
+        <% elsif %>
           <li><%= question.step %></li>
         <% end %>
       <% end %>
