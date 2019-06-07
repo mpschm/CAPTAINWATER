@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :water_ft_calculators, only: [:new, :create]
 
   resources :games, only: [:new, :create] do
+    resources :plays, only: :index
     member do
       patch :launch # /games/:id/launch
     end

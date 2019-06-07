@@ -1,9 +1,9 @@
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
       Water footprint
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     <div class="setters">
       <div class="minutes-set">
         <button data-setter="minutes-plus">+</button>
@@ -38,23 +38,23 @@
   </div>
 
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     Total score
   </div>
 
 
-  <div>
+  <div class="question">
     <p>Question</p>
           <!-- formulaire pour créer une instance de UserAnswer -->
           <!-- ce formulaire liste une question et ses answers -->
           <!-- NB: passer en params la step de la question présente pour choisir la  -->
           <!-- question au redirect -->
-      <%= @question.content %>
-      <%= simple_form_for [@play, @user_answer] do |f| %>
-        <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-        <%= f.submit "Save" %>
-      <% end %>
+    <p><%= @question.content %></p>
+    <%= simple_form_for [@play, @user_answer] do |f| %>
+      <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+      <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+      <%= f.submit "Save" %>
+    <% end %>
     <!--   action a declancher
      -->
   </div>
