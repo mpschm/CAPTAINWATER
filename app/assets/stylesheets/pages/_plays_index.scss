@@ -1,42 +1,26 @@
-// font-family: CenturyGothic-Bold;
-// font-size: 30px;
-// color: #FFFFFF;
-// letter-spacing: 0;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// font-family: CenturyGothic-Bold;
-// font-size: 30px;
-// color: #131212;
-// letter-spacing: 0;
-// font-family: CenturyGothic-Bold;
-// font-size: 30px;
-// color: #131212;
-// letter-spacing: 0;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
-// background: #FCFAFA;
-// border: 1px solid #979797;
+.bubbles {
+    position: relative;
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+
+// .bubbles svg {
+//     position: absolute;
+//     top: 70px;
+//     right: 20px;
+//     width: 80%;
+//     height: 80%;
+//     transform: rotate(0deg);
+// }
+
+.bubbles svg {
+    position: absolute;
+    top: 117px;
+    /* right: 20px; */
+    width: 80%;
+    height: 80%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin: auto;
+    width: 100vw;
+}

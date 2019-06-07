@@ -8,7 +8,7 @@ class PlaysController < ApplicationController
     @question = questions.first
 
     # @question = nil if @game.current_step == 3 # To be removed next week if other question kind implemented
-    # return redirect_to game_plays_path(@play.game) if @question.nil?
+    return redirect_to game_plays_path(@play.game) if @question.nil?
 
     @answers = @question.answers
     @user_answer = UserAnswer.new
