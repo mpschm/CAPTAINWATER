@@ -10,6 +10,8 @@ class UserAnswersController < ApplicationController
     @user_answer.answer = @answer
     @user_answer.play = @play
     @question = @answer.question
+    # Ici on passe la question à played: true
+    @question.update(played: true)
     authorize @user_answer
     if @user_answer.save
       @game = @play.game

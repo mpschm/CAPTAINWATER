@@ -122,16 +122,16 @@ p question4
 
 # step 2 true-false
 
-question1 = Question.create!({
+question5 = Question.create!({
 game: game1,
 content: '5,000 children die due to preventable water and sanitation-related diseases.',
 kind: 'true-false',
 step: 2,
 played: false,
 })
-p question1
+p question5
 
-question2 = Question.create!({
+question6 = Question.create!({
 game: game1,
 content: 'If you reduce your daily water consumption by 5% or 200L,
 you could automatically reduce pollution on average by %. ',
@@ -139,36 +139,36 @@ kind: 'true-false',
 step: 2,
 played: false,
 })
-p question2
+p question6
 
-question3 = Question.create!({
+question7 = Question.create!({
 game: game1,
 content: 'Agriculture consumes 70% of all freshwater globally.',
 step: 2,
 played: false,
 })
-p question3
+p question7
 
-question4 = Question.create!({
+question8 = Question.create!({
 game: game1,
 content: '279 conflicts and wars have occurred in the world since 2010.',
 step: 2,
 played: false,
 })
-p question4
+p question8
 
 # step 3 fill-in-the-blancs
 
-question1 = Question.create!({
+question9 = Question.create!({
 game: game1,
 content: 'We eat … times more water than we drink.',
 kind:'fill-in-the-blancs',
 step: 3,
 played: false,
 })
-p question1
+p question9
 
-question2 = Question.create!({
+question10 = Question.create!({
 game: game1,
 content: '… bathtubs of water are used per person,
 per day  to make the food we eat and the things we buy.',
@@ -176,9 +176,9 @@ kind:'fill-in-the-blancs',
 step: 3,
 played: false,
 })
-p question2
+p question10
 
-question3 = Question.create!({
+question11 = Question.create!({
 game: game1,
 content: 'A round- trip flight from Paris to London requires
 as much water as ... average dishwasher loads.',
@@ -186,63 +186,63 @@ kind:'fill-in-the-blancs',
 step: 3,
 played: false,
 })
-p question3
+p question11
 
-question4 = Question.create!({
+question12 = Question.create!({
 game: game1,
 content: 'Coffee requires almost ... times more water than tea.',
 kind:'fill-in-the-blancs',
 step: 3,
 played: false,
 })
-p question4
+p question12
 
 # step 4 drag-and-drop
 
-question1 = Question.create!({
+question13 = Question.create!({
 game: game1,
 content: 'A bowl of cereals',
 kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
-p question1
+p question13
 
-question2 = Question.create!({
+question14 = Question.create!({
 game: game1,
 content: 'An egg',
 kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
-p question2
+p question14
 
-question3 = Question.create!({
+question15 = Question.create!({
 game: game1,
 content: 'A t-shirt',
 kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
-p question3
+p question15
 
-question4 = Question.create!({
+question16 = Question.create!({
 game: game1,
 content: 'A pair of leather boots',
 kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
-p question4
+p question16
 
-question5 = Question.create!({
+question17 = Question.create!({
 game: game1,
 content: 'A smartphone',
 kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
-p question5
+p question17
 
 
 #step 5 water-drop-collection
@@ -298,285 +298,285 @@ position: 4,
 p answer4
 
 
-#step 1 multiple-choice
-#answers_to_question2
-#'What does the Syrian war and the Arab Spring have in common?',
+# #step 1 multiple-choice
+# #answers_to_question2
+# #'What does the Syrian war and the Arab Spring have in common?',
 
-answer1 = Answer.create!({
+answer5 = Answer.create!({
 question: question2,
 content: "They were both originally caused by drought",
 correct: true,
 position: 1,
 })
-p answer1
+p answer5
 
-answer2 = Answer.create!({
+answer6 = Answer.create!({
 question: question2,
 content: "They were planned by a scapegoat nation - the Russians?",
 correct: false,
 position: 2,
 })
-p answer2
+p answer6
 
-answer3 = Answer.create!({
+answer7 = Answer.create!({
 question: question2,
 content: "They resulted in improved democracy",
 correct: false,
 position: 3,
 })
-p answer3
+p answer7
 
-answer4 = Answer.create!({
+answer8 = Answer.create!({
 question: question2,
 content: "They didn’t increase migration flows to Europe",
 correct: false,
 position: 4,
 })
-p answer4
+p answer8
 
 
-#step 1 multiple-choice
-#answers_to_question3
-#'What happened on the 28th of July 2010?',
+# #step 1 multiple-choice
+# #answers_to_question3
+# #'What happened on the 28th of July 2010?',
 
-answer1 = Answer.create!({
+answer9 = Answer.create!({
 question: question3,
 content: "Tintin landed on the Moon",
 correct: false,
 position: 1,
 })
-p answer1
+p answer9
 
-answer2 = Answer.create!({
+answer10 = Answer.create!({
 question: question3,
 content: "The first episode of Game of Thrones was produced",
 correct: false,
 position: 2,
 })
-p answer2
+p answer10
 
-answer3 = Answer.create!({
+answer11 = Answer.create!({
 question: question3,
 content: "Kardashian married Kanye West",
 correct: false,
 position: 3,
 })
-p answer3
+p answer11
 
-answer4 = Answer.create!({
+answer12 = Answer.create!({
 question: question3,
 content: "The UN recognized the access to safe water as a basic Human Right",
 correct: true,
 position: 4,
 })
-p answer4
+p answer12
 
 
-#step 1 multiple-choice
-#answers_to_question4
-#'Water stress = inadequacy between water use and water resources.
-# It starts when the water in a country < 4 600 litres/day per person.
-# What is the closest region to France that is in very high water stress?'
+# #step 1 multiple-choice
+# #answers_to_question4
+# #'Water stress = inadequacy between water use and water resources.
+# # It starts when the water in a country < 4 600 litres/day per person.
+# # What is the closest region to France that is in very high water stress?'
 
-answer1 = Answer.create!({
+answer13 = Answer.create!({
 question: question4,
 content: "South of Spain",
 correct: true,
 position: 1,
 })
-p answer1
+p answer13
 
-answer2 = Answer.create!({
+answer14 = Answer.create!({
 question: question4,
 content: "Egypt",
 correct: false,
 position: 2,
 })
-p answer2
+p answer14
 
-answer3 = Answer.create!({
+answer15 = Answer.create!({
 question: question4,
 content: "Turkish coast",
 correct: false,
 position: 3,
 })
-p answer3
+p answer15
 
-answer4 = Answer.create!({
+answer16 = Answer.create!({
 question: question4,
 content: "Morocco",
 correct: false,
 position: 4,
 })
-p answer4
+p answer16
 
 
-#step 2 true-false
-#answers_to_question1
-#'5,000 children die due to preventable water and sanitation-related diseases.'
+# #step 2 true-false
+# #answers_to_question1
+# #'5,000 children die due to preventable water and sanitation-related diseases.'
 
-answer1 = Answer.create!({
-question: question1,
+answer17 = Answer.create!({
+question: question5,
 content: "True",
 correct: true,
 position: 1,
 })
-p answer1
+p answer17
 
-answer2 = Answer.create!({
-question: question1,
+answer18 = Answer.create!({
+question: question5,
 content: "False",
 correct: false,
 position: 2,
 })
-p answer2
+p answer18
 
 
-#step 2 true-false
-#answers_to_question2
-#'If you reduce your daily water consumption by 5% or 200L,
-#you could automatically reduce pollution on average by x%.'
+# #step 2 true-false
+# #answers_to_question2
+# #'If you reduce your daily water consumption by 5% or 200L,
+# #you could automatically reduce pollution on average by x%.'
 
-answer1 = Answer.create!({
-question: question2,
+answer19 = Answer.create!({
+question: question6,
 content: "True",
 correct: true,
 position: 1,
 })
-p answer1
+p answer19
 
-answer2 = Answer.create!({
-question: question2,
+answer20 = Answer.create!({
+question: question6,
 content: "False",
 correct: false,
 position: 2,
 })
-p answer2
+p answer20
 
 
-#step 2 true-false
-#answers_to_question3
-#'Agriculture consumes 70% of all freshwater globally.'
+# #step 2 true-false
+# #answers_to_question3
+# #'Agriculture consumes 70% of all freshwater globally.'
 
-answer1 = Answer.create!({
-question: question3,
+answer21 = Answer.create!({
+question: question7,
 content: "True",
 correct: true,
 position: 1,
 })
-p answer1
+p answer21
 
-answer2 = Answer.create!({
-question: question4,
+answer22 = Answer.create!({
+question: question7,
 content: "False",
 correct: false,
 position: 2,
 })
-p answer2
+p answer22
 
-#step 2 true-false
-#answers_to_question4
-#'279 conflicts and wars have occurred in the world since 2010'
+# #step 2 true-false
+# #answers_to_question4
+# #'279 conflicts and wars have occurred in the world since 2010'
 
-answer1 = Answer.create!({
-question: question4,
+answer23 = Answer.create!({
+question: question8,
 content: "True",
 correct: true,
 position: 1,
 })
-p answer1
+p answer23
 
-answer2 = Answer.create!({
-question: question4,
+answer24 = Answer.create!({
+question: question8,
 content: "False",
 correct: false,
 position: 2,
 })
-p answer2
+p answer24
 
 
-#step 3 fill-in-the-blancs
-#answers_to_question1 to question4
-#'279 conflicts and wars have occurred in the world since 2010'
+# #step 3 fill-in-the-blancs
+# #answers_to_question1 to question4
+# #'279 conflicts and wars have occurred in the world since 2010'
 
-answer1 = Answer.create!({
-question: question1,
+answer25 = Answer.create!({
+question: question9,
 content: "500",
 correct: true,
 position: 1,
 })
-p answer1
+p answer25
 
-answer2 = Answer.create!({
-question: question2,
+answer26 = Answer.create!({
+question: question10,
 content: "58",
 correct: true,
 position: 2,
 })
-p answer2
+p answer26
 
-answer3 = Answer.create!({
-question: question3,
+answer27 = Answer.create!({
+question: question11,
 content: "1 000",
 correct: true,
 position: 1,
 })
-p answer1
+p answer27
 
-answer4 = Answer.create!({
-question: question4,
+answer28 = Answer.create!({
+question: question12,
 content: "10",
 correct: true,
 position: 2,
 })
-p answer2
+p answer28
 
-#step 4 drag-and-drop
-#answers_to_question1 to question5
+# #step 4 drag-and-drop
+# #answers_to_question1 to question5
 
-answer1 = Answer.create!({
-question: question1,
+answer29 = Answer.create!({
+question: question13,
 content: "1 644 l",
 correct: true,
 position: 1,
 })
-p answer1
+p answer29
 
-answer1 = Answer.create!({
-question: question1,
+answer30 = Answer.create!({
+question: question14,
 content: "3 625 l",
 correct: true,
 position: 2,
 })
-p answer1
+p answer30
 
-answer1 = Answer.create!({
-question: question1,
+answer31 = Answer.create!({
+question: question15,
 content: "3 900 l",
 correct: true,
 position: 3,
 })
-p answer1
+p answer31
 
-answer1 = Answer.create!({
-question: question1,
+answer32 = Answer.create!({
+question: question16,
 content: "14 503 l",
 correct: true,
 position: 4,
 })
-p answer1
+p answer32
 
-answer1 = Answer.create!({
-question: question1,
+answer33 = Answer.create!({
+question: question17,
 content: "12 760 l",
 correct: true,
 position: 5,
 })
-p answer1
+p answer33
 
 
-#<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
-#Will be generated, no seed required!!!
+# #<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
+# #Will be generated, no seed required!!!
 
 
 
