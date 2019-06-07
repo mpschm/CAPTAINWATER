@@ -3,19 +3,33 @@
 }
 .container-top {
   display: flex;
-  align-items: flex-start;
-}
-
-.left-top-box-waterfootprint {
-  flex-direction:row
-}
-
-.right-top-box-timerscore {
-  flex-direction: row-reverse
+  margin-top:20px;
 }
 
 
-question-container
+.question {
+  input[type="radio"] {
+      display: none;
+  }
+
+  label {
+    border: 1px solid #DDD;
+    border-radius:5px;
+    padding:10px;
+    margin-top:10px;
+    display:block;
+    position:relative;
+  }
+
+  label:hover {
+    cursor:pointer;
+    background-color:#EEE;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color:#DDD;
+  }
+}
 
 .bottom-container {
   display: flex;
@@ -23,6 +37,9 @@ question-container
   flex-direction:row
 }
 
+.right-top-box-timer-score {
+  margin: 0px 8px 0px 8px;
+}
 
 // .cards {
 //   display: grid;

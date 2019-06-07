@@ -1,25 +1,25 @@
 <div class="container">
 
   <div class="container-top" style='position: fixed;
-    top: 10px;left: 40px;'>
+    top: 10px;left: 30px;'>
 
       <div class='d-flex align-items-center'>
-
-
-        <div class="cards card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+        <div class="cards card-category" style="background-image:white">
           Water footprint
        </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-             <div id="countdown">
+        <div class="card-category" style="background-image:white">
+             <div id="countdown" style='position: relative;'>
                 <div id="countdown-number"></div>
-                <svg>
-                  <circle r="18" cx="20" cy="20"></circle>
-                </svg>
-              </div>
+                <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+                  <svg>
+                    <circle r="27" cx="30" cy="30"></circle>
+                  </svg>
+                </div>
+                </div>
          </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+        <div class="card-category" style="background-image:white">
           Total score: <%= @play.score %>
         </div>
 
