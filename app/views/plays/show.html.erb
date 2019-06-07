@@ -1,15 +1,15 @@
 <div class="container">
-  
+
   <div class="container-top" style='position: fixed;
     top: 10px;left: 40px;'>
 
       <div class='d-flex align-items-center'>
-        
-        
+
+
         <div class="cards card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
           Water footprint
        </div>
-    
+
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
              <div id="countdown">
                 <div id="countdown-number"></div>
@@ -22,11 +22,11 @@
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
           Total score: <%= @play.score %>
         </div>
-        
-      </div> 
 
-     </div> 
-  
+      </div>
+
+     </div>
+
   <div class="question" style='position: absolute; top: 200px; padding: 17px'>
     <p>Question</p>
           <!-- formulaire pour créer une instance de UserAnswer -->
@@ -40,9 +40,13 @@
         <%= f.submit "Save", id: "submit-answer" %>
       <% end %>
   </div>
-        
+
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
-    <p> Drops Image </p>
+    <ul class="progressbar">
+      <% @play.game.questions.each do |question| %>
+        <li class="active"><%= question.step %></li>
+      <% end %>
+    </ul>
   </div>
 
 </div>
