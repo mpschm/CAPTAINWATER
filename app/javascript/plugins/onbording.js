@@ -2,7 +2,6 @@ if (location.href.includes('full')) {
   document.querySelector('.toast').parentElement.removeChild(document.querySelector('.toast'));
 }
 const onboarding = document.querySelector('.onboarding');
-console.log(onboarding);
 const bookmarks = document.querySelectorAll("form input[type=\"radio\"]");
 const btnNext = document.querySelectorAll("a.btn-next");
 btnNext.forEach((button) => {
