@@ -11,6 +11,7 @@ gem 'redis'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'pundit'
 gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
@@ -27,7 +28,4 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-
-  gem 'pundit'
-
 end
