@@ -14,9 +14,10 @@
   flex-direction: row-reverse
 }
 
-input[type="radio"] {
-    display: none;
-}
+.question {
+  input[type="radio"] {
+      display: none;
+  }
 
   label {
     border: 1px solid #DDD;
@@ -27,17 +28,15 @@ input[type="radio"] {
     position:relative;
   }
 
-label:hover {
-  cursor:pointer;
-  background-color:#EEE;
+  label:hover {
+    cursor:pointer;
+    background-color:#EEE;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color:#DDD;
+  }
 }
-
-input[type="radio"]:checked + label {
-  background-color:#DDD;
-}
-
-
-question-container
 
 .bottom-container {
   display: flex;
