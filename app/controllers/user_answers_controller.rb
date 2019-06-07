@@ -15,6 +15,12 @@ class UserAnswersController < ApplicationController
       @game = @play.game
       @game.current_step = @next_step
       @game.save
+      if @user_answer.answer.correct?
+        @play.score += 1
+        @play.save
+      else
+        @play.score
+      end
       redirect_to play_path(@play)
     else
       render 'plays/show'

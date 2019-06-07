@@ -75,7 +75,7 @@ p game1
 play1 = Play.create!({
 game: game1,
 user: user1,
-score: 10,
+score: 0,
 eliminated: false,
 })
 p play1

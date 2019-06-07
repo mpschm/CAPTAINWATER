@@ -9,6 +9,7 @@ class PlaysController < ApplicationController
     @answers = @question.answers
     @user_answer = UserAnswer.new
     @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
+
   end
 
   def new
