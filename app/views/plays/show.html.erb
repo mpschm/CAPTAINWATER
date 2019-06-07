@@ -4,8 +4,6 @@
     top: 10px;left: 30px;'>
 
       <div class='d-flex align-items-center'>
-
-
         <div class="cards card-category" style="background-image:white">
           Water footprint
        </div>
@@ -44,7 +42,16 @@
   </div>
 
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
-    <p> Drops Image </p>
+    <ul class="progressbar">
+      <% number = @play.game.current_step %>
+      <% @play.game.questions.each_with_index do |question, index| %>
+        <% if index < number %>
+          <li class="active"><%= question.step %></li>
+        <% else %>
+          <li><%= question.step %></li>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
 
 </div>
