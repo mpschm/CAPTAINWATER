@@ -1,98 +1,42 @@
-button[data-setter] {
-  outline: none;
-  background: transparent;
-  border: none;
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-size: 18px;
-  width: 25px;
-  color: #F7958E;
-  cursor: pointer;
-}
-
-button[data-setter]:hover { opacity: 0.5; }
-
-.setters {
-  position: absolute;
-  left: 85px;
-  top: 75px;
-}
-
-.minutes-set {
-  float: left;
-  margin-right: 28px;
-}
-
-.seconds-set { float: right; }
-
-.controlls {
-  position: absolute;
-  left: 75px;
-  top: 105px;
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
   text-align: center;
 }
 
-.display-remain-time {
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-size: 24px;
-  color: #F7958E;
-  margin-top: 10px;
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
 }
 
-#pause {
-  outline: none;
-  background: transparent;
-  border: none;
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-
-.play::before {
-  display: block;
-  content: "";
+svg {
   position: absolute;
-  top: 8px;
-  left: 16px;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 22px solid #F7958E;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-.pause::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 12px;
-  width: 15px;
-  height: 30px;
-  background-color: transparent;
-  border-radius: 1px;
-  border: 5px solid #F7958E;
-  border-top: none;
-  border-bottom: none;
-}
-
-#pause:hover { opacity: 0.8; }
-
-.e-c-base {
-  fill: none;
-  stroke: #B6B6B6;
-  stroke-width: 4px
-}
-
-.e-c-progress {
-  fill: none;
-  stroke: #F7958E;
-  stroke-width: 4px;
-  transition: stroke-dashoffset 0.7s;
-}
-
-.e-c-pointer {
-  fill: #FFF;
-  stroke: #F7958E;
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
   stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
 }
 
-#e-pointer { transition: transform 0.7s; }
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}

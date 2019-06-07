@@ -1,80 +1,47 @@
 <div class="container">
+  
   <div class="container-top" style='position: fixed;
     top: 10px;left: 30px;'>
 
       <div class='d-flex align-items-center'>
-        <div class="cards card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+        
+        
+        <div class="cards card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
           Water footprint
-        </div>
-
-
-        <div class="right-top-box-timer-score">
-         <div class="timer-card" style='position: relative'>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-            <!-- <div class="setters">
-              <div class="minutes-set">
-                <button data-setter="minutes-plus">+</button>
-                <button data-setter="minutes-minus">-</button>
+       </div>
+    
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+             <div id="countdown">
+                <div id="countdown-number"></div>
+                <svg>
+                  <circle r="18" cx="20" cy="20"></circle>
+                </svg>
               </div>
-              <div class="seconds-set">
-                <button data-setter="seconds-plus">+</button>
-                <button data-setter="seconds-minus">-</button>
-              </div>
-            </div> -->
-          </div>
-          <div class="circle">
-            <svg width="100" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-               <g transform="translate(110,110)">
-                  <circle r="100" class="e-c-base"/>
-                    <g transform="rotate(-90)">
-                      <circle r="100" class="e-c-progress"/>
-                    <g id="e-pointer">
-                    <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
-                    </g>
-                  </g>
-               </g>
-            </svg>
-          </div>
-            <!-- timer controls -->
-          <div
-            style='
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              position: absolute;
-              top: 0;
-              left: 24px;
-            '
-          >
-            <div class="display-remain-time">00:30</div>
-            <button class="play" id="pause"></button>
-          </div>
          </div>
-        </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-          Total score
+          Total score: <%= @play.score %>
         </div>
-      </div>
-  </div>
+        
+      </div> 
 
-
+     </div> 
+  
   <div class="question" style='position: absolute; top: 200px; padding: 17px'>
     <p>Question</p>
           <!-- formulaire pour créer une instance de UserAnswer -->
           <!-- ce formulaire liste une question et ses answers -->
           <!-- NB: passer en params la step de la question présente pour choisir la  -->
           <!-- question au redirect -->
-    <p><%= @question.content %></p>
-    <%= simple_form_for [@play, @user_answer] do |f| %>
-      <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-      <%= f.input :next_step, disabled: true, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-      <%= f.submit "Save" %>
-    <% end %>
-    <!--   action a declancher
-     -->
+      <%= @question.content %>
+      <%= simple_form_for [@play, @user_answer] do |f| %>
+        <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+        <%= f.submit "Save", id: "submit-answer" %>
+      <% end %>
   </div>
-   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
+        
+  <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
     <p> Drops Image </p>
   </div>
 

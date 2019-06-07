@@ -71,7 +71,7 @@ p game1
 play1 = Play.create!({
 game: game1,
 user: user1,
-score: 10,
+score: 0,
 eliminated: false,
 })
 p play1
@@ -95,7 +95,7 @@ question2 = Question.create!({
 game: game1,
 content: 'What does the Syrian war and the Arab Spring have in common?',
 kind: 'multiple-choice',
-step: 1,
+step: 2,
 played: false,
 })
 p question2
@@ -104,7 +104,7 @@ question3 = Question.create!({
 game: game1,
 content: 'What happened on the 28th of July 2010?',
 kind: 'multiple-choice',
-step: 1,
+step: 3,
 played: false,
 })
 p question3
@@ -115,7 +115,7 @@ content: 'Water stress = inadequacy between water use and water resources.
 It starts when the water in a country < 4 600 litres/day per person.
 What is the closest region to France that is in very high water stress?',
 kind: 'multiple-choice',
-step: 1,
+step: 4,
 played: false,
 })
 p question4
@@ -126,7 +126,7 @@ question5 = Question.create!({
 game: game1,
 content: '5,000 children die due to preventable water and sanitation-related diseases.',
 kind: 'true-false',
-step: 2,
+step: 5,
 played: false,
 })
 p question5
@@ -136,7 +136,7 @@ game: game1,
 content: 'If you reduce your daily water consumption by 5% or 200L,
 you could automatically reduce pollution on average by %. ',
 kind: 'true-false',
-step: 2,
+step: 6,
 played: false,
 })
 p question6
@@ -144,7 +144,7 @@ p question6
 question7 = Question.create!({
 game: game1,
 content: 'Agriculture consumes 70% of all freshwater globally.',
-step: 2,
+step: 7,
 played: false,
 })
 p question7
@@ -152,7 +152,7 @@ p question7
 question8 = Question.create!({
 game: game1,
 content: '279 conflicts and wars have occurred in the world since 2010.',
-step: 2,
+step: 8,
 played: false,
 })
 p question8
@@ -163,7 +163,7 @@ question9 = Question.create!({
 game: game1,
 content: 'We eat … times more water than we drink.',
 kind:'fill-in-the-blancs',
-step: 3,
+step: 9,
 played: false,
 })
 p question9
@@ -173,7 +173,7 @@ game: game1,
 content: '… bathtubs of water are used per person,
 per day  to make the food we eat and the things we buy.',
 kind:'fill-in-the-blancs',
-step: 3,
+step: 10,
 played: false,
 })
 p question10
@@ -183,7 +183,7 @@ game: game1,
 content: 'A round- trip flight from Paris to London requires
 as much water as ... average dishwasher loads.',
 kind:'fill-in-the-blancs',
-step: 3,
+step: 11,
 played: false,
 })
 p question11
@@ -192,7 +192,7 @@ question12 = Question.create!({
 game: game1,
 content: 'Coffee requires almost ... times more water than tea.',
 kind:'fill-in-the-blancs',
-step: 3,
+step: 12,
 played: false,
 })
 p question12
@@ -203,7 +203,7 @@ question13 = Question.create!({
 game: game1,
 content: 'A bowl of cereals',
 kind: 'drag-and-drop',
-step: 4,
+step: 13,
 played: false,
 })
 p question13
@@ -212,7 +212,7 @@ question14 = Question.create!({
 game: game1,
 content: 'An egg',
 kind: 'drag-and-drop',
-step: 4,
+step: 14,
 played: false,
 })
 p question14
@@ -221,7 +221,7 @@ question15 = Question.create!({
 game: game1,
 content: 'A t-shirt',
 kind: 'drag-and-drop',
-step: 4,
+step: 15,
 played: false,
 })
 p question15
@@ -230,7 +230,7 @@ question16 = Question.create!({
 game: game1,
 content: 'A pair of leather boots',
 kind: 'drag-and-drop',
-step: 4,
+step: 16,
 played: false,
 })
 p question16
@@ -239,7 +239,7 @@ question17 = Question.create!({
 game: game1,
 content: 'A smartphone',
 kind: 'drag-and-drop',
-step: 4,
+step: 17,
 played: false,
 })
 p question17
