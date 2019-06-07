@@ -58,32 +58,28 @@
       </div>
   </div>
 
-  <!-- <div class="container-big d-flex justify-content-center col-12 col-lg-6"> -->
-  <div class="col-12 col-lg-6 justify-content-center">
 
-
-      <div class="question-container d-flex flex-column align-items-left">
-        <p>Question</p>
-              <!-- formulaire pour créer une instance de UserAnswer -->
-              <!-- ce formulaire liste une question et ses answers -->
-              <!-- NB: passer en params la step de la question présente pour choisir la  -->
-              <!-- question au redirect -->
-          <%= @question.content %>
-          <%= simple_form_for [@play, @user_answer] do |f| %>
-            <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-            <%= f.submit "Save" %>
-          <% end %>
-        <!--   action a declancher
-         -->
-      </div>
-
-      <div class="bottom-container d-flex align-items-left">
-        <p> Drops Image </p>
-      </div>
-
+  <div class="question">
+    <p>Question</p>
+          <!-- formulaire pour créer une instance de UserAnswer -->
+          <!-- ce formulaire liste une question et ses answers -->
+          <!-- NB: passer en params la step de la question présente pour choisir la  -->
+          <!-- question au redirect -->
+    <p><%= @question.content %></p>
+    <%= simple_form_for [@play, @user_answer] do |f| %>
+      <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+      <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+      <%= f.submit "Save" %>
+    <% end %>
+    <!--   action a declancher
+     -->
   </div>
+   <div class="bottom-container d-flex align-items-left">
+    <p> Drops Image </p>
+  </div>
+
 </div>
+
 
 
 

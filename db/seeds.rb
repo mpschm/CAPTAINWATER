@@ -27,7 +27,6 @@ country: 'France',
 avatar: 'photo.png',
 waterprint: '1000',
 })
-
 p user1
 
 user2 = User.create!({
@@ -40,7 +39,6 @@ country: 'France',
 avatar: 'picture.png',
 waterprint: '3000',
 })
-
 p user2
 
 user3 = User.create!({
@@ -53,7 +51,6 @@ country: 'France',
 avatar: 'image.png',
 waterprint: '7000',
 })
-
 p user3
 
 
@@ -65,7 +62,6 @@ name: 'Water battle',
 code: '333',
 current_step: 1
 })
-
 p game1
 
 
@@ -83,268 +79,505 @@ p play1
 
 #<Question:0x00007fa137567478 id: nil, game_id: nil, content: nil, kind: nil, step: nil, created_at: nil, updated_at: nil>
 
-#Step 1
+#step 1 multiple-choice
 
 question1 = Question.create!({
-
 game: game1,
-content: 'What consumes most of your water at home?',
-kind: 'images-multiple-choice',
+content: 'How many people currently live, without sufficient access to freshwater,
+for at least one month of the year?',
+kind: 'multiple-choice',
 step: 1,
 played: false,
 })
-
 p question1
 
-
 question2 = Question.create!({
-
 game: game1,
-content: 'What is the question 2?',
-kind:'fill-in-the-blancs',
+content: 'What does the Syrian war and the Arab Spring have in common?',
+kind: 'multiple-choice',
+step: 1,
+played: false,
+})
+p question2
+
+question3 = Question.create!({
+game: game1,
+content: 'What happened on the 28th of July 2010?',
+kind: 'multiple-choice',
+step: 1,
+played: false,
+})
+p question3
+
+question4 = Question.create!({
+game: game1,
+content: 'Water stress = inadequacy between water use and water resources.
+It starts when the water in a country < 4 600 litres/day per person.
+What is the closest region to France that is in very high water stress?',
+kind: 'multiple-choice',
+step: 1,
+played: false,
+})
+p question4
+
+# step 2 true-false
+
+question5 = Question.create!({
+game: game1,
+content: '5,000 children die due to preventable water and sanitation-related diseases.',
+kind: 'true-false',
 step: 2,
 played: false,
 })
+p question5
 
-p question2
-
-
-question3 = Question.create!({
-
+question6 = Question.create!({
 game: game1,
-content: 'What is the question 3?',
-kind: 'drag-and-drop',
+content: 'If you reduce your daily water consumption by 5% or 200L,
+you could automatically reduce pollution on average by %. ',
+kind: 'true-false',
+step: 2,
+played: false,
+})
+p question6
+
+question7 = Question.create!({
+game: game1,
+content: 'Agriculture consumes 70% of all freshwater globally.',
+step: 2,
+played: false,
+})
+p question7
+
+question8 = Question.create!({
+game: game1,
+content: '279 conflicts and wars have occurred in the world since 2010.',
+step: 2,
+played: false,
+})
+p question8
+
+# step 3 fill-in-the-blancs
+
+question9 = Question.create!({
+game: game1,
+content: 'We eat … times more water than we drink.',
+kind:'fill-in-the-blancs',
 step: 3,
 played: false,
 })
+p question9
 
-p question3
-
-
-question4 = Question.create!({
-
+question10 = Question.create!({
 game: game1,
-content: 'What is the question 4?',
-kind: 'true-false',
+content: '… bathtubs of water are used per person,
+per day  to make the food we eat and the things we buy.',
+kind:'fill-in-the-blancs',
+step: 3,
+played: false,
+})
+p question10
+
+question11 = Question.create!({
+game: game1,
+content: 'A round- trip flight from Paris to London requires
+as much water as ... average dishwasher loads.',
+kind:'fill-in-the-blancs',
+step: 3,
+played: false,
+})
+p question11
+
+question12 = Question.create!({
+game: game1,
+content: 'Coffee requires almost ... times more water than tea.',
+kind:'fill-in-the-blancs',
+step: 3,
+played: false,
+})
+p question12
+
+# step 4 drag-and-drop
+
+question13 = Question.create!({
+game: game1,
+content: 'A bowl of cereals',
+kind: 'drag-and-drop',
 step: 4,
 played: false,
 })
+p question13
 
-p question4
-
-#Step 2
-
-question5 = Question.create!({
-
+question14 = Question.create!({
 game: game1,
-content: 'What is the question 5 (collect water drops) - Step 2?',
-kind: 'water-drop-collection',
-step: 5,
+content: 'An egg',
+kind: 'drag-and-drop',
+step: 4,
 played: false,
 })
+p question14
 
-p question5
+question15 = Question.create!({
+game: game1,
+content: 'A t-shirt',
+kind: 'drag-and-drop',
+step: 4,
+played: false,
+})
+p question15
+
+question16 = Question.create!({
+game: game1,
+content: 'A pair of leather boots',
+kind: 'drag-and-drop',
+step: 4,
+played: false,
+})
+p question16
+
+question17 = Question.create!({
+game: game1,
+content: 'A smartphone',
+kind: 'drag-and-drop',
+step: 4,
+played: false,
+})
+p question17
+
+
+#step 5 water-drop-collection
+
+# question = Question.create!({
+
+# game: game1,
+# content: 'What is the question 5 (collect water drops) - Step 2?',
+# kind: 'water-drop-collection',
+# step: 5,
+# played: false,
+# })
+
+# p question
 
 
 # <Answer:0x00007fa1374258a8 id: nil, question_id: nil, content: nil, correct: false, position: nil, created_at: nil, updated_at: nil>
 
+#step 1 multiple-choice
 #answers_to_question1
+#'How many people currently live without sufficient access to freshwater for at least one month of the year?',
 
 answer1 = Answer.create!({
 question: question1,
-content: "My toilet",
-correct: true,
+content: "1 billion, ⅙  of the world’s population",
+correct: false,
 position: 1,
 })
-
 p answer1
-
 
 answer2 = Answer.create!({
 question: question1,
-content: "My bath tub",
-correct: false,
+content: "2 billion, ⅓ of the world’s population",
+correct: true,
 position: 2,
 })
-
 p answer2
-
 
 answer3 = Answer.create!({
 question: question1,
-content: "My washing machine",
+content: "4 billion, ⅔ of the world’s population",
 correct: false,
 position: 3,
 })
-
 p answer3
 
 answer4 = Answer.create!({
 question: question1,
-content: "My dish-washer",
+content: "All of us",
 correct: false,
 position: 4,
 })
-
 p answer4
 
 
-#answers_to_question2
+# #step 1 multiple-choice
+# #answers_to_question2
+# #'What does the Syrian war and the Arab Spring have in common?',
 
-answer1 = Answer.create!({
+answer5 = Answer.create!({
 question: question2,
-content: "Answer 1",
+content: "They were both originally caused by drought",
 correct: true,
 position: 1,
 })
+p answer5
 
-p answer1
-
-
-answer2 = Answer.create!({
+answer6 = Answer.create!({
 question: question2,
-content: "Answer 2",
+content: "They were planned by a scapegoat nation - the Russians?",
 correct: false,
 position: 2,
 })
+p answer6
 
-p answer2
-
-
-answer3 = Answer.create!({
+answer7 = Answer.create!({
 question: question2,
-content: "Answer 3",
+content: "They resulted in improved democracy",
 correct: false,
 position: 3,
 })
+p answer7
 
-p answer3
-
-
-answer4 = Answer.create!({
+answer8 = Answer.create!({
 question: question2,
-content: "Answer 4",
+content: "They didn’t increase migration flows to Europe",
 correct: false,
 position: 4,
 })
+p answer8
 
-p answer4
 
+# #step 1 multiple-choice
+# #answers_to_question3
+# #'What happened on the 28th of July 2010?',
 
-#answers_to_question3
-
-answer1 = Answer.create!({
+answer9 = Answer.create!({
 question: question3,
-content: "Answer 1",
-correct: true,
+content: "Tintin landed on the Moon",
+correct: false,
 position: 1,
 })
+p answer9
 
-p answer1
-
-
-answer2 = Answer.create!({
+answer10 = Answer.create!({
 question: question3,
-content: "Answer 2",
+content: "The first episode of Game of Thrones was produced",
 correct: false,
 position: 2,
 })
+p answer10
 
-p answer2
-
-
-answer3 = Answer.create!({
+answer11 = Answer.create!({
 question: question3,
-content: "Answer 3",
+content: "Kardashian married Kanye West",
 correct: false,
 position: 3,
 })
+p answer11
 
-p answer3
-
-
-answer4 = Answer.create!({
+answer12 = Answer.create!({
 question: question3,
-content: "Answer 4",
-correct: false,
+content: "The UN recognized the access to safe water as a basic Human Right",
+correct: true,
 position: 4,
 })
+p answer12
 
-p answer4
 
+# #step 1 multiple-choice
+# #answers_to_question4
+# #'Water stress = inadequacy between water use and water resources.
+# # It starts when the water in a country < 4 600 litres/day per person.
+# # What is the closest region to France that is in very high water stress?'
 
-#answers_to_question4
-
-answer1 = Answer.create!({
+answer13 = Answer.create!({
 question: question4,
-content: "Answer 1",
+content: "South of Spain",
 correct: true,
 position: 1,
 })
+p answer13
 
-p answer1
-
-
-answer2 = Answer.create!({
+answer14 = Answer.create!({
 question: question4,
-content: "Answer 2",
+content: "Egypt",
 correct: false,
 position: 2,
 })
+p answer14
 
-p answer2
-
-
-answer3 = Answer.create!({
+answer15 = Answer.create!({
 question: question4,
-content: "Answer 3",
+content: "Turkish coast",
 correct: false,
 position: 3,
 })
+p answer15
 
-p answer3
-
-
-answer4 = Answer.create!({
+answer16 = Answer.create!({
 question: question4,
-content: "Answer 4",
+content: "Morocco",
 correct: false,
 position: 4,
 })
+p answer16
 
-p answer4
 
+# #step 2 true-false
+# #answers_to_question1
+# #'5,000 children die due to preventable water and sanitation-related diseases.'
 
-#answers_to_question5
-
-answer1 = Answer.create!({
-question: question4,
-content: "Collected drop",
+answer17 = Answer.create!({
+question: question5,
+content: "True",
 correct: true,
 position: 1,
 })
+p answer17
 
-p answer1
-
-
-answer2 = Answer.create!({
-question: question4,
-content: "Missed drop",
+answer18 = Answer.create!({
+question: question5,
+content: "False",
 correct: false,
 position: 2,
 })
-
-p answer2
-
+p answer18
 
 
-#<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
-#Will be generated, no seed required!!!
+# #step 2 true-false
+# #answers_to_question2
+# #'If you reduce your daily water consumption by 5% or 200L,
+# #you could automatically reduce pollution on average by x%.'
 
-# user_answer1 = UserAnswer.create!({
-# answer: answer1,
-# play: play1,
-# })
+answer19 = Answer.create!({
+question: question6,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer19
+
+answer20 = Answer.create!({
+question: question6,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer20
+
+
+# #step 2 true-false
+# #answers_to_question3
+# #'Agriculture consumes 70% of all freshwater globally.'
+
+answer21 = Answer.create!({
+question: question7,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer21
+
+answer22 = Answer.create!({
+question: question7,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer22
+
+# #step 2 true-false
+# #answers_to_question4
+# #'279 conflicts and wars have occurred in the world since 2010'
+
+answer23 = Answer.create!({
+question: question8,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer23
+
+answer24 = Answer.create!({
+question: question8,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer24
+
+
+# #step 3 fill-in-the-blancs
+# #answers_to_question1 to question4
+# #'279 conflicts and wars have occurred in the world since 2010'
+
+answer25 = Answer.create!({
+question: question9,
+content: "500",
+correct: true,
+position: 1,
+})
+p answer25
+
+answer26 = Answer.create!({
+question: question10,
+content: "58",
+correct: true,
+position: 2,
+})
+p answer26
+
+answer27 = Answer.create!({
+question: question11,
+content: "1 000",
+correct: true,
+position: 1,
+})
+p answer27
+
+answer28 = Answer.create!({
+question: question12,
+content: "10",
+correct: true,
+position: 2,
+})
+p answer28
+
+# #step 4 drag-and-drop
+# #answers_to_question1 to question5
+
+answer29 = Answer.create!({
+question: question13,
+content: "1 644 l",
+correct: true,
+position: 1,
+})
+p answer29
+
+answer30 = Answer.create!({
+question: question14,
+content: "3 625 l",
+correct: true,
+position: 2,
+})
+p answer30
+
+answer31 = Answer.create!({
+question: question15,
+content: "3 900 l",
+correct: true,
+position: 3,
+})
+p answer31
+
+answer32 = Answer.create!({
+question: question16,
+content: "14 503 l",
+correct: true,
+position: 4,
+})
+p answer32
+
+answer33 = Answer.create!({
+question: question17,
+content: "12 760 l",
+correct: true,
+position: 5,
+})
+p answer33
+
+
+# #<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
+# #Will be generated, no seed required!!!
+
 
 
 
