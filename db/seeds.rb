@@ -178,71 +178,71 @@ played: false,
 })
 p question10
 
-question11 = Question.create!({
-game: game1,
-content: 'A round- trip flight from Paris to London requires
-as much water as ... average dishwasher loads.',
-kind:'fill-in-the-blancs',
-step: 11,
-played: false,
-})
-p question11
+# question11 = Question.create!({
+# game: game1,
+# content: 'A round- trip flight from Paris to London requires
+# as much water as ... average dishwasher loads.',
+# kind:'fill-in-the-blancs',
+# step: 11,
+# played: false,
+# })
+# p question11
 
-question12 = Question.create!({
-game: game1,
-content: 'Coffee requires almost ... times more water than tea.',
-kind:'fill-in-the-blancs',
-step: 12,
-played: false,
-})
-p question12
+# question12 = Question.create!({
+# game: game1,
+# content: 'Coffee requires almost ... times more water than tea.',
+# kind:'fill-in-the-blancs',
+# step: 12,
+# played: false,
+# })
+# p question12
 
-# step 4 drag-and-drop
+# # step 4 drag-and-drop
 
-question13 = Question.create!({
-game: game1,
-content: 'A bowl of cereals',
-kind: 'drag-and-drop',
-step: 13,
-played: false,
-})
-p question13
+# question13 = Question.create!({
+# game: game1,
+# content: 'A bowl of cereals',
+# kind: 'drag-and-drop',
+# step: 13,
+# played: false,
+# })
+# p question13
 
-question14 = Question.create!({
-game: game1,
-content: 'An egg',
-kind: 'drag-and-drop',
-step: 14,
-played: false,
-})
-p question14
+# question14 = Question.create!({
+# game: game1,
+# content: 'An egg',
+# kind: 'drag-and-drop',
+# step: 14,
+# played: false,
+# })
+# p question14
 
-question15 = Question.create!({
-game: game1,
-content: 'A t-shirt',
-kind: 'drag-and-drop',
-step: 15,
-played: false,
-})
-p question15
+# question15 = Question.create!({
+# game: game1,
+# content: 'A t-shirt',
+# kind: 'drag-and-drop',
+# step: 15,
+# played: false,
+# })
+# p question15
 
-question16 = Question.create!({
-game: game1,
-content: 'A pair of leather boots',
-kind: 'drag-and-drop',
-step: 16,
-played: false,
-})
-p question16
+# question16 = Question.create!({
+# game: game1,
+# content: 'A pair of leather boots',
+# kind: 'drag-and-drop',
+# step: 16,
+# played: false,
+# })
+# p question16
 
-question17 = Question.create!({
-game: game1,
-content: 'A smartphone',
-kind: 'drag-and-drop',
-step: 17,
-played: false,
-})
-p question17
+# question17 = Question.create!({
+# game: game1,
+# content: 'A smartphone',
+# kind: 'drag-and-drop',
+# step: 17,
+# played: false,
+# })
+# p question17
 
 
 #step 5 water-drop-collection
@@ -513,66 +513,66 @@ content: "58",
 correct: true,
 position: 2,
 })
-p answer26
+# p answer26
 
-answer27 = Answer.create!({
-question: question11,
-content: "1 000",
-correct: true,
-position: 1,
-})
-p answer27
+# answer27 = Answer.create!({
+# question: question11,
+# content: "1 000",
+# correct: true,
+# position: 1,
+# })
+# p answer27
 
-answer28 = Answer.create!({
-question: question12,
-content: "10",
-correct: true,
-position: 2,
-})
-p answer28
+# answer28 = Answer.create!({
+# question: question12,
+# content: "10",
+# correct: true,
+# position: 2,
+# })
+# p answer28
 
-# #step 4 drag-and-drop
-# #answers_to_question1 to question5
+# # #step 4 drag-and-drop
+# # #answers_to_question1 to question5
 
-answer29 = Answer.create!({
-question: question13,
-content: "1 644 l",
-correct: true,
-position: 1,
-})
-p answer29
+# answer29 = Answer.create!({
+# question: question13,
+# content: "1 644 l",
+# correct: true,
+# position: 1,
+# })
+# p answer29
 
-answer30 = Answer.create!({
-question: question14,
-content: "3 625 l",
-correct: true,
-position: 2,
-})
-p answer30
+# answer30 = Answer.create!({
+# question: question14,
+# content: "3 625 l",
+# correct: true,
+# position: 2,
+# })
+# p answer30
 
-answer31 = Answer.create!({
-question: question15,
-content: "3 900 l",
-correct: true,
-position: 3,
-})
-p answer31
+# answer31 = Answer.create!({
+# question: question15,
+# content: "3 900 l",
+# correct: true,
+# position: 3,
+# })
+# p answer31
 
-answer32 = Answer.create!({
-question: question16,
-content: "14 503 l",
-correct: true,
-position: 4,
-})
-p answer32
+# answer32 = Answer.create!({
+# question: question16,
+# content: "14 503 l",
+# correct: true,
+# position: 4,
+# })
+# p answer32
 
-answer33 = Answer.create!({
-question: question17,
-content: "12 760 l",
-correct: true,
-position: 5,
-})
-p answer33
+# answer33 = Answer.create!({
+# question: question17,
+# content: "12 760 l",
+# correct: true,
+# position: 5,
+# })
+# p answer33
 
 
 # #<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>

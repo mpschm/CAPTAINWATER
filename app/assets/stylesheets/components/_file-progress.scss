@@ -1,5 +1,5 @@
 .bottom-container{
-     width: 35%;
+    width: 100%;
     position: absolute;
     z-index: 1;
     margin-top: 20px;
@@ -10,9 +10,10 @@
 }
 .progressbar li{
   float: left;
-  width: 14.28%;
+  width: 10%;
   position: relative;
   text-align: center;
+  list-style: none;
 }
 .progressbar li:before{
   content:counter(step);
