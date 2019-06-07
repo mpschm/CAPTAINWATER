@@ -32,7 +32,7 @@ end
   def index
     @game = Game.find(params[:game_id])
     @plays = policy_scope(Play).where(game: @game)
-    @result = @play.score
+    @result = current_user.plays.find_by(game: @game).score
   end
 end
   # def countdown(seconds)
