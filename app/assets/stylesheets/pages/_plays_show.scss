@@ -3,16 +3,9 @@
 }
 .container-top {
   display: flex;
-  align-items: flex-start;
+  margin-top:20px;
 }
 
-.left-top-box-waterfootprint {
-  flex-direction:row
-}
-
-.right-top-box-timerscore {
-  flex-direction: row-reverse
-}
 
 .question {
   input[type="radio"] {
