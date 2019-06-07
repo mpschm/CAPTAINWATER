@@ -3,7 +3,7 @@
       Water footprint
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+ <!--  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
     <div class="setters">
       <div class="minutes-set">
         <button data-setter="minutes-plus">+</button>
@@ -31,15 +31,24 @@
 
         <!-- timer controls -->
 
-    <div class="controlls">
-      <div class="display-remain-time">00:30</div>
+<!--     <div class="controlls">
+      <div class="display-remain-time">00:15</div>
       <button class="play" id="pause"></button>
     </div>
   </div>
 
+<div id="timer"></div> -->
+ -->
+
 
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
     Total score: <%= @play.score %>
+     <div id="countdown">
+      <div id="countdown-number"></div>
+      <svg>
+        <circle r="18" cx="20" cy="20"></circle>
+      </svg>
+    </div>
   </div>
 
 
@@ -53,7 +62,7 @@
       <%= simple_form_for [@play, @user_answer] do |f| %>
         <%= f.association :answer, collection: @answers, as: :radio_buttons %>
         <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-        <%= f.submit "Save" %>
+        <%= f.submit "Save", id: "submit-answer" %>
       <% end %>
     <!--   action a declancher
      -->

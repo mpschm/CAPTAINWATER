@@ -9,8 +9,7 @@ class PlaysController < ApplicationController
     @answers = @question.answers
     @user_answer = UserAnswer.new
     @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
-
-  end
+end
 
   def new
    @play = Play.new
@@ -20,12 +19,14 @@ class PlaysController < ApplicationController
 
   def create
     #@play = TODO
-    game = Game.find_by(name: params[:game][:name])
-    @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
-
-
-    authorize @play
-    redirect_to play_path(@play)
+    if Game.find_by(name: params[:game][:name]) != nil
+      game = Game.find_by(name: params[:game][:name])
+      @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
+      authorize @play
+      redirect_to play_path(@play)
+    else
+      render :new
+    end
   end
 end
   # def countdown(seconds)
