@@ -35,15 +35,15 @@ button[data-setter]:hover { opacity: 0.5; }
 .display-remain-time {
   font-family: 'Roboto';
   font-weight: 100;
-  font-size: 65px;
+  font-size: 24px;
   color: #F7958E;
+  margin-top: 10px;
 }
 
 #pause {
   outline: none;
   background: transparent;
   border: none;
-  margin-top: 10px;
   width: 50px;
   height: 50px;
   position: relative;
