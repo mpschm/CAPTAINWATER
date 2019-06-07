@@ -1,23 +1,29 @@
-<!-- <h1>WaterFtCalculators#new</h1>
-<p>Find me in app/views/water_ft_calculators/new.html.erb</p> -->
-
 
 <div class="water_ft_calculators">
   <div class="container">
+    <h1 class="title-ft-calculators text-center">Water footprint calculator</h1>
+    <div>
+      <div class="info-calculator">
+        <p>92% of the Global Water Consumption is used in food production. This is the Virtual Water we EAT !</p>
+        <p>How much water do you eat ?</p>
+      </div>
+      <div class=calculator>
+        <!-- <p>Your water footprint is unique ! It is based on your country of residence and the way you live. Knowing more about your personal impact on the planet, you can change the future ! GO ! </p> -->
 
-    <h1 class="title-ft-calculators">Calculate your personnal water footprint !</h1>
-      <p>92% of the Global Water Consumption is used in food production. This is the Virtual Water we EAT !</p>
-      <p>How much water do you eat ?</p>
+        <%= simple_form_for :calculator, url: water_ft_calculators_path, method: :post do |f| %>
+          <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "Country of residence" %>
+          <%= f.input :gender, as: :select, collection: ["Female", "Male"] %>
+          <%= f.input :income, as: :integer %>
+          <%= f.input :dietatary_habit, as: :radio_buttons, collection: ['vegetarian', 'average meat consumer'], wrapper: :vertical_collection_inline %>
+           <%= f.button :submit, class: "btn-primary" %> -->
+        <% end %>
+
+      </div>
+    </div>
   </div>
 </div>
 
 
-<!--
-</html>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
-  </div>
-</div> -->
+
+
+
