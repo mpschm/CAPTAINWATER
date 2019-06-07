@@ -5,6 +5,7 @@ class WaterFtCalculatorsController < ApplicationController
   end
 
   def create
-    authorize current_user
+    skip_authorization
+    redirect_to new_game_path
   end
 end
