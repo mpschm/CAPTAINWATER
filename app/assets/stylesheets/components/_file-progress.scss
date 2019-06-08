@@ -65,17 +65,28 @@ color: white
  background: white;
  color: black
 }
-.progressbar li.wrong:after{
- background: red;
- color: black;
-}
+
 
 .progressbar li.correct:before{
  border-color: blue;
  background: white;
  color: black
 }
-.progressbar li.correct:after{
- background: blue;
- color: black;
+
+
+
+.progressbar li.pending:before{
+  content:counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  border: 2px solid blue;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 27px;
+  background: white;
+  color: #bebebe;
+  text-align: center;
+  font-weight: bold;
 }
