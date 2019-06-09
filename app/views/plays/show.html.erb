@@ -35,8 +35,8 @@
           <!-- question au redirect -->
       <%= @question.content %>
       <%= simple_form_for [@play, @user_answer] do |f| %>
-        <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+        <%= f.association :answer, collection: @answers, as: :radio_buttons  %>
+        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'}, id: "selected-answer" %>
         <%= f.submit "Save", id: "submit-answer" %>
       <% end %>
   </div>
