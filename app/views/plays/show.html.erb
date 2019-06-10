@@ -29,21 +29,40 @@
 
   <div class="question" style='position: absolute; top: 200px; padding: 17px'>
 
-
+  <% @questions.each do |question|  %>
+        <% if question.kind == 'multiple-choice'|| question.kind == 'true-false'%>
           <p>Question</p>
-                <!-- formulaire pour créer une instance de UserAnswer -->
-                <!-- ce formulaire liste une question et ses answers -->
-                <!-- NB: passer en params la step de la question présente pour choisir la  -->
-                <!-- question au redirect -->
+          <%= @question.content %>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+            <%= f.submit "Save", id: "submit-answer" %>
+          <% end %>
+        <% elsif question.kind == 'fill-in-the-blancs'%>
+          <p>Fill-in-the-blanks with one of the following answers: 1000, 500, 58, 10. </p>
+          <div class='question-fill-in-the-blanks'>
             <%= @question.content %>
-            <%= simple_form_for [@play, @user_answer] do |f| %>
-              <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+          </div>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <div style="visibility: hidden">
+              <%= f.association :answer, collection: @answers%>
               <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-              <%= f.submit "Save", id: "submit-answer" %>
-            <% end %>
-
+            </div>
+            <%= f.submit "Save", id: "submit-answer" %>
+          <% end %>
+        <% else %>
+          <p>Question to be determined</p>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+            <%= f.submit "Save", id: "submit-answer" %>
+          <% end %>
+        <% end %>
+      <% end %>
 
   </div>
+
+
 
 
 <!-- trial-fill-in-the-blanks

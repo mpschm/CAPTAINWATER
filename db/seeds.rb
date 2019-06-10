@@ -161,7 +161,7 @@ p question8
 
 question9 = Question.create!({
 game: game1,
-content: 'We eat … times more water than we drink.',
+content: 'We eat ... times more water than we drink.',
 kind:'fill-in-the-blancs',
 step: 9,
 played: false,
@@ -170,7 +170,7 @@ p question9
 
 question10 = Question.create!({
 game: game1,
-content: '… bathtubs of water are used per person,
+content: '... bathtubs of water are used per person,
 per day  to make the food we eat and the things we buy.',
 kind:'fill-in-the-blancs',
 step: 10,
@@ -178,26 +178,26 @@ played: false,
 })
 p question10
 
-# question11 = Question.create!({
-# game: game1,
-# content: 'A round- trip flight from Paris to London requires
-# as much water as ... average dishwasher loads.',
-# kind:'fill-in-the-blancs',
-# step: 11,
-# played: false,
-# })
-# p question11
+question11 = Question.create!({
+game: game1,
+content: 'A round- trip flight from Paris to London requires
+as much water as ... average dishwasher loads.',
+kind:'fill-in-the-blancs',
+step: 11,
+played: false,
+})
+p question11
 
-# question12 = Question.create!({
-# game: game1,
-# content: 'Coffee requires almost ... times more water than tea.',
-# kind:'fill-in-the-blancs',
-# step: 12,
-# played: false,
-# })
-# p question12
+question12 = Question.create!({
+game: game1,
+content: 'Coffee requires almost ... times more water than tea.',
+kind:'fill-in-the-blancs',
+step: 12,
+played: false,
+})
+p question12
 
-# # step 4 drag-and-drop
+# step 4 drag-and-drop
 
 # question13 = Question.create!({
 # game: game1,
@@ -513,23 +513,23 @@ content: "58",
 correct: true,
 position: 2,
 })
-# p answer26
+p answer26
 
-# answer27 = Answer.create!({
-# question: question11,
-# content: "1 000",
-# correct: true,
-# position: 1,
-# })
-# p answer27
+answer27 = Answer.create!({
+question: question11,
+content: "1 000",
+correct: true,
+position: 1,
+})
+p answer27
 
-# answer28 = Answer.create!({
-# question: question12,
-# content: "10",
-# correct: true,
-# position: 2,
-# })
-# p answer28
+answer28 = Answer.create!({
+question: question12,
+content: "10",
+correct: true,
+position: 2,
+})
+p answer28
 
 # # #step 4 drag-and-drop
 # # #answers_to_question1 to question5
