@@ -1,0 +1,49 @@
+.home-battle {
+  z-index: 1000;
+}
+
+img.water-battle {
+  position: absolute;
+  bottom: 0;
+
+ @media (max-height: 812px) {
+   bottom: 0;
+ }
+
+  @media (max-height: 667px) {
+   bottom: -90%;
+ }
+}
+
+.battle-background {
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+}
+
+.play-index-container {
+  height: 505px;
+  margin-bottom: 55px;
+}
+
+.cloud-1 {
+
+}
+
+.cloud-2 {
+  height: 40px;
+}
+
+.cloud-3 {
+  height: 100px;
+  margin-left: -30px;
+}
+
+ .cloud-1, .cloud-2 {
+   animation: slowflow 15s linear infinite;
+ }
+
+ .cloud-3 {
+   transform: translateX(-60%);
+   animation: highflow 15s linear infinite;
+ }

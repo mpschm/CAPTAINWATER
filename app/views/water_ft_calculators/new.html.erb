@@ -11,11 +11,17 @@
         <!-- <p>Your water footprint is unique ! It is based on your country of residence and the way you live. Knowing more about your personal impact on the planet, you can change the future ! GO ! </p> -->
 
         <%= simple_form_for :calculator, url: water_ft_calculators_path, method: :post do |f| %>
-          <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "Country of residence" %>
-          <%= f.input :gender, as: :select, collection: ["Female", "Male"] %>
-          <%= f.input :income, as: :integer %>
-          <%= f.input :dietatary_habit, as: :radio_buttons, collection: ['vegetarian', 'average meat consumer'], wrapper: :vertical_collection_inline %>
-           <%= f.button :submit, class: "btn-primary" %> -->
+          <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "COUNTRY OF RESIDENCE (> 6 months/year)", selected: "France" %>
+          <div class="row" style="padding-left: 15px;">
+            <div class="col-xs-6">
+              <%= f.input :gender, label: "GENDER", as: :select, collection: ["Female", "Male", "Neutral"], selected: "Male" %>
+            </div>
+            <div class="col-xs-6" style="padding-left: 15px;">
+              <%= f.input :income, label: "ANNUAL INCOME (€/year)", as: :integer, input_html: {value: '30000'} %>
+            </div>
+          </div>
+          <%= f.input :dietatary_habit, label: "DIETARY HABIT", as: :radio_buttons, collection: ['Vegan or vegetarian', 'Average meat consumer', 'High meat consumer'], wrapper: :vertical_collection_inline, :value_method => :first %>
+          <%= f.button :submit, class: "btn btn-primary" %>
         <% end %>
 
       </div>

@@ -7,26 +7,26 @@
 }
 
 
-input[type="radio"] {
+.question {
+  input[type="radio"] {
     display: none;
-}
-
-  label {
-    border: 1px solid #DDD;
-    border-radius:5px;
-    padding:10px;
-    margin-top:10px;
-    display:block;
-    position:relative;
   }
-
-label:hover {
-  cursor:pointer;
-  background-color:#EEE;
-}
-
-input[type="radio"]:checked + label {
-  background-color:#DDD;
+  label {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+  }
+  label:hover {
+    cursor:pointer;
+    background-color:#EEE;
+  }
+  input[type="radio"]:checked + label {
+    background-color: white;
+    color: #888;
+  }
 }
 
 
@@ -36,8 +36,16 @@ input[type="radio"]:checked + label {
   flex-direction:row
 }
 
+.question {
+  overflow-y: scroll;
+}
+
 .right-top-box-timer-score {
   margin: 0px 8px 0px 8px;
+}
+
+.form-check {
+  padding: 0;
 }
 
 // .cards {

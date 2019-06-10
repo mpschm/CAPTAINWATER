@@ -1,56 +1,77 @@
-F<div class="container">
+<div class="container">
 
   <div class="container-top" style='position: absolute;
     top: 10px;left: 15px; width:375px; width: 90%; justify-content: space-between'>
 
       <div class='d-flex align-items-center justify-content-between' style='width:35%'>
-
-
         <div class="cards card-category" style="background-image:white;">
           <div id ="scores"></div>
           <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
-          Water footprint
+            Water footprint
           </div>
-          </div>
-       </div>
+        </div>
+      </div>
 
-        <div class="card-category" style="background-image:white">
-             <div id="countdown" style='position: relative;'>
-                <div id="countdown-number"></div>
-                <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
-                  <svg>
-                    <circle r="27" cx="30" cy="30"></circle>
-                  </svg>
-                </div>
-                </div>
-         </div>
+      <div class="card-category" style="background-image:white">
+         <div id="countdown" style='position: relative;'>
+            <div id="countdown-number"></div>
+            <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+              <svg>
+                <circle r="27" cx="30" cy="30"></circle>
+              </svg>
+            </div>
+          </div>
+      </div>
 
         <div class="card-category" style="background-image:white">
           <div id ="scores"></div>
           <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
             Total score: <%= @play.score %>
+          </div>
         </div>
 
-      </div>
+    </div>
 
-     </div>
 
-  <div class="question">
-    <p>Question</p>
-          <!-- formulaire pour créer une instance de UserAnswer -->
-          <!-- ce formulaire liste une question et ses answers -->
-          <!-- NB: passer en params la step de la question présente pour choisir la  -->
-          <!-- question au redirect -->
-      <%= @question.content %>
-      <%= simple_form_for [@play, @user_answer] do |f| %>
-        <%= f.association :answer, collection: @answers, as: :radio_buttons, input_html: { class: 'sp-btn'} %>
-        <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-        <%= f.submit "Save", id: "submit-answer" %>
-      <% end %>
+
+  <div class="question" style='position: absolute; top: 150px; padding: 17px; color: white'>
+    <!-- <p>Question</p> -->
+    <!-- formulaire pour créer une instance de UserAnswer -->
+    <!-- ce formulaire liste une question et ses answers -->
+    <!-- NB: passer en params la step de la question présente pour choisir la  -->
+    <!-- question au redirect -->
+    <%= @question.content %>
+    <%= simple_form_for [@play, @user_answer] do |f| %>
+      <%= f.association :answer, collection: @answers, as: :radio_buttons, input_html: { class: 'sp-btn'}  %>
+      <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+    <!--   <%= f.submit "SAVE", id: "submit-answer", style: "color: black; background-color: white; border: 3px white; padding: 5px 15px; border-radius: 3px;" %> -->
+    <% end %>
   </div>
 
-  <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
-    <p> Drops Image </p>
+  <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: -40px;'>
+    <ul class="progressbar">
+      <% number = @play.game.current_step %>
+
+      <% @play.game.questions.each_with_index do |question, index| %>
+        <%= @user_answers %>
+        <% if index < number  - 1%>
+
+          <% if @play.user_answers[index].answer.present? %>
+            <% if  @play.user_answers[index].answer.correct? %>
+              <li class="active"><% question.step %></li>
+            <% else %>
+              <li class="wrong"><% question.step %></li>
+            <% end %>
+          <% else %>
+              <li class="wrong"><% question.step %></li>
+          <% end %>
+        <% elsif  index == number - 1 %>
+          <li class="pending"><% question.step %></li>
+        <% elsif %>
+          <li><% question.step %></li>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
 
 </div>
