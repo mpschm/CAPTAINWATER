@@ -29,6 +29,13 @@
   }
 }
 
+
+.bottom-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction:row
+}
+
 .question {
   overflow-y: scroll;
 }
