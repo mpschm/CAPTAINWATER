@@ -8,4 +8,11 @@ class User < ApplicationRecord
   has_many :plays, dependent: :destroy
 
   attr_accessor :next_step
+
+  private
+
+  def password_required?
+    false
+  end
+
 end
