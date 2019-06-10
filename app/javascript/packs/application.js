@@ -5,5 +5,5 @@ import "../plugins/quizsubmit";
 
 
 if (document.getElementById('countdown-number')) {
-  timer();
+  // timer();
 }
