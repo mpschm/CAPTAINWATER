@@ -93,7 +93,7 @@ p question1
 
 question2 = Question.create!({
 game: game1,
-content: 'How much water do you EAT per day ?',
+content: 'How much water do you EAT per day?',
 kind: 'multiple-choice',
 step: 2,
 played: false,
@@ -102,7 +102,7 @@ p question2
 
 question3 = Question.create!({
 game: game1,
-content: 'What happened on the 28th of July 2010? ?',
+content: 'What happened on the 28th of July 2010?',
 kind: 'multiple-choice',
 step: 3,
 played: false,
@@ -111,7 +111,7 @@ p question3
 
 question4 = Question.create!({
 game: game1,
-content: 'The closest region to France that is in very high water stress ?',
+content: 'The closest region to France that is in very high water stress?',
 kind: 'multiple-choice',
 step: 4,
 played: false,

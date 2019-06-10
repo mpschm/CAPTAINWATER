@@ -5,9 +5,11 @@
 
 .bubbles {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
   height: 100vh;
   background-position: center;
+  align-items: center;
 }
 
 .bubble1 {
@@ -69,7 +71,9 @@
   text-shadow: 1px 1px #979797;
 }
 
-.bubble3{
+.bubble3 {
+    background-position: center;
+    background-size: 150%;
     background-color: white;
     border: none;
     width: 47px;
@@ -86,10 +90,11 @@
     text-align: center;
     font-size: 32px;
     text-shadow: 1px 1px #979797;
-
 }
 
-.bubble4{
+.bubble4 {
+    background-position: center;
+    background-size: 150%;
     background-color: white;
     border: none;
     width: 47px;
@@ -108,8 +113,59 @@
     text-shadow: 1px 1px #979797;
 }
 
-.btn-battle-battle {
-    z-index: 1000;
+.bubble5 {
+    background-position: center;
+    background-size: 150%;
     background-color: white;
-
+    border: #979797;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 421px;
+    left: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.bubble6 {
+    background-position: center;
+    background-size: 150%;
+    background-color: white;
+    border: #979797;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 456px;
+    left: 258px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battle-button {
+    z-index: 1000;
+    margin-bottom: 70px;
+    height:30px;
+    width:270px;
+    background: #428BCA;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px 0 rgba(255,255,255,0.20);
+    border-radius: 34.5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 21px;
+    letter-spacing: 0;
+}
+
+.btn-battle {
+   color: white;
+}
+
+.btn-battle:hover {
+    opacity: 0.5;
+    color: white;
+  }
+
