@@ -29,10 +29,7 @@
 
   <div class="question" style='position: absolute; top: 200px; padding: 17px'>
 
-    <% @questions.each do |question|  %>
 
-      <% if question.kind == 'multiple-choice'|| 'true-false'%>
-        <% return %>
           <p>Question</p>
                 <!-- formulaire pour créer une instance de UserAnswer -->
                 <!-- ce formulaire liste une question et ses answers -->
@@ -45,25 +42,16 @@
               <%= f.submit "Save", id: "submit-answer" %>
             <% end %>
 
-        <% elsif question.kind == 'fill-in-the-blancs'%>
-         <% return %>
-          <p>Fill-in-the-blanks with one of the following answers: 1000l, 500l, 58l, 10l. </p>
-            <!-- fill in the blanks - changer dans question: integer question: et dans answers, a changer: gets chomp-->
-            <%= @question.content %>
-            <%= simple_form_for [@play, @user_answer] do |f| %>
-              <%= f.association :answer, collection: @answers%>
-              <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-              <%= f.submit "Save", id: "submit-answer" %>
-            <% end %>
-
-        <% else %>
-         <% return %>
-          <p>Question to be determined</p>
-          <% end %>
-
-    <% end %>
 
   </div>
+
+
+<!-- trial-fill-in-the-blanks
+
+<p>We eat <input times more water than we drink.</p>
+
+ -->
+
 
 
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>

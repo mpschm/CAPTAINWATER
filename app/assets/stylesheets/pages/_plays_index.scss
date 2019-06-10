@@ -1,31 +1,43 @@
 .Players-ranking {
-    position: absolute;
-    width: 400px;
-    height: 850px;
-    margin-top: 200px;
-    text-align: center;
-    display:none;
+    z-index: 1000;
+    width: 100%;
 }
 
 .bubbles {
   display: flex;
   flex-direction: column;
-  // background-image: url(../images/bubbles_image.png);
+  height: 100vh;
+  background-position: center;
 }
 
 .bubble1 {
-    background-color: black;
-    border: 1px solid #979797;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  background-color: black;
+  border: 1px solid #979797;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 39px;
+  left: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
+
 .bubble2 {
-    background-color: black;
-    border: 1px solid #979797;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  background-color: black;
+  border: 1px solid #979797;
+  width: 171px;
+  height: 171px;
+  border-radius: 50%;
+  position: absolute;
+  top: 187px;
+  left: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 

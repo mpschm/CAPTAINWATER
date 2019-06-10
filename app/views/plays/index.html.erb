@@ -1,25 +1,28 @@
-<body>
+<div class="Players-ranking">
 
-<div class=Players-ranking>
+  <div
+    class="bubbles"
+    style="background-image: url(<%= image_path 'bubbles_image.png' %>)"
+  >
+    <div
+      class="bubble1"
+    >
+      <div>
+        <%= @play.first.user.pseudo %>
+      </div>
 
-  <div class=bubbles>
+    </div>
 
-    <div class=Bubble1>
-<!--       @play.score.first.current_user.avatar <%  %>
- -->    </div>
-
-    <div class=Bubble2>
-<!--       @play.score.first <%  %>
- -->    </div>
+    <div class="bubble2">
+      <%= @play.first.score %>
+    </div>
 
   </div>
 
-      <%= link_to 'Play again', profile_path(@play), class: 'button' %>
+  <%= link_to 'Play again', profile_path(@play), class: 'button' %>
 
 <!--     <button type="button" id="button1" > -->
 <!--       Play again
     </button> -->
 
 </div>
-
-</body>
