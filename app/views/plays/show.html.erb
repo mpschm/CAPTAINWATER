@@ -9,10 +9,12 @@
   <div style='position: relative;'>
     <h5>list of players:</h5>
     <ul class='list-players', style='position: relative'>
+
       <% @game.plays.each do |play| %>
-        <li><%= @play.user.email %></li>
+        <li><%= play.user.email %></li>
       <% end  %>
     </ul>
+    <p><%= @game.plays.size %> players</p>
   </div>
 
 
