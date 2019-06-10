@@ -9,27 +9,26 @@
 
 .question {
   input[type="radio"] {
-      display: none;
+    display: none;
   }
-
   label {
-    border: 1px solid #DDD;
-    border-radius:5px;
-    padding:10px;
-    margin-top:10px;
-    display:block;
-    position:relative;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    position: relative;
   }
-
   label:hover {
     cursor:pointer;
     background-color:#EEE;
   }
-
   input[type="radio"]:checked + label {
-    background-color:#DDD;
+    background-color: white;
+    color: #888;
   }
 }
+
 
 .bottom-container {
   display: flex;
@@ -37,8 +36,16 @@
   flex-direction:row
 }
 
+.question {
+  overflow-y: scroll;
+}
+
 .right-top-box-timer-score {
   margin: 0px 8px 0px 8px;
+}
+
+.form-check {
+  padding: 0;
 }
 
 // .cards {

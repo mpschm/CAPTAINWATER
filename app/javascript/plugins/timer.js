@@ -3,7 +3,7 @@ const timer = () => {
   var countdown = 10;
   var submit = document.getElementById("submit-answer");
 
-  countdownNumberEl.textContent = countdown;
+countdownNumberEl.textContent = countdown;
 
   setInterval(function() {
     if (countdown > 0) {
@@ -18,5 +18,3 @@ const timer = () => {
 }
 
 export { timer }
-
-

@@ -1,12 +1,12 @@
 import "bootstrap";
 import "../plugins/onbording";
 import { timer } from "../plugins/timer";
-import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer'
-
+import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer';
+import "../plugins/quizsubmit";
 
 
 if (document.getElementById('countdown-number')) {
-  timer();
+  // timer();
 }
 
 const questionFillIn = document.querySelector('.question-fill-in-the-blanks');

@@ -26,6 +26,7 @@ coliving: 'true',
 country: 'France',
 avatar: 'photo.png',
 waterprint: '1000',
+admin: true
 })
 p user1
 
@@ -83,8 +84,7 @@ p play1
 
 question1 = Question.create!({
 game: game1,
-content: 'How many people currently live, without sufficient access to freshwater,
-for at least one month of the year?',
+content: 'What means water footprint ?',
 kind: 'multiple-choice',
 step: 1,
 played: false,
@@ -93,7 +93,7 @@ p question1
 
 question2 = Question.create!({
 game: game1,
-content: 'What does the Syrian war and the Arab Spring have in common?',
+content: 'How much water do you eat per day ?',
 kind: 'multiple-choice',
 step: 2,
 played: false,
@@ -111,9 +111,7 @@ p question3
 
 question4 = Question.create!({
 game: game1,
-content: 'Water stress = inadequacy between water use and water resources.
-It starts when the water in a country < 4 600 litres/day per person.
-What is the closest region to France that is in very high water stress?',
+content: 'Who is Malin FALKENMARK ?',
 kind: 'multiple-choice',
 step: 4,
 played: false,
@@ -124,7 +122,7 @@ p question4
 
 question5 = Question.create!({
 game: game1,
-content: '5,000 children die due to preventable water and sanitation-related diseases.',
+content: 'UNexpected consequences of the drought in Russia ?',
 kind: 'true-false',
 step: 5,
 played: false,
@@ -151,7 +149,7 @@ p question7
 
 question8 = Question.create!({
 game: game1,
-content: '279 conflicts and wars have occurred in the world since 2010.',
+content: 'Water Stress has generated 279 conflicts & wars in the world since 2010.',
 step: 8,
 played: false,
 })
@@ -178,24 +176,24 @@ played: false,
 })
 p question10
 
-question11 = Question.create!({
-game: game1,
-content: 'A round- trip flight from Paris to London requires
-as much water as ... average dishwasher loads.',
-kind:'fill-in-the-blancs',
-step: 11,
-played: false,
-})
-p question11
+# question11 = Question.create!({
+# game: game1,
+# content: 'A round- trip flight from Paris to London requires
+# as much water as ... average dishwasher loads.',
+# kind:'fill-in-the-blancs',
+# step: 11,
+# played: false,
+# })
+# p question11
 
-question12 = Question.create!({
-game: game1,
-content: 'Coffee requires almost ... times more water than tea.',
-kind:'fill-in-the-blancs',
-step: 12,
-played: false,
-})
-p question12
+# question12 = Question.create!({
+# game: game1,
+# content: 'Coffee requires almost ... times more water than tea.',
+# kind:'fill-in-the-blancs',
+# step: 12,
+# played: false,
+# })
+# p question12
 
 # step 4 drag-and-drop
 
@@ -515,21 +513,21 @@ position: 2,
 })
 p answer26
 
-answer27 = Answer.create!({
-question: question11,
-content: "1 000",
-correct: true,
-position: 1,
-})
-p answer27
+# answer27 = Answer.create!({
+# question: question11,
+# content: "1 000",
+# correct: true,
+# position: 1,
+# })
+# p answer27
 
-answer28 = Answer.create!({
-question: question12,
-content: "10",
-correct: true,
-position: 2,
-})
-p answer28
+# answer28 = Answer.create!({
+# question: question12,
+# content: "10",
+# correct: true,
+# position: 2,
+# })
+# p answer28
 
 # # #step 4 drag-and-drop
 # # #answers_to_question1 to question5
