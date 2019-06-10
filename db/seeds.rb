@@ -26,6 +26,7 @@ coliving: 'true',
 country: 'France',
 avatar: 'photo.png',
 waterprint: '1000',
+admin: true
 })
 p user1
 
@@ -157,7 +158,7 @@ p question8
 
 question9 = Question.create!({
 game: game1,
-content: 'We eat … times more water than we drink.',
+content: 'We eat ... times more water than we drink.',
 kind:'fill-in-the-blancs',
 step: 9,
 played: false,
@@ -175,7 +176,7 @@ p question10
 
 # question11 = Question.create!({
 # game: game1,
-# content: 'Flying from Paris to London requires
+# content: 'A round- trip flight from Paris to London requires
 # as much water as ... average dishwasher loads.',
 # kind:'fill-in-the-blancs',
 # step: 11,
@@ -185,14 +186,14 @@ p question10
 
 # question12 = Question.create!({
 # game: game1,
-# content: 'Coffee requires ... times more water than tea.',
+# content: 'Coffee requires almost ... times more water than tea.',
 # kind:'fill-in-the-blancs',
 # step: 12,
 # played: false,
 # })
 # p question12
 
-# # step 4 drag-and-drop
+# step 4 drag-and-drop
 
 # question13 = Question.create!({
 # game: game1,
@@ -247,7 +248,7 @@ p question10
 # game: game1,
 # content: 'What is the question 5 (collect water drops) - Step 2?',
 # kind: 'water-drop-collection',
-# step: 5,
+# step: 18,
 # played: false,
 # })
 
@@ -508,7 +509,7 @@ content: "58",
 correct: true,
 position: 2,
 })
-# p answer26
+p answer26
 
 # answer27 = Answer.create!({
 # question: question11,

@@ -13,14 +13,12 @@
 }
 
 svg {
-  height:10px;
-
   width: 100px;
   height: 100px;
   transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-svg circle {
+#countdown-number svg circle {
   stroke-dasharray: 200px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
