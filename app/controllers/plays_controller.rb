@@ -32,5 +32,9 @@ class PlaysController < ApplicationController
     @plays = policy_scope(Play).where(game: @game)
     @result = current_user.plays.find_by(game: @game).score
   end
+
+  def game_boat
+    authorize current_user
+  end
 end
 

@@ -17,4 +17,7 @@ class UserPolicy < ApplicationPolicy
     return true
   end
 
+  def game_boat?
+    true
+  end
 end

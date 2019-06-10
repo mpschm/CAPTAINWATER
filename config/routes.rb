@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'pages#home'
+  get "game_boat", to: "plays#game_boat"
 
   devise_for :users
 
