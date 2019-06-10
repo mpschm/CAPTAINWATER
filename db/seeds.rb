@@ -26,6 +26,7 @@ coliving: 'true',
 country: 'France',
 avatar: 'photo.png',
 waterprint: '1000',
+admin: true
 })
 p user1
 
