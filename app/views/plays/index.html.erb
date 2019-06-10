@@ -1,11 +1,35 @@
-<div class="home-battle">
-  <div class="d-flex flex-column justify-content-between play-index-container">
-    <div class="cloud-container">
-      <%= image_tag "cloud.svg", class:"cloud-1" %>
-      <%= image_tag "cloud.svg", class:"cloud-2" %>
-      <%= image_tag "cloud.svg", class:"cloud-3" %>
+<div class="Players-ranking">
+
+  <div class="bubbles"
+    style="background-image: url(<%= image_path 'bubbles_image.png' %>)">
+
+    <div class="bubble1">
+      <div>
+        <h1>Winner!</h1>
+        <h2><%= @plays.first.user.pseudo %></h2>
+        <h1><%= @plays.first.score %> points</h1>
+      </div>
     </div>
-      <%= image_tag "water-drop.svg" %>
-    <%= image_tag "boat.svg" %>
+
+    <div class="bubble2">
+      <div>
+        <h1><%= @plays.first.user.pseudo %>
+        </br>
+        <%= @plays.first.score %></h1>
+      </div>
+    </div>
+
+    <div class="bubble3">
+      🏆
+    </div>
+
+    <div class="bubble4">
+      🏅
+    </div>
+
+    <%= link_to 'Water Battle Game!', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
+    <!-- todo .first? -->
+
   </div>
+
 </div>

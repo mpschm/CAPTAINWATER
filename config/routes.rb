@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :games, only: [:new, :create] do
     resources :plays, only: :index
     member do
-      patch :launch # /games/:id/launch
+      get :launch # /games/:id/launch
     end
   end
 

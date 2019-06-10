@@ -1,0 +1,115 @@
+.Players-ranking {
+    z-index: 1000;
+    width: 100%;
+}
+
+.bubbles {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-position: center;
+}
+
+.bubble1 {
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 51px;
+    left: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.bubble1 h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #00bcc2;
+  text-shadow: 1px 1px #979797;
+}
+
+.bubble1 h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #00bcc2;
+  text-shadow: 1px 1px #979797;
+  font-weight: bold;
+}
+
+.bubble2 {
+    background-color: transparent;
+    border: none;
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    position: absolute;
+    top: 232px;
+    left: 203px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.bubble2 h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #6C6B6B;
+  text-shadow: 1px 1px #979797;
+}
+
+.bubble3{
+    background-color: white;
+    border: none;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 1px 1px #979797;
+
+}
+
+.bubble4{
+    background-color: white;
+    border: none;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 352px;
+    left: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 1px 1px #979797;
+}
+
+.btn-battle-battle {
+    z-index: 1000;
+    background-color: white;
+
+}
