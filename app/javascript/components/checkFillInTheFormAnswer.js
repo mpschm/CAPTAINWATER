@@ -8,12 +8,15 @@ const checkFillInTheFormAnswer = (questionFillIn) => {
   const answerInput = document.getElementById('answer-fill-in')
   let userAnswer
 
-  answerInput.addEventListener('change', (e) => {
-    userAnswer = e.currentTarget.value;
-    if (userAnswer === goodAnswer.innerText) {
-      selectInput.value = goodAnswer.value
-    }
-  })
+  if (answerInput) {
+    answerInput.addEventListener('change', (e) => {
+      userAnswer = e.currentTarget.value;
+      if (userAnswer === goodAnswer.innerText) {
+        selectInput.value = goodAnswer.value
+      }
+    })
+
+  }
 }
 
 export { checkFillInTheFormAnswer };

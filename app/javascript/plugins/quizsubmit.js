@@ -1,16 +1,21 @@
-
-// document.querySelectorAll("label").forEach((choice) => {
-//   choice.addEventListener("click", (event) => {
-//     document.getElementById("submit-answer").click();
-//   });
-// });
-
 document.body.addEventListener('click', function (event) {
-if(event.target.classList.contains('form-check-input')) {
-  // function disabled() {
-  // document.querySelector("collection_radio_buttons").disabled = true;
-
-document.getElementById("new_user_answer").submit();
+  if(event.target.classList.contains('form-check-input')) {
+    let choices = document.querySelectorAll("label");
+    choices.forEach((choice) => {
+    let rightAnswer = document.getElementById("correct-answer").textContent;
+      if (choice.textContent == rightAnswer) {
+        choice.style.borderColor = "green";
+        choice.style.backgroundColor ="white";
+        choice.style.color = "green";
+      }
+      else {
+        choice.style.backgroundColor="transparent";
+        choice.style.color = "white";
+      }
+    });
+    setTimeout(function() {
+      document.getElementById("new_user_answer").submit();
+    }, 1000);
 }
 });
 

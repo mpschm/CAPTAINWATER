@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+
   def new
     @game = Game.new
     authorize @game
@@ -20,7 +21,16 @@ class GamesController < ApplicationController
   end
 
   def launch
-    authorize current_user
+    @game = Game.find(params[:id])
+    authorize @game
+    ActionCable.server.broadcast("game_#{@game.id}", {
+      game_launched: true
+    })
+    head :no_content
+    # @play = @game.plays.find_by(user: current_user)
+    # @questions = @game.questions
+    # @user_answer = UserAnswer.new
+    # render "plays/show"
   end
 
   private

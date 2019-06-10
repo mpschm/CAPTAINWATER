@@ -1,0 +1,95 @@
+<div class="<%= "d-none" if @play.user_answers.empty?  %>" id="quiz-container">
+  <div class="container-top" style='position: absolute;
+    top: 10px;left: 15px; width:375px; width: 90%; justify-content: space-between'>
+    <div class='d-flex align-items-center justify-content-between' style='width:35%'>
+      <div class="cards card-category" style="background-image:white;">
+        <div id ="scores"></div>
+        <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
+          Water footprint
+        </div>
+      </div>
+    </div>
+    <div class="card-category" style="background-image:white">
+       <div id="countdown" style='position: relative;'>
+          <div id="countdown-number"></div>
+          <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+            <svg>
+              <circle r="27" cx="30" cy="30"></circle>
+            </svg>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-category" style="background-image:white">
+      <div id ="scores"></div>
+      <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
+        Total score: <%= @play.score %>
+      </div>
+    </div>
+
+  </div>
+
+     <!-- </div> -->
+  <div class="question" style='position: absolute; top: 150px; padding: 17px; color: white'>
+
+    <% @questions.each do |question|  %>
+      <% if question.kind == 'multiple-choice'|| question.kind == 'true-false'%>
+        <p>Question</p>
+        <%= question.content %>
+        <%= simple_form_for [@play, @user_answer] do |f| %>
+          <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+          <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+        <% end %>
+      <% elsif question.kind == 'fill-in-the-blancs'%>
+        <%= simple_form_for [@play, @user_answer] do |f| %>
+          <p>Fill-in-the-blanks with one of the following answers: 1000, 500, 58, 10. </p>
+          <div class='question-fill-in-the-blanks'>
+            <%= question.content %>
+          </div>
+          <div style="visibility: hidden">
+            <%= f.association :answer, collection: @answers%>
+            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+          </div>
+            <%#= f.submit "Save", id: "submit-answer", class: 'd-none' %>
+        <% end %>
+      <% else %>
+        <p>Question to be determined</p>
+        <%= simple_form_for [@play, @user_answer] do |f| %>
+          <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+          <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+        <% end %>
+      <% end %>
+      <div id="correct-answer" class="d-none"><%= question.answers.find_by(correct: true).content %></div>
+    <% end %>
+  </div>
+
+
+  <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: -40px; left: 15px'>
+    <ul class="progressbar">
+      <% number = @play.game.current_step %>
+
+      <% @play.game.questions.each_with_index do |question, index| %>
+      <%= @user_answers %>
+      <% if index < number  - 1%>
+
+        <% if @play.user_answers[index].answer.present? %>
+          <% if  @play.user_answers[index].answer.correct? %>
+            <li class="active"><% question.step %></li>
+          <% else %>
+            <li class="wrong"><% question.step %></li>
+          <% end %>
+        <% else %>
+          <li class="wrong"><% question.step %></li>
+        <% end %>
+        <% elsif  index == number - 1 %>
+          <li class="pending"><% question.step %></li>
+        <% elsif %>
+          <li><% question.step %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+
+</div>
+
