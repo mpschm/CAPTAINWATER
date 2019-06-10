@@ -1,12 +1,8 @@
-.bottom-container{
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    margin-top: 20px;
-}
-
 .progressbar{
   counter-reset: step;
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
 }
 .progressbar li{
   float: left;
@@ -15,12 +11,21 @@
   text-align: center;
   list-style: none;
 }
+.progressbar li{
+  content: '';
+}
 .progressbar li:before{
   content:counter(step);
   counter-increment: step;
+
   // width: 30px;
   // height: 30px;
   // border: 2px solid #bebebe;
+
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+
   display: block;
   margin: 0 auto 10px auto;
   // border-radius: 50%;
@@ -38,6 +43,7 @@
   // margin-top: 20px;
 }
 .progressbar li:after{
+  display: none;
   content: '';
   position: absolute;
   width:100%;
@@ -48,6 +54,7 @@
   z-index: -1;
 }
 .progressbar li.active:before{
+
  border-color: #00aced;
  background: #00aced;
  color: white;
@@ -70,7 +77,11 @@ color: white;
 // animation: glowing 5000ms infinite;
 }
 .progressbar li:first-child:after{
- content: none;
+  display: none;
+  content: none;
+}
+.progressbar li #text {
+  display: none;
 }
 
 .progressbar li.wrong:before{
