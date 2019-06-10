@@ -32,20 +32,45 @@
 
     </div>
 
-
-
+<<<<<<< HEAD
+     </div>
   <div class="question" style='position: absolute; top: 150px; padding: 17px; color: white'>
-    <!-- <p>Question</p> -->
-    <!-- formulaire pour créer une instance de UserAnswer -->
-    <!-- ce formulaire liste une question et ses answers -->
-    <!-- NB: passer en params la step de la question présente pour choisir la  -->
-    <!-- question au redirect -->
-    <%= @question.content %>
-    <%= simple_form_for [@play, @user_answer] do |f| %>
-      <%= f.association :answer, collection: @answers, as: :radio_buttons, input_html: { class: 'sp-btn'}  %>
-      <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-    <!--   <%= f.submit "SAVE", id: "submit-answer", style: "color: black; background-color: white; border: 3px white; padding: 5px 15px; border-radius: 3px;" %> -->
-    <% end %>
+
+  <% @questions.each do |question|  %>
+        <% if question.kind == 'multiple-choice'|| question.kind == 'true-false'%>
+          <p>Question</p>
+          <%= @question.content %>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+<!--             <%= f.submit "Save", id: "submit-answer" %>
+ -->          <% end %>
+
+        <% elsif question.kind == 'fill-in-the-blancs'%>
+          <p>Fill-in-the-blanks with one of the following answers: 1000, 500, 58, 10. </p>
+          <div class='question-fill-in-the-blanks'>
+            <%= @question.content %>
+          </div>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <div style="visibility: hidden">
+              <%= f.association :answer, collection: @answers%>
+              <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+            </div>
+<!--             <%= f.submit "Save", id: "submit-answer" %>
+ -->          <% end %>
+
+        <% else %>
+          <p>Question to be determined</p>
+          <%= simple_form_for [@play, @user_answer] do |f| %>
+            <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+            <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+<!--             <%= f.submit "Save", id: "submit-answer" %>
+ -->          <% end %>
+
+        <% end %>
+
+      <% end %>
+
   </div>
 
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: -40px;'>
@@ -75,8 +100,3 @@
   </div>
 
 </div>
-
-
-
-
-
