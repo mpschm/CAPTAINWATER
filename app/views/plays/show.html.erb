@@ -24,6 +24,8 @@
     </div>
   </div>
 
+     </div>
+
   <div class="question" style='position: absolute; top: 150px; padding: 17px; color: white'>
     <!-- <p>Question</p> -->
     <!-- formulaire pour créer une instance de UserAnswer -->
@@ -34,18 +36,32 @@
     <%= simple_form_for [@play, @user_answer] do |f| %>
       <%= f.association :answer, collection: @answers, as: :radio_buttons %>
       <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
-      <%= f.submit "SAVE", id: "submit-answer", style: "color: black; background-color: white; border: 3px white; padding: 5px 15px; border-radius: 3px;" %>
+    <!--   <%= f.submit "SAVE", id: "submit-answer", style: "color: black; background-color: white; border: 3px white; padding: 5px 15px; border-radius: 3px;" %> -->
     <% end %>
+
   </div>
 
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: -40px;'>
     <ul class="progressbar">
       <% number = @play.game.current_step %>
+
       <% @play.game.questions.each_with_index do |question, index| %>
-        <% if index < number %>
-          <li class="active"><%= question.step %></li>
-        <% else %>
-          <li><%= question.step %></li>
+        <%= @user_answers %>
+        <% if index < number  - 1%>
+
+          <% if @play.user_answers[index].answer.present? %>
+            <% if  @play.user_answers[index].answer.correct? %>
+              <li class="active"><% question.step %></li>
+            <% else %>
+              <li class="wrong"><% question.step %></li>
+            <% end %>
+          <% else %>
+              <li class="wrong"><% question.step %></li>
+          <% end %>
+        <% elsif  index == number - 1 %>
+          <li class="pending"><% question.step %></li>
+        <% elsif %>
+          <li><% question.step %></li>
         <% end %>
       <% end %>
     </ul>
