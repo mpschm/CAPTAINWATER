@@ -72,7 +72,7 @@
       <%= @user_answers %>
       <% if index < number  - 1%>
 
-        <% if @play.user_answers[index].answer.present? %>
+        <% if @play.user_answers[index].present? %>
           <% if  @play.user_answers[index].answer.correct? %>
             <li class="active"><% question.step %></li>
           <% else %>
