@@ -17,7 +17,7 @@
     height: 200px;
     border-radius: 50%;
     position: absolute;
-    top: 39px;
+    top: 51px;
     left: 61px;
     display: flex;
     align-items: center;
@@ -35,6 +35,15 @@
   text-shadow: 1px 1px #979797;
 }
 
+.bubble1 h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #00bcc2;
+  text-shadow: 1px 1px #979797;
+  font-weight: bold;
+}
+
 .bubble2 {
     background-color: transparent;
     border: none;
@@ -42,7 +51,7 @@
     height: 121px;
     border-radius: 50%;
     position: absolute;
-    top: 214px;
+    top: 232px;
     left: 203px;
     display: flex;
     align-items: center;
@@ -53,10 +62,54 @@
 }
 
 .bubble2 h1 {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
   letter-spacing: .10em;
   color: #6C6B6B;
   text-shadow: 1px 1px #979797;
 }
 
+.bubble3{
+    background-color: white;
+    border: none;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 1px 1px #979797;
+
+}
+
+.bubble4{
+    background-color: white;
+    border: none;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    top: 352px;
+    left: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 1px 1px #979797;
+}
+
+.btn-battle-battle {
+    z-index: 1000;
+    background-color: white;
+
+}
