@@ -19,18 +19,28 @@
       </div>
     </div>
 
-    <div class="bubble3">
-      🏆
+    <div class="bubble3"
+    style="background-image: url(<%= image_path 'drop-b-happy.png' %>)">
     </div>
 
-    <div class="bubble4">
-      🏅
+    <div class="bubble4"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
     </div>
 
-    <%= link_to 'Water Battle Game!', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
+    <div class="bubble5"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
+    </div>
+
+    <div class="bubble6"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
+    </div>
+
+    <div class = "battle-button">
+    <%= link_to 'Water Battle', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
     <!-- todo .first? -->
 
-  </div>
+    </div>
 
+  </div>
 </div>
 
