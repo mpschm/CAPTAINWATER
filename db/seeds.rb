@@ -122,7 +122,7 @@ p question4
 
 question5 = Question.create!({
 game: game1,
-content: 'Arab spring linked to the drought in Russia ?',
+content: 'Is arab spring linked to the drought in Russia ?',
 kind: 'true-false',
 step: 5,
 played: false,
@@ -167,7 +167,7 @@ p question9
 
 question10 = Question.create!({
 game: game1,
-content: '… bathtubs of water used/person/per day to make the food we eat & the things we buy.',
+content: '... bathtubs of water used/person/per day to make the food we eat & the things we buy.',
 kind:'fill-in-the-blancs',
 step: 10,
 played: false,
@@ -264,7 +264,7 @@ p question10
 answer1 = Answer.create!({
 question: question1,
 content: "Your personal global water comsumption",
-correct: false,
+correct: true,
 position: 1,
 })
 p answer1
@@ -272,7 +272,7 @@ p answer1
 answer2 = Answer.create!({
 question: question1,
 content: "Your foot's size over the water",
-correct: true,
+correct: false,
 position: 2,
 })
 p answer2
@@ -308,7 +308,7 @@ p answer5
 
 answer6 = Answer.create!({
 question: question2,
-content: "500 litres?",
+content: "500 litres",
 correct: false,
 position: 2,
 })
