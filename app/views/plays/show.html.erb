@@ -1,13 +1,17 @@
-<div class="container">
+F<div class="container">
 
-  <div class="container-top" style='position: fixed;
-    top: 10px;left: 30px;'>
+  <div class="container-top" style='position: absolute;
+    top: 10px;left: 15px; width:375px; width: 90%; justify-content: space-between'>
 
-      <div class='d-flex align-items-center'>
+      <div class='d-flex align-items-center justify-content-between' style='width:35%'>
 
 
-        <div class="cards card-category" style="background-image:white">
+        <div class="cards card-category" style="background-image:white;">
+          <div id ="scores"></div>
+          <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
           Water footprint
+          </div>
+          </div>
        </div>
 
         <div class="card-category" style="background-image:white">
@@ -22,14 +26,16 @@
          </div>
 
         <div class="card-category" style="background-image:white">
-          Total score: <%= @play.score %>
+          <div id ="scores"></div>
+          <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
+            Total score: <%= @play.score %>
         </div>
 
       </div>
 
      </div>
 
-  <div class="question" style='position: absolute; top: 200px; padding: 17px'>
+  <div class="question">
     <p>Question</p>
           <!-- formulaire pour créer une instance de UserAnswer -->
           <!-- ce formulaire liste une question et ses answers -->
@@ -37,7 +43,7 @@
           <!-- question au redirect -->
       <%= @question.content %>
       <%= simple_form_for [@play, @user_answer] do |f| %>
-        <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+        <%= f.association :answer, collection: @answers, as: :radio_buttons, input_html: { class: 'sp-btn'} %>
         <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
         <%= f.submit "Save", id: "submit-answer" %>
       <% end %>

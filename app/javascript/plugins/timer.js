@@ -9,6 +9,7 @@ setInterval(function() {
       countdown = countdown -1
       // countdown = --countdown <= 0 ? 10 : countdown;
     countdownNumberEl.textContent = countdown;
+    console.log(countdownNumberEl.textContent)
     if (countdown === 0) {
       submit.click()
     }
