@@ -7,7 +7,8 @@
 
 document.body.addEventListener('click', function (event) {
 if(event.target.classList.contains('form-check-input')) {
-  // document.querySelectorAll("label").setAttribute("disabled");
+  // function disabled() {
+  // document.querySelector("collection_radio_buttons").disabled = true;
 
 document.getElementById("new_user_answer").submit();
 }
