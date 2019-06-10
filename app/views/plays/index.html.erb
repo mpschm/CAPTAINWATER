@@ -8,14 +8,19 @@
       class="bubble1"
     >
       <div>
-        <%= @play.first.user.pseudo %>
+        <h1>Winner!</h1>
+        <h1><strong><%= @play.first.user.pseudo %></strong></h1>
+        <h1><%= @play.first.score %> points</h1>
+
       </div>
 
     </div>
 
-    <div class="bubble2">
-      <%= @play.first.score %>
-    </div>
+      <div class="bubble2">
+        <h1><%= @play.first.user.pseudo %>
+        </br>
+        <%= @play.first.score %></h1>
+      </div>
 
   </div>
 

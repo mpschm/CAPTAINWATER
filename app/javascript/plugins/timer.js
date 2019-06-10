@@ -1,6 +1,6 @@
 const timer = () => {
   const countdownNumberEl = document.getElementById('countdown-number');
-  var countdown = 100000;
+  var countdown = 10;
   var submit = document.getElementById("submit-answer");
 
   countdownNumberEl.textContent = countdown;

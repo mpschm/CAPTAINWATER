@@ -38,6 +38,7 @@
             <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
             <%= f.submit "Save", id: "submit-answer" %>
           <% end %>
+
         <% elsif question.kind == 'fill-in-the-blancs'%>
           <p>Fill-in-the-blanks with one of the following answers: 1000, 500, 58, 10. </p>
           <div class='question-fill-in-the-blanks'>
@@ -50,6 +51,7 @@
             </div>
             <%= f.submit "Save", id: "submit-answer" %>
           <% end %>
+
         <% else %>
           <p>Question to be determined</p>
           <%= simple_form_for [@play, @user_answer] do |f| %>
@@ -57,21 +59,12 @@
             <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
             <%= f.submit "Save", id: "submit-answer" %>
           <% end %>
+
         <% end %>
+
       <% end %>
 
   </div>
-
-
-
-
-<!-- trial-fill-in-the-blanks
-
-<p>We eat <input times more water than we drink.</p>
-
- -->
-
-
 
   <div class="bottom-container d-flex align-items-left" style='position: absolute; bottom: 0;'>
     <ul class="progressbar">

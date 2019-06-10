@@ -11,33 +11,52 @@
 }
 
 .bubble1 {
-  background-color: black;
-  border: 1px solid #979797;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  top: 39px;
-  left: 61px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 39px;
+    left: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.bubble1 h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #00bcc2;
+  text-shadow: 1px 1px #979797;
 }
 
 .bubble2 {
-  background-color: black;
-  border: 1px solid #979797;
-  width: 171px;
-  height: 171px;
-  border-radius: 50%;
-  position: absolute;
-  top: 187px;
-  left: 175px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+    background-color: transparent;
+    border: none;
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    position: absolute;
+    top: 214px;
+    left: 203px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
 }
 
+.bubble2 h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  color: #6C6B6B;
+  text-shadow: 1px 1px #979797;
+}
 
