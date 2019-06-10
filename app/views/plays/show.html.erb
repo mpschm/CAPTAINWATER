@@ -1,12 +1,23 @@
 <div class="container">
 
   <div>
-
+    <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Please wait for more players...</h3>
   </div>
 
+  <div style='position: relative;'>
+    <h5>list of players:</h5>
+    <ul class='list-players', style='position: absolute'>
 
+      <li><%= @play.user.email %></li>
+    </ul>
+  </div>
 
 </div>
+
+
+<% if @play.user.admin? == true %>
+<a href="/plays/<%=@play.id%>" class="btn-launch", style='position: absolute'>Launch the game</a>
+<% end %>
 
 
 
