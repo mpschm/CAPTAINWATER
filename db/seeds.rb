@@ -250,7 +250,7 @@ p question10
 # game: game1,
 # content: 'What is the question 5 (collect water drops) - Step 2?',
 # kind: 'water-drop-collection',
-# step: 5,
+# step: 18,
 # played: false,
 # })
 

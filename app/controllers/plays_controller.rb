@@ -12,7 +12,7 @@ class PlaysController < ApplicationController
 
     @answers = @question.answers
     @user_answer = UserAnswer.new
-    @next_step = questions.count > 1 ? @game.current_step : @game.current_step + 1
+    @next_step = @questions.count > 1 ? @game.current_step : @game.current_step + 1
   end
 
   def new
@@ -29,7 +29,7 @@ class PlaysController < ApplicationController
 
   def index
     @game = Game.find(params[:game_id])
-    @play = policy_scope(Play).where(game: @game)
+    @plays = policy_scope(Play).where(game: @game)
     @result = current_user.plays.find_by(game: @game).score
   end
 end
