@@ -5,7 +5,9 @@
       <div class="cards card-category" style="background-image:white;">
         <div id ="scores"></div>
         <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
-          Water footprint
+          <%= image_tag "footprint.png", class:"footprint"%>
+            <p>3,496 L/day</p>
+          </%>
         </div>
       </div>
     </div>
@@ -23,7 +25,7 @@
     <div class="card-category" style="background-image:white">
       <div id ="scores"></div>
       <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
-        Total score: <%= @play.score %>
+        <%= image_tag "score.svg", class:"score" %> <%= @play.score %>
       </div>
     </div>
 
