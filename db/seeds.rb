@@ -84,7 +84,7 @@ p play1
 
 question1 = Question.create!({
 game: game1,
-content: 'What is your "water footprint" ?',
+content: 'What is your "water footprint"?',
 kind: 'multiple-choice',
 step: 1,
 played: false,
@@ -122,7 +122,7 @@ p question4
 
 question5 = Question.create!({
 game: game1,
-content: 'Is arab spring linked to the drought in Russia ?',
+content: 'Is arab spring linked to the drought in Russia?',
 kind: 'true-false',
 step: 5,
 played: false,
@@ -131,7 +131,7 @@ p question5
 
 question6 = Question.create!({
 game: game1,
-content: 'How we consume impact water resources ?',
+content: 'How do we consume impact water resources?',
 kind: 'true-false',
 step: 6,
 played: false,
@@ -140,7 +140,9 @@ p question6
 
 question7 = Question.create!({
 game: game1,
-content: '80% of diseases in "developing" countries are associated with water ?',
+
+content: '80% of diseases in "developing" countries are associated with water?',
+
 kind: 'true-false',
 step: 7,
 played: false,
@@ -261,7 +263,8 @@ p question10
 
 #step 1 multiple-choice
 #answers_to_question1
-#'How many people currently live without sufficient access to freshwater for at least one month of the year?',
+#content: 'What is your "water footprint"?'
+
 
 answer1 = Answer.create!({
 question: question1,
@@ -287,22 +290,15 @@ position: 3,
 })
 p answer3
 
-answer4 = Answer.create!({
-question: question1,
-content: "All of us",
-correct: false,
-position: 4,
-})
-p answer4
 
+# step 1 multiple-choice
+# answers_to_question2
+# content: 'How much water do you EAT per day?'
 
-# #step 1 multiple-choice
-# #answers_to_question2
-# #'What does the Syrian war and the Arab Spring have in common?',
 
 answer5 = Answer.create!({
 question: question2,
-content: "3.496 litres",
+content: "3 496 litres",
 correct: true,
 position: 1,
 })
@@ -318,7 +314,7 @@ p answer6
 
 answer7 = Answer.create!({
 question: question2,
-content: "2000 litres",
+content: "2 000 litres",
 correct: false,
 position: 3,
 })
@@ -333,9 +329,9 @@ position: 4,
 p answer8
 
 
-# #step 1 multiple-choice
-# #answers_to_question3
-# #'What happened on the 28th of July 2010?',
+# step 1 multiple-choice
+# answers_to_question3
+# content: 'What happened on the 28th of July 2010?'
 
 answer9 = Answer.create!({
 question: question3,
@@ -370,11 +366,10 @@ position: 4,
 p answer12
 
 
-# #step 1 multiple-choice
-# #answers_to_question4
-# #'Water stress = inadequacy between water use and water resources.
-# # It starts when the water in a country < 4 600 litres/day per person.
-# # What is the closest region to France that is in very high water stress?'
+# step 1 multiple-choice
+# answers_to_question4
+# content: 'The closest region to France that is in very high water stress?'
+
 
 answer13 = Answer.create!({
 question: question4,
@@ -409,9 +404,8 @@ position: 4,
 p answer16
 
 
-# #step 2 true-false
-# #answers_to_question1
-# #'5,000 children die due to preventable water and sanitation-related diseases.'
+#step 2 true-false
+#answers_to_question5
 
 answer17 = Answer.create!({
 question: question5,
@@ -430,10 +424,9 @@ position: 2,
 p answer18
 
 
-# #step 2 true-false
-# #answers_to_question2
-# #'If you reduce your daily water consumption by 5% or 200L,
-# #you could automatically reduce pollution on average by x%.'
+#step 2 true-false
+#answers_to_question6
+
 
 answer19 = Answer.create!({
 question: question6,
@@ -452,9 +445,9 @@ position: 2,
 p answer20
 
 
-# #step 2 true-false
-# #answers_to_question3
-# #'Agriculture consumes 70% of all freshwater globally.'
+#step 2 true-false
+#answers_to_question7
+
 
 answer21 = Answer.create!({
 question: question7,
@@ -472,9 +465,8 @@ position: 2,
 })
 p answer22
 
-# #step 2 true-false
-# #answers_to_question4
-# #'279 conflicts and wars have occurred in the world since 2010'
+#step 2 true-false
+#answers_to_question8
 
 answer23 = Answer.create!({
 question: question8,
@@ -493,9 +485,8 @@ position: 2,
 p answer24
 
 
-# #step 3 fill-in-the-blancs
-# #answers_to_question1 to question4
-# #'279 conflicts and wars have occurred in the world since 2010'
+#step 3 fill-in-the-blancs
+#answers_to_question9 to question12
 
 answer25 = Answer.create!({
 question: question9,
@@ -529,8 +520,8 @@ p answer26
 # })
 # p answer28
 
-# # #step 4 drag-and-drop
-# # #answers_to_question1 to question5
+# step 4 drag-and-drop
+# answers_to_question13 to question17
 
 # answer29 = Answer.create!({
 # question: question13,
