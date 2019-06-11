@@ -148,20 +148,24 @@
 .battle-button {
     z-index: 1000;
     margin-bottom: 70px;
-    height:30px;
-    width:270px;
+    height:40px;
+    width:290px;
     background: #428BCA;
     color: white;
     text-align: center;
     box-shadow: 0 5px 15px 0 rgba(255,255,255,0.20);
-    border-radius: 34.5px;
+    // border-radius: 34.5px;
     font-family: "Roboto", sans-serif;
     font-size: 21px;
     letter-spacing: 0;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .btn-battle {
-   color: white;
+  color: white;
 }
 
 .btn-battle:hover {

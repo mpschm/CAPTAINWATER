@@ -11,11 +11,14 @@
       </div>
     </div>
 
+<!-- user_id: current_user.id
+ -->
+
     <div class="bubble2">
       <div>
-        <h1><%= @plays.first.user.pseudo %>
+        <h1><%= @plays.second.user.pseudo %>
         </br>
-        <%= @plays.first.score %></h1>
+        <%= @plays.second.score %></h1>
       </div>
     </div>
 
@@ -37,7 +40,7 @@
 
     <div class = "battle-button">
     <%= link_to 'Water Battle', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
-    <!-- todo .first? -->
+    <!-- todo .first??? -->
 
     </div>
 
