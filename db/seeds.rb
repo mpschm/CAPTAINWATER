@@ -130,14 +130,14 @@ played: false,
 })
 p question5
 
-question6 = Question.create!({
-game: game1,
-content: 'The more water you consume, especially indirectly, the more you pollute.',
-kind: 'true-false',
-step: 6,
-played: false,
-})
-p question6
+# question6 = Question.create!({
+# game: game1,
+# content: 'The more water you consume, especially indirectly, the more you pollute.',
+# kind: 'true-false',
+# step: 6,
+# played: false,
+# })
+# p question6
 
 question7 = Question.create!({
 game: game1,
@@ -178,14 +178,14 @@ played: false,
 })
 p question10
 
-question11 = Question.create!({
-game: game1,
-content: 'The point is not JUST about shortening your showers: ... bathtubs of water are required every day to make all the food we eat & all the things we buy!',
-kind:'fill-in-the-blancs',
-step: 11,
-played: false,
-})
-p question11
+# question11 = Question.create!({
+# game: game1,
+# content: 'The point is not JUST about shortening your showers: ... bathtubs of water are required every day to make all the food we eat & all the things we buy!',
+# kind:'fill-in-the-blancs',
+# step: 11,
+# played: false,
+# })
+# p question11
 
 question12 = Question.create!({
 game: game1,
@@ -451,41 +451,41 @@ p answer18
 #answers_to_question7
 #content: A T-shirt ==> 3,900 L of water A pair of leather boots ==> 14,503 L Think twice before you buy another one!',
 
-# answer21 = Answer.create!({
-# question: question7,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer21
+answer21 = Answer.create!({
+question: question7,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer21
 
-# answer22 = Answer.create!({
-# question: question7,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer22
+answer22 = Answer.create!({
+question: question7,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer22
 
 #step 2 true-false
 #answers_to_question8
 #content: Remember, your smartphone required 12,760 L of water!
 
-# answer23 = Answer.create!({
-# question: question8,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer23
+answer23 = Answer.create!({
+question: question8,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer23
 
-# answer24 = Answer.create!({
-# question: question8,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer24
+answer24 = Answer.create!({
+question: question8,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer24
 
 
 #step 3 fill-in-the-blancs
@@ -507,16 +507,16 @@ position: 2,
 })
 p answer26
 
-answer27 = Answer.create!({
-question: question10,
-content: "58",
-correct: true,
-position: 3,
-})
-p answer27
+# answer27 = Answer.create!({
+# question: question11,
+# content: "58",
+# correct: true,
+# position: 3,
+# })
+# p answer27
 
 answer28 = Answer.create!({
-question: question10,
+question: question12,
 content: "1,000",
 correct: true,
 position: 4,
