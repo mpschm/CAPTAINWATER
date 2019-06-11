@@ -10,9 +10,8 @@
 
       <% @game.plays.each do |play| %>
         <% if play.user_answers.size == 10 %>
-          <div class="list-scores d-flex">
-            <li><%= play.user.email %></li>
-            <%= play.score %>
+          <div class="list-scores">
+            <li><%= play.user.email %> - <%= play.score %></li>
           </div>
         <% end  %>
       <% end  %>
@@ -40,9 +39,9 @@
             let ranking = document.getElementById('players-ranking');
             ranking.classList.remove('d-none');
           }
-          if (data.new_finisher && date.new_score) {
+          if (data.new_finisher) {
             let scores = document.querySelector(".list-scores");
-            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_finisher + "</li>" + "<p>" + data.new_score + "</p>");
+            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_finisher + " - "+ data.new_score + "</li>");
           }
         }
       }
