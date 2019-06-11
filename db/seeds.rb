@@ -130,14 +130,14 @@ played: false,
 })
 p question5
 
-# question6 = Question.create!({
-# game: game1,
-# content: 'The more water you consume, especially indirectly, the more you pollute.',
-# kind: 'true-false',
-# step: 6,
-# played: false,
-# })
-# p question6
+question6 = Question.create!({
+game: game1,
+content: 'The more water you consume, especially indirectly, the more you pollute.',
+kind: 'true-false',
+step: 6,
+played: false,
+})
+p question6
 
 question7 = Question.create!({
 game: game1,
@@ -187,14 +187,14 @@ p question10
 # })
 # p question11
 
-question12 = Question.create!({
-game: game1,
-content: 'A round-trip flight from Paris to London requires as much water as ... average dishwasher loads. That is because of oil so take the train!',
-kind:'fill-in-the-blancs',
-step: 12,
-played: false,
-})
-p question12
+# question12 = Question.create!({
+# game: game1,
+# content: 'A round-trip flight from Paris to London requires as much water as ... average dishwasher loads. That is because of oil so take the train!',
+# kind:'fill-in-the-blancs',
+# step: 12,
+# played: false,
+# })
+# p question12
 
 # step 4 drag-and-drop
 
@@ -430,21 +430,21 @@ p answer18
 # content: The more water you consume, especially indirectly, the more you pollute.
 
 
-# answer19 = Answer.create!({
-# question: question6,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer19
+answer19 = Answer.create!({
+question: question6,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer19
 
-# answer20 = Answer.create!({
-# question: question6,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer20
+answer20 = Answer.create!({
+question: question6,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer20
 
 
 #step 2 true-false
@@ -515,13 +515,13 @@ p answer26
 # })
 # p answer27
 
-answer28 = Answer.create!({
-question: question12,
-content: "1,000",
-correct: true,
-position: 4,
-})
-p answer28
+# answer28 = Answer.create!({
+# question: question12,
+# content: "1,000",
+# correct: true,
+# position: 4,
+# })
+# p answer28
 
 
 # step 4 drag-and-drop

@@ -40,7 +40,7 @@
           }
           if (data.new_player) {
             let ul = document.querySelector(".list-players");
-            ul.insertAdjacentHTML("beforeend", "<li>" + data.new_player + "</li>");
+            ul.insertAdjacentHTML("beforeend", "<li class='each-player'>" + data.new_player + "</li>");
             let numberPlayers = document.getElementById("number-players");
             numberPlayers.innerHTML = ul.querySelectorAll("li").length + " players";
           }
