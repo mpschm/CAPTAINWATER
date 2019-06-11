@@ -39,7 +39,7 @@ class GamesController < ApplicationController
     ActionCable.server.broadcast("game_#{@game.id}", {
       game_finished: true
     })
-    head no_content
+    head :no_content
   end
 
   private

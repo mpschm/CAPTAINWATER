@@ -10,8 +10,7 @@
     <ul class='list-scores', style='position: relative'>
 
       <% @game.plays.each do |play| %>
-        <% if play.finished %>
-
+        <% if play.user_answers.size == 10 %>
           <div class="d-flex">
             <li><%= play.user.email %></li>
             <%= play.score %>
@@ -22,9 +21,8 @@
 
   </div>
 
-
   <% if current_user.admin? %>
-    <%= link_to 'Stop the game', plays_path, class: "btn-launch" %>
+    <%= link_to 'Stop the game', stop_game_path(@game), class: "btn-launch" %>
   <% end %>
 
 </div>
@@ -39,14 +37,14 @@
         received: (data) => {
           console.log(data);
           if (data.game_finished === true) {
-            let quizContainer = document.getElementById('quiz-container');
-            quizContainer.classList.add('d-none');
             let waitingRoom2 = document.getElementById('waitingroom2');
-            waitingRoom2.classList.remove('d-none');
+            waitingRoom2.classList.add('d-none');
+            let ranking = document.getElementById('players-ranking');
+            ranking.classList.remove('d-none');
           }
-          if (data.new_score) {
+          if (data.new_score && data.new_finisher) {
             let scores = document.querySelector(".list-scores");
-            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_score + "</li>");
+            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_finisher + "</li>" + "<p>" + data.new_score + "</p>" );
           }
         }
       }

@@ -40,15 +40,16 @@ class PlaysController < ApplicationController
     authorize current_user
   end
 
-  def finished
-    game = Game.find_by(name: params[:game][:name])
-    @play = Play.where(user_id: current_user.id, game_id: game.id).first
+  def finished?
+    @play = Play.find(params[:id])
+    # if @play.user_answers.size == 10
+    #   return true
+    # end
     authorize @play
     ActionCable.server.broadcast("game_#{game.id}", {
+      new_finisher: @play.user.email,
       new_score: @play.score
-      play_finished: true
     })
-    redirect_to play_path(@play)
   end
 end
 
