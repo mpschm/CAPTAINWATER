@@ -24,6 +24,9 @@ class PlaysController < ApplicationController
     game = Game.find_by(name: params[:game][:name])
     @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
     authorize @play
+    ActionCable.server.broadcast("game_#{game.id}", {
+      new_player: @play.user.email
+    })
     redirect_to play_path(@play)
   end
 
