@@ -1,0 +1,27 @@
+<div class="d-none" id="waitingroom2">
+
+  <div>
+    <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Score...</h3>
+
+  </div>
+
+  <div style='position: relative;'>
+    <h5>list of players:</h5>
+    <ul class='list-scores', style='position: relative'>
+
+      <% @game.plays.each do |play| %>
+        <div class="d-flex">
+          <li><%= play.user.email %></li>
+          <%= play.score %>
+        </div>
+      <% end  %>
+    </ul>
+
+  </div>
+
+
+  <% if current_user.admin? %>
+    <%= link_to 'Stop the game', play_path(@play), class: "btn-launch" %>
+  <% end %>
+
+</div>

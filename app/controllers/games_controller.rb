@@ -33,6 +33,15 @@ class GamesController < ApplicationController
     # render "plays/show"
   end
 
+  def stop
+    @game = Game.find(params[:id])
+    authorize @game
+    ActionCable.server.broadcast("game_#{@game.id}", {
+      game_finished: true
+    })
+    head no_content
+  end
+
   private
 
   def game_params

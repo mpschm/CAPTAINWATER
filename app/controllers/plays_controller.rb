@@ -7,8 +7,8 @@ class PlaysController < ApplicationController
     @questions = @game.questions.where(step: @game.current_step, played: false)
     @question = @questions.first
 
-    @question = nil if @game.current_step == 13 # To be removed next week if other question kind implemented
-    return redirect_to game_plays_path(@play.game) if @question.nil?
+    @question = nil if @game.current_step == 11 # To be removed next week if other question kind implemented
+    return redirect_to game_play_path(@play.game) if @question.nil?
 
     @answers = @question.answers
     @user_answer = UserAnswer.new
@@ -38,6 +38,16 @@ class PlaysController < ApplicationController
 
   def game_boat
     authorize current_user
+  end
+
+  def finished
+    game = Game.find_by(name: params[:game][:name])
+    @play = Play.where(user_id: current_user.id, game_id: game.id).first
+    authorize @play
+    ActionCable.server.broadcast("game_#{game.id}", {
+      new_score: @play.score
+    })
+    redirect_to play_path(@play)
   end
 end
 
