@@ -32,7 +32,7 @@ class PlaysController < ApplicationController
 
   def index
     @game = Game.find(params[:game_id])
-    @plays = policy_scope(Play).where(game: @game)
+    @plays = policy_scope(Play).where(game: @game).order(score: :desc)
     @result = current_user.plays.find_by(game: @game).score
 
     @plays.each do |play|
@@ -59,4 +59,3 @@ class PlaysController < ApplicationController
     })
   end
 end
-
