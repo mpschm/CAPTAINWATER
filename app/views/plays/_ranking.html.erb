@@ -1,27 +1,45 @@
-<div class="d-none" id="waitingroom2">
+<div class="d-none" id="Players-ranking">
 
-  <div>
-    <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Score...</h3>
+  <div class="bubbles"
+    style="background-image: url(<%= image_path 'bubbles_image.png' %>)">
+
+    <div class="bubble1">
+      <div>
+        <h1>Winner!</h1>
+        <h2><%= @plays.first.user.pseudo %></h2>
+        <h1><%= @plays.first.score %> points</h1>
+      </div>
+    </div>
+
+    <div class="bubble2">
+      <div>
+        <h1><%= @plays.first.user.pseudo %>
+        </br>
+        <%= @plays.first.score %></h1>
+      </div>
+    </div>
+
+    <div class="bubble3"
+    style="background-image: url(<%= image_path 'drop-b-happy.png' %>)">
+    </div>
+
+    <div class="bubble4"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
+    </div>
+
+    <div class="bubble5"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
+    </div>
+
+    <div class="bubble6"
+    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
+    </div>
+
+    <div class = "battle-button">
+    <%= link_to 'Water Battle', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
+    <!-- todo .first? -->
+
+    </div>
 
   </div>
-
-  <div style='position: relative;'>
-    <h5>list of players:</h5>
-    <ul class='list-scores', style='position: relative'>
-
-      <% @game.plays.each do |play| %>
-        <div class="d-flex">
-          <li><%= play.user.email %></li>
-          <%= play.score %>
-        </div>
-      <% end  %>
-    </ul>
-
-  </div>
-
-
-  <% if current_user.admin? %>
-    <%= link_to 'Stop the game', play_path(@play), class: "btn-launch" %>
-  <% end %>
-
 </div>
