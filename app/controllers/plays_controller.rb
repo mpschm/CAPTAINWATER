@@ -24,6 +24,9 @@ class PlaysController < ApplicationController
     game = Game.find_by(name: params[:game][:name])
     @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
     authorize @play
+    ActionCable.server.broadcast("game_#{game.id}", {
+      new_player: @play.user.email
+    })
     redirect_to play_path(@play)
   end
 
@@ -31,9 +34,28 @@ class PlaysController < ApplicationController
     @game = Game.find(params[:game_id])
     @plays = policy_scope(Play).where(game: @game).order(score: :desc)
     @result = current_user.plays.find_by(game: @game).score
+
+    @plays.each do |play|
+      ActionCable.server.broadcast("game_#{@game.id}", {
+        new_finisher: play.user.email,
+        new_score: play.score
+      })
+    end
   end
 
   def game_boat
     authorize current_user
+  end
+
+  def finished?
+    @play = Play.find(params[:id])
+    # if @play.user_answers.size == 10
+    #   return true
+    # end
+    authorize @play
+    ActionCable.server.broadcast("game_#{game.id}", {
+      new_finisher: @play.user.email,
+      new_score: @play.score
+    })
   end
 end

@@ -14,7 +14,8 @@
         <li><%= play.user.email %></li>
       <% end  %>
     </ul>
-    <p><%= @game.plays.size %> players</p>
+
+    <p id="number-players"><%= @game.plays.size %> players</p>
   </div>
 
 
@@ -34,12 +35,18 @@
         received: (data) => {
           console.log(data);
           if (data.game_launched === true) {
-            console.log("hello");
             let quizContainer = document.getElementById('quiz-container');
             quizContainer.classList.remove('d-none');
             let waitingRoom = document.getElementById('waitingroom');
             waitingRoom.classList.add('d-none');
           }
+          if (data.new_player) {
+            let ul = document.querySelector(".list-players");
+            ul.insertAdjacentHTML("beforeend", "<li>" + data.new_player + "</li>");
+            let numberPlayers = document.getElementById("number-players");
+            numberPlayers.innerHTML = ul.querySelectorAll("li").length + " players";
+          }
+
         }
       }
     )

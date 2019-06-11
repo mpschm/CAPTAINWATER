@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :plays, only: :index
     member do
       get :launch # /games/:id/launch
+      get :stop
     end
   end
 
