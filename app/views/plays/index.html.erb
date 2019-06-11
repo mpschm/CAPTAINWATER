@@ -6,7 +6,7 @@
     <div class="bubble1">
       <div>
         <h1>Winner!</h1>
-        <h2><%= @plays.first.user.pseudo %></h2>
+        <h2><%= @plays.first.user.email %></h2>
         <h1><%= @plays.first.score %> points</h1>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
     <div class="bubble2">
       <div>
-        <h1><%= @plays.second.user.pseudo %>
+        <h1><%= @plays.second.user.email %>
         </br>
         <%= @plays.second.score %></h1>
       </div>
