@@ -12,4 +12,8 @@ class GamePolicy < ApplicationPolicy
   def launch?
     record.user == user
   end
+
+  def stop?
+    record.user == user
+  end
 end

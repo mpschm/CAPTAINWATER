@@ -140,7 +140,9 @@ p question6
 
 question7 = Question.create!({
 game: game1,
+
 content: '80% of diseases in "developing" countries are associated with water?',
+
 kind: 'true-false',
 step: 7,
 played: false,
