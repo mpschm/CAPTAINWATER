@@ -1,19 +1,7 @@
 <div class="blue-sky">
-
-  <button class="btn-game-boat" id="submit-answer-boat-game"><%= link_to "hello", game_plays_path(@game) %></button>
   <div class="score">
-    <p class="score-text"><%= @play.score %></p>
+    <p class="score-text">0</p>
    </div>
-
-   <div id="countdown-boat-game" style='position: static;'>
-      <div id="countdown-boat-game-number"></div>
-      <div style='position:absolute; top: -20px; right: 20px; z-index: 100'>
-        <svg>
-          <circle r="27" cx="30" cy="30"></circle>
-        </svg>
-      </div>
-    </div>
-
 </div>
 <div class="home-battle">
   <div class="d-flex flex-column justify-content-between play-index-container">
