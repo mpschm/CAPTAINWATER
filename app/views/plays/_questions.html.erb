@@ -41,6 +41,7 @@
         <%= simple_form_for [@play, @user_answer] do |f| %>
           <%= f.association :answer, collection: @answers, as: :radio_buttons %>
           <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+          <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
       <% elsif question.kind == 'fill-in-the-blancs'%>
         <%= simple_form_for [@play, @user_answer] do |f| %>
@@ -59,6 +60,7 @@
         <%= simple_form_for [@play, @user_answer] do |f| %>
           <%= f.association :answer, collection: @answers, as: :radio_buttons %>
           <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
+            <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
       <% end %>
       <div id="correct-answer" class="d-none"><%= question.answers.find_by(correct: true).content %></div>

@@ -15,6 +15,6 @@ if (questionFillIn) {
   checkFillInTheFormAnswer(questionFillIn);
 }
 
-if (document.getElementById('countdown-game-boat-number')) {
-  timerGame();
-}
+// if (document.getElementById('countdown-game-boat-number')) {
+//   timerGame();
+// }
