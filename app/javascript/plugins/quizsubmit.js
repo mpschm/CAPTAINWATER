@@ -1,8 +1,10 @@
 document.body.addEventListener('click', function (event) {
   if(event.target.classList.contains('form-check-input')) {
-    let choices = document.querySelectorAll("label");
-    choices.forEach((choice) => {
-    let rightAnswer = document.getElementById("correct-answer").textContent;
+
+    setTimeout(function() {
+      let choices = document.querySelectorAll("label");
+      choices.forEach((choice) => {
+      let rightAnswer = document.getElementById("correct-answer").textContent;
       if (choice.textContent == rightAnswer) {
         choice.style.borderColor = "green";
         choice.style.backgroundColor ="white";
@@ -12,11 +14,14 @@ document.body.addEventListener('click', function (event) {
         choice.style.backgroundColor="transparent";
         choice.style.color = "white";
       }
-    });
-    setTimeout(function() {
-      document.getElementById("new_user_answer").submit();
+      });
+      setTimeout(function() {
+        document.getElementById("new_user_answer").submit();
+      }, 1000);
     }, 1000);
 }
+
+
 });
 
 // Disable les buttons

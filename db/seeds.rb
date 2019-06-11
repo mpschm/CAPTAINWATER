@@ -160,8 +160,6 @@ played: false,
 })
 p question8
 
-# step 3 fill-in-the-blancs
-
 question9 = Question.create!({
 game: game1,
 content: 'A cup of coffee is made of ... glasses of water. Switch to tea which consumes 10 times less :) ',
@@ -374,7 +372,6 @@ p answer12
 # answers_to_question4
 # content: 'How much water do you EAT per day?'
 
-
 answer13 = Answer.create!({
 question: question4,
 content: "3,496 L/day",
@@ -408,7 +405,6 @@ position: 4,
 })
 p answer16
 
-
 #step 2 true-false
 #answers_to_question5
 # content: Europe is NOT CONCERNED with water crisis, not even Southern Spain which is approaching scarcity.
@@ -429,68 +425,67 @@ position: 2,
 })
 p answer18
 
-
 #step 2 true-false
 #answers_to_question6
 # content: The more water you consume, especially indirectly, the more you pollute.
 
 
-answer19 = Answer.create!({
-question: question6,
-content: "True",
-correct: true,
-position: 1,
-})
-p answer19
+# answer19 = Answer.create!({
+# question: question6,
+# content: "True",
+# correct: true,
+# position: 1,
+# })
+# p answer19
 
-answer20 = Answer.create!({
-question: question6,
-content: "False",
-correct: false,
-position: 2,
-})
-p answer20
+# answer20 = Answer.create!({
+# question: question6,
+# content: "False",
+# correct: false,
+# position: 2,
+# })
+# p answer20
 
 
 #step 2 true-false
 #answers_to_question7
 #content: A T-shirt ==> 3,900 L of water A pair of leather boots ==> 14,503 L Think twice before you buy another one!',
 
-answer21 = Answer.create!({
-question: question7,
-content: "True",
-correct: true,
-position: 1,
-})
-p answer21
+# answer21 = Answer.create!({
+# question: question7,
+# content: "True",
+# correct: true,
+# position: 1,
+# })
+# p answer21
 
-answer22 = Answer.create!({
-question: question7,
-content: "False",
-correct: false,
-position: 2,
-})
-p answer22
+# answer22 = Answer.create!({
+# question: question7,
+# content: "False",
+# correct: false,
+# position: 2,
+# })
+# p answer22
 
 #step 2 true-false
 #answers_to_question8
 #content: Remember, your smartphone required 12,760 L of water!
 
-answer23 = Answer.create!({
-question: question8,
-content: "True",
-correct: true,
-position: 1,
-})
-p answer23
+# answer23 = Answer.create!({
+# question: question8,
+# content: "True",
+# correct: true,
+# position: 1,
+# })
+# p answer23
 
-answer24 = Answer.create!({
-question: question8,
-content: "False",
-correct: false,
-position: 2,
-})
-p answer24
+# answer24 = Answer.create!({
+# question: question8,
+# content: "False",
+# correct: false,
+# position: 2,
+# })
+# p answer24
 
 
 #step 3 fill-in-the-blancs
@@ -512,37 +507,22 @@ position: 2,
 })
 p answer26
 
-answer26 = Answer.create!({
+answer27 = Answer.create!({
 question: question10,
 content: "58",
 correct: true,
 position: 3,
 })
-p answer26
+p answer27
 
-answer26 = Answer.create!({
+answer28 = Answer.create!({
 question: question10,
 content: "1,000",
 correct: true,
 position: 4,
 })
-p answer26
+p answer28
 
-# answer27 = Answer.create!({
-# question: question11,
-# content: "1 000",
-# correct: true,
-# position: 1,
-# })
-# p answer27
-
-# answer28 = Answer.create!({
-# question: question12,
-# content: "10",
-# correct: true,
-# position: 2,
-# })
-# p answer28
 
 # step 4 drag-and-drop
 # answers_to_question13 to question17
@@ -590,11 +570,3 @@ p answer26
 
 # #<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
 # #Will be generated, no seed required!!!
-
-
-
-
-
-
-
-
