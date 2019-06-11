@@ -7,7 +7,7 @@ class PlaysController < ApplicationController
     @questions = @game.questions.where(step: @game.current_step, played: false)
     @question = @questions.first
 
-    @question = nil if @game.current_step == 13 # To be removed next week if other question kind implemented
+    @question = nil if @game.current_step == 11 # To be removed next week if other question kind implemented
     return redirect_to game_plays_path(@play.game) if @question.nil?
 
     @answers = @question.answers

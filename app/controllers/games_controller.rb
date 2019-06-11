@@ -14,7 +14,8 @@ class GamesController < ApplicationController
       @play.user = current_user
       @play.game = @game
       @play.save
-      redirect_to play_path(@play)
+      redirect_to profile_path
+
     else
       render :new
     end
