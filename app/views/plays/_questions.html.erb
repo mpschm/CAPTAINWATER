@@ -44,7 +44,7 @@
         <% end %>
       <% elsif question.kind == 'fill-in-the-blancs'%>
         <%= simple_form_for [@play, @user_answer] do |f| %>
-          <p>Fill-in-the-blanks with one of the following answers: 1000, 500, 58, 10. </p>
+          <p>Fill-in-the-blanks with one of the following answers: 140 or 500. </p>
           <div class='question-fill-in-the-blanks'>
             <%= question.content %>
           </div>
