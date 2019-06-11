@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden !important;
 }
+
 html, body {
   height: 100%;
 }
+
 body {
   display: flex;
    position: relative;
@@ -38,9 +41,6 @@ body {
    @media (max-height: 667px) {
     bottom: -170px;
   }
-
-
-
 
  }
 
