@@ -77,7 +77,6 @@ eliminated: false,
 })
 p play1
 
-
 #<Question:0x00007fa137567478 id: nil, game_id: nil, content: nil, kind: nil, step: nil, created_at: nil, updated_at: nil>
 
 #step 1 multiple-choice
