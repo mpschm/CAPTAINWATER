@@ -20,7 +20,7 @@
 
 
   <% if current_user.admin? %>
-    <%= link_to 'Launch the game', game_plays_path, class: "btn-launch" %>
+    <%= link_to 'Launch the game', launch_game_path(@game), class: "btn-launch" %>
   <% end %>
 
 </div>
@@ -46,6 +46,7 @@
             let numberPlayers = document.getElementById("number-players");
             numberPlayers.innerHTML = ul.querySelectorAll("li").length + " players";
           }
+
         }
       }
     )

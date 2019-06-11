@@ -34,6 +34,13 @@ class PlaysController < ApplicationController
     @game = Game.find(params[:game_id])
     @plays = policy_scope(Play).where(game: @game)
     @result = current_user.plays.find_by(game: @game).score
+
+    @plays.each do |play|
+      ActionCable.server.broadcast("game_#{@game.id}", {
+        new_finisher: play.user.email,
+        new_score: play.score
+      })
+    end
   end
 
   def game_boat

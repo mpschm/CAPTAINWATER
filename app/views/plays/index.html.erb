@@ -7,18 +7,17 @@
 
   <div style='position: relative;'>
     <h5>list of players:</h5>
-    <ul class='list-scores', style='position: relative'>
+    <ul style='position: relative'>
 
       <% @game.plays.each do |play| %>
         <% if play.user_answers.size == 10 %>
-          <div class="d-flex">
+          <div class="list-scores d-flex">
             <li><%= play.user.email %></li>
             <%= play.score %>
           </div>
         <% end  %>
       <% end  %>
     </ul>
-
   </div>
 
   <% if current_user.admin? %>
@@ -42,9 +41,9 @@
             let ranking = document.getElementById('players-ranking');
             ranking.classList.remove('d-none');
           }
-          if (data.new_score && data.new_finisher) {
+          if (data.new_finisher && date.new_score) {
             let scores = document.querySelector(".list-scores");
-            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_finisher + "</li>" + "<p>" + data.new_score + "</p>" );
+            scores.insertAdjacentHTML("beforeend", "<li>" + data.new_finisher + "</li>" + "<p>" + data.new_score + "</p>");
           }
         }
       }
