@@ -171,7 +171,7 @@ p question9
 
 question10 = Question.create!({
 game: game1,
-content: 'We eat ... times more water than what we drink. So let us not throw away food.'
+content: 'We eat ... times more water than what we drink. So let us not throw away food.',
 kind:'fill-in-the-blancs',
 step: 10,
 played: false,
@@ -318,7 +318,7 @@ p answer6
 
 answer7 = Answer.create!({
 question: question2,
-content: "The inventor of the water stress indicator measuring the amount of renewable freshwater available in a country per person."
+content: "The inventor of the water stress indicator measuring the amount of renewable freshwater available in a country per person.",
 correct: true,
 position: 3,
 })
