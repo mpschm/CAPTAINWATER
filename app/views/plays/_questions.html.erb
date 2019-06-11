@@ -50,7 +50,7 @@
             <%= f.association :answer, collection: @answers%>
             <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
           </div>
-            <%#= f.submit "Save", id: "submit-answer", class: 'd-none' %>
+            <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
       <% else %>
         <p>Question to be determined</p>
