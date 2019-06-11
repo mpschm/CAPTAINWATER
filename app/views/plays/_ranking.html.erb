@@ -1,43 +1,24 @@
-<div class="d-none" id="players-ranking">
+  <div class="table-responsive-sm">
+    <p>Players ranking</p>
+    <table class="table table-hover">
 
-  <div class="bubbles"
-    style="background-image: url(<%= image_path 'bubbles_image.png' %>)">
+      <thead>
+        <tr>
+          <th scope="col">Ranking</th>
+          <th scope="col">Player Name</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
 
-    <div class="bubble1">
-      <div>
-        <h1>Winner!</h1>
-        <h2>10</h2>
-        <h1>2 points</h1>
-      </div>
-    </div>
+      <tbody>
+        <% @plays.each_with_index do |play, index| %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= play.user.email %></td>
+            <td><%= play.score %></td>
+          </tr>
+        <% end %>
+      </tbody>
 
-    <div class="bubble2">
-      <div>
-        <h1>10</h1>
-      </div>
-    </div>
-
-    <div class="bubble3"
-    style="background-image: url(<%= image_path 'drop-b-happy.png' %>)">
-    </div>
-
-    <div class="bubble4"
-    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
-    </div>
-
-    <div class="bubble5"
-    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
-    </div>
-
-    <div class="bubble6"
-    style="background-image: url(<%= image_path 'drop-b-sad.png' %>)">
-    </div>
-
-<!--     <div class = "battle-button">
-    <%#= link_to 'Water Battle', play_path(@plays.first), class: 'btn-battle', id: 'play-battle'   %>
-    <!-- todo .first? -->
-
-    </div> -->
-
+    </table>
   </div>
-</div>
