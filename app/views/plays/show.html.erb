@@ -9,13 +9,11 @@
   <div style='position: relative;'>
     <h5>list of players:</h5>
     <ul class='list-players', style='position: relative'>
-
+       <p id="number-players"><%= @game.plays.size %> players</p>
       <% @game.plays.each do |play| %>
-        <li><%= play.user.email %></li>
+        <li class='each-player'><%= play.user.email %></li>
       <% end  %>
     </ul>
-
-    <p id="number-players"><%= @game.plays.size %> players</p>
   </div>
 
 
@@ -26,6 +24,7 @@
 </div>
 
 <%= render 'plays/questions' %>
+
 
 <% content_for :after_js do %>
   <script>
@@ -42,7 +41,7 @@
           }
           if (data.new_player) {
             let ul = document.querySelector(".list-players");
-            ul.insertAdjacentHTML("beforeend", "<li>" + data.new_player + "</li>");
+            ul.insertAdjacentHTML("beforeend", "<li class='each-player'>" + data.new_player + "</li>");
             let numberPlayers = document.getElementById("number-players");
             numberPlayers.innerHTML = ul.querySelectorAll("li").length + " players";
           }

@@ -8,7 +8,7 @@ class PlaysController < ApplicationController
     @question = @questions.first
 
     @question = nil if @game.current_step == 11 # To be removed next week if other question kind implemented
-    return redirect_to game_plays_path(@play.game) if @question.nil?
+    return redirect_to game_boat_play_path(@play) if @question.nil?
 
     @answers = @question.answers
     @user_answer = UserAnswer.new
@@ -24,9 +24,11 @@ class PlaysController < ApplicationController
     game = Game.find_by(name: params[:game][:name])
     @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
     authorize @play
-    ActionCable.server.broadcast("game_#{game.id}", {
-      new_player: @play.user.email
-    })
+    unless @play.user.admin?
+      ActionCable.server.broadcast("game_#{game.id}", {
+        new_player: @play.user.email
+      })
+    end
     redirect_to play_path(@play)
   end
 
@@ -35,27 +37,15 @@ class PlaysController < ApplicationController
     @plays = policy_scope(Play).where(game: @game).order(score: :desc)
     @result = current_user.plays.find_by(game: @game).score
 
-    @plays.each do |play|
-      ActionCable.server.broadcast("game_#{@game.id}", {
-        new_finisher: play.user.email,
-        new_score: play.score
+    ActionCable.server.broadcast("game_#{@game.id}", {
+      new_finisher: current_user.email,
+      new_score: current_user.plays.find_by(game: @game).score
       })
-    end
   end
 
   def game_boat
     authorize current_user
-  end
-
-  def finished?
     @play = Play.find(params[:id])
-    # if @play.user_answers.size == 10
-    #   return true
-    # end
-    authorize @play
-    ActionCable.server.broadcast("game_#{game.id}", {
-      new_finisher: @play.user.email,
-      new_score: @play.score
-    })
+    @game = @play.game
   end
 end

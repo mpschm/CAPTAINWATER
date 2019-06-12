@@ -171,30 +171,30 @@ p question9
 
 question10 = Question.create!({
 game: game1,
-content: 'We eat ... times more water than what we drink. So let us not throw away food.'
+content: 'We eat ... times more water than what we drink. So let us not throw away food.',
 kind:'fill-in-the-blancs',
 step: 10,
 played: false,
 })
 p question10
 
-question11 = Question.create!({
-game: game1,
-content: 'The point is not JUST about shortening your showers: ... bathtubs of water are required every day to make all the food we eat & all the things we buy!',
-kind:'fill-in-the-blancs',
-step: 11,
-played: false,
-})
-p question11
+# question11 = Question.create!({
+# game: game1,
+# content: 'The point is not JUST about shortening your showers: ... bathtubs of water are required every day to make all the food we eat & all the things we buy!',
+# kind:'fill-in-the-blancs',
+# step: 11,
+# played: false,
+# })
+# p question11
 
-question12 = Question.create!({
-game: game1,
-content: 'A round-trip flight from Paris to London requires as much water as ... average dishwasher loads. That is because of oil so take the train!',
-kind:'fill-in-the-blancs',
-step: 12,
-played: false,
-})
-p question12
+# question12 = Question.create!({
+# game: game1,
+# content: 'A round-trip flight from Paris to London requires as much water as ... average dishwasher loads. That is because of oil so take the train!',
+# kind:'fill-in-the-blancs',
+# step: 12,
+# played: false,
+# })
+# p question12
 
 # step 4 drag-and-drop
 
@@ -318,7 +318,7 @@ p answer6
 
 answer7 = Answer.create!({
 question: question2,
-content: "The inventor of the water stress indicator measuring the amount of renewable freshwater available in a country per person."
+content: "The inventor of the water stress indicator measuring the amount of renewable freshwater available in a country per person.",
 correct: true,
 position: 3,
 })
@@ -430,62 +430,62 @@ p answer18
 # content: The more water you consume, especially indirectly, the more you pollute.
 
 
-# answer19 = Answer.create!({
-# question: question6,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer19
+answer19 = Answer.create!({
+question: question6,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer19
 
-# answer20 = Answer.create!({
-# question: question6,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer20
+answer20 = Answer.create!({
+question: question6,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer20
 
 
 #step 2 true-false
 #answers_to_question7
 #content: A T-shirt ==> 3,900 L of water A pair of leather boots ==> 14,503 L Think twice before you buy another one!',
 
-# answer21 = Answer.create!({
-# question: question7,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer21
+answer21 = Answer.create!({
+question: question7,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer21
 
-# answer22 = Answer.create!({
-# question: question7,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer22
+answer22 = Answer.create!({
+question: question7,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer22
 
 #step 2 true-false
 #answers_to_question8
 #content: Remember, your smartphone required 12,760 L of water!
 
-# answer23 = Answer.create!({
-# question: question8,
-# content: "True",
-# correct: true,
-# position: 1,
-# })
-# p answer23
+answer23 = Answer.create!({
+question: question8,
+content: "True",
+correct: true,
+position: 1,
+})
+p answer23
 
-# answer24 = Answer.create!({
-# question: question8,
-# content: "False",
-# correct: false,
-# position: 2,
-# })
-# p answer24
+answer24 = Answer.create!({
+question: question8,
+content: "False",
+correct: false,
+position: 2,
+})
+p answer24
 
 
 #step 3 fill-in-the-blancs
@@ -507,21 +507,21 @@ position: 2,
 })
 p answer26
 
-answer27 = Answer.create!({
-question: question10,
-content: "58",
-correct: true,
-position: 3,
-})
-p answer27
+# answer27 = Answer.create!({
+# question: question11,
+# content: "58",
+# correct: true,
+# position: 3,
+# })
+# p answer27
 
-answer28 = Answer.create!({
-question: question10,
-content: "1,000",
-correct: true,
-position: 4,
-})
-p answer28
+# answer28 = Answer.create!({
+# question: question12,
+# content: "1,000",
+# correct: true,
+# position: 4,
+# })
+# p answer28
 
 
 # step 4 drag-and-drop

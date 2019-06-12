@@ -1,31 +1,42 @@
 
 .signup{
-  position:relative;
-  top:-33px;
+  position: relative;
+  top: -33px;
+  text-align: center;
+  color: white;
 }
 
 .signup_title{
-color:white;
 font-size: x-large;
+margin-bottom: -10px;
 text-shadow: 0.7px 0.7px #979797;
+color:white;
 }
 
 .signup-btn {
 margin-top:30px;
 font-size:larger;
 font-weight:bold;
-background-color:   #DC143C;
-border-radius:4px;
+background: linear-gradient(-5deg, #CE4C4B, #FC6956);
+border-radius:2px;
+width:300px;
 border: none;
 color: white;
-padding: 12px 25px;
+padding: 6px 12px;
 text-align: center;
 font-size: 16px;
 margin-top: 10px;
-margin-left: 60px;
 transition: 0.3s;
 display: inline-block;
 text-shadow: 0.7px 0.7px #979797;
+margin-bottom: 20px;
+}
+
+.already {
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 

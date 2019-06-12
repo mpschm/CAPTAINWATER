@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root to: 'pages#home'
-  get "game_boat", to: "plays#game_boat"
 
   devise_for :users
 
@@ -19,5 +18,10 @@ Rails.application.routes.draw do
 
   resources :plays, only: [:show, :new, :create] do
     resources :user_answers, only: [:create]
+    member do
+      get "game_boat"
+    end
   end
+
+  mount ActionCable.server => "/cable"
 end

@@ -1,3 +1,43 @@
+.blue-sky {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(to bottom, blue, #6dd5fa 80%);
+}
+
+img.water-game {
+  position: absolute;
+  bottom: -610px;
+}
+
+.score-game {
+  background: url(star.svg) no-repeat 50%/15%;
+  margin-top: 15px;
+  height: 63px;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 20px;
+  color: #e50000;
+}
+
+.score-text {
+  color: white;
+}
+
+.game-boat {
+  width: 170px;
+  overflow: hidden;
+  margin-left: 90px;
+}
+
+#defaultCanvas0 {
+  width: 100vw !important;
+  position: absolute;
+  bottom: 0px !important;
+  height: auto !important;
+}
+
 .home-battle {
   z-index: 1000;
 }
