@@ -1,4 +1,4 @@
-<div class="<%= "d-none" if @play.user_answers.empty?  %>" id="quiz-container">
+<div class="<%= "d-none" if @play.user_answers.empty?  %>" id="quiz-container" data-current-step="<%= @game.current_step %>">
   <div class="container-top" style='position: absolute;
     top: 10px;left: 15px; width:375px; width: 90%; justify-content: space-between'>
     <div class='d-flex align-items-center justify-content-between' style='width:35%'>
@@ -15,9 +15,13 @@
        <div id="countdown" style='position: relative;'>
           <div id="countdown-number"></div>
           <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
-            <svg>
+            <!-- <svg>
               <circle r="27" cx="30" cy="30"></circle>
-            </svg>
+            </svg> -->
+            <div class="pie degree">
+              <span class="block"></span>
+              <span id="time">10</span>
+            </div>
           </div>
         </div>
     </div>
@@ -43,7 +47,7 @@
           <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
           <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
-      <% elsif question.kind == 'fill-in-the-blancs'%>
+      <% else %> question.kind == 'fill-in-the-blancs'%>
         <%= simple_form_for [@play, @user_answer] do |f| %>
           <p>Fill-in-the-blanks with one of the following answers: 140 or 500. </p>
           <div class='question-fill-in-the-blanks'>
@@ -53,13 +57,6 @@
             <%= f.association :answer, collection: @answers%>
             <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
           </div>
-            <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
-        <% end %>
-      <% else %>
-        <p>Question to be determined</p>
-        <%= simple_form_for [@play, @user_answer] do |f| %>
-          <%= f.association :answer, collection: @answers, as: :radio_buttons %>
-          <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
             <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
       <% end %>
@@ -76,7 +73,7 @@
       <%= @user_answers %>
       <% if index < number  - 1%>
 
-        <% if @play.user_answers[index].present? %>
+        <% if @play.user_answers[index].answer.present? %>
           <% if  @play.user_answers[index].answer.correct? %>
             <li class="active"><% question.step %></li>
           <% else %>
