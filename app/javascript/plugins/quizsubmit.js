@@ -7,13 +7,8 @@ document.body.addEventListener('click', function (event) {
       let rightAnswer = document.getElementById("correct-answer").textContent;
       if (choice.textContent == rightAnswer) {
         choice.classList.add("right-answer");
-        // choice.style.borderColor = "green";
-        // choice.style.backgroundColor ="white";
-        // choice.style.color = "green";
       }
       else {
-        // choice.style.backgroundColor = "transparent";
-        // choice.style.color = "white";
         choice.classList.add("other-answer");
       }
       });

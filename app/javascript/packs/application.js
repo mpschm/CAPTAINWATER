@@ -8,18 +8,6 @@ import "../plugins/quizsubmit";
 
 let questionSide = document.querySelector('#quiz-container');
 
-console.log(questionSide)
-
-// document.querySelector('.btn-launch').addEventListener('click', (e) => {
-//   questionSide = document.querySelector('#quiz-container');
-//   console.log(questionSide.classList.value === "")
-//   if (questionSide.classList.value === '') {
-//     console.log('timer')
-//     timer();
-//   }
-
-// })
-
 const btnLaunch = document.querySelector('.btn-launch');
 if (btnLaunch) {
   btnLaunch.addEventListener('click', (e) => {
@@ -27,8 +15,6 @@ if (btnLaunch) {
   })
 }
 const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
-  console.log('hello');
-  console.log(currentStep);
 if (currentStep > 1) {
   timer();
 }
