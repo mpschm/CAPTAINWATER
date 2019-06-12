@@ -4,6 +4,27 @@
   height: 40px;
   width: 40px;
   text-align: center;
+  overflow: visible !important;
+  > div {
+   overflow: visible !important;
+
+  }
+}
+
+.card-category {
+  overflow: visible !important;
+}
+
+.container-top {
+  overflow: visible !important;
+}
+
+.bottom-container, .active, .pending, .wrong{
+  overflow: visible !important;
+}
+
+.progressbar {
+  overflow: visible !important;
 }
 
 #countdown-number {
@@ -16,23 +37,91 @@ svg {
   width: 100px;
   height: 100px;
   transform: rotateY(-180deg) rotateZ(-90deg);
+  overflow: visible !important;
 }
 
-#countdown-number svg circle {
-  stroke-dasharray: 200px;
-  stroke-dashoffset: 0px;
-  stroke-linecap: round;
-  stroke-width: 2px;
-  stroke: red;
-  fill: none;
-  animation: countdown 10s linear infinite forwards;
+// #countdown-number svg circle {
+//   stroke-dasharray: 200px;
+//   stroke-dashoffset: 0px;
+//   stroke-linecap: round;
+//   stroke-width: 2px;
+//   stroke: red;
+//   fill: none;
+//   animation: countdown 10s linear infinite forwards;
+// }
+
+// @keyframes countdown {
+//   from {
+//     stroke-dashoffset: 0px;
+//   }
+//   to {
+//     stroke-dashoffset: 200px;
+//   }
+// }
+
+
+
+.pie{
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background-color:#1fbba6;
+    border: 2px solid#1fbba6;
+    float: left;
+    margin: 2em;
+    overflow: visible !important;
+  .block{
+    position:absolute;
+    background:#fff;
+    width:50px;
+    height:50px;
+    display:block;
+    border-radius:50%;
+    margin: 3px;
+  }
+
+}
+#time{
+  font-size: 1.2em;
+  position: absolute;
+  top: 26%;
+  left: 39%;
+  color: #999999;
+}
+.degree{
+  /*90 + ( 360 * .1 )*/
+      background-image:
+        linear-gradient(90deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
 }
 
-@keyframes countdown {
-  from {
-    stroke-dashoffset: 0px;
+.pie-game{
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background-color:#1fbba6;
+    border: 2px solid#1fbba6;
+    float: left;
+    margin: 2em;
+    overflow: visible !important;
+  .block-game{
+    position:absolute;
+    background:#fff;
+    width:56px;
+    height:56px;
+    display:block;
+    border-radius:50%;
   }
-  to {
-    stroke-dashoffset: 200px;
-  }
+
+}
+#time-game{
+  font-size: 1.2em;
+  position: fixed;
+  top: 26%;
+  left: 33%;
+  color: #999999;
 }

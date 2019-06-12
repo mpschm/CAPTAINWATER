@@ -6,13 +6,10 @@ document.body.addEventListener('click', function (event) {
       choices.forEach((choice) => {
       let rightAnswer = document.getElementById("correct-answer").textContent;
       if (choice.textContent == rightAnswer) {
-        choice.style.borderColor = "green";
-        choice.style.backgroundColor ="white";
-        choice.style.color = "green";
+        choice.classList.add("right-answer");
       }
       else {
-        choice.style.backgroundColor="transparent";
-        choice.style.color = "white";
+        choice.classList.add("other-answer");
       }
       });
       setTimeout(function() {

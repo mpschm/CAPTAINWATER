@@ -42,3 +42,14 @@ label:active {
   width: 30px;
   height: 30px;
 }
+
+.right-answer {
+  color: white !important;
+  border-color: green !important;
+  background: green !important;
+  opacity: 0.9;
+}
+.other-answer {
+  background: transparent !important;
+  color: white !important;
+}

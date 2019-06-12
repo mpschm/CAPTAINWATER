@@ -1,7 +1,6 @@
 <div class="signup">
 
-<h2 style="text-align: center">Create your</h2>
-<h2 style="text-align: center">Username</h2>
+<h2 class='signup_title1' style="text-align: center">Create</br>your username</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -15,7 +14,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "signup-btn"%>
   </div>
 <% end %>
 

@@ -1,21 +1,38 @@
-// const timerGame = () => {
-//   const countdownNumberGame = document.getElementById('countdown-boat-game-number');
-//   var countdownGame = 30;
-//   var submitGame = document.getElementById("submit-answer-boat-game");
+import $ from 'jquery';
 
-// countdownNumberGame.textContent = countdownGame;
 
-//   setInterval(function() {
-//     console.log(countdownGame);
-//     if (countdownGame > 0) {
-//         countdownGame = countdownGame -1
-//         countdownGame = --countdownGame <= 0 ? 30 : countdownGame;
-//       countdownNumberGame.textContent = countdownGame;
-//       if (countdownGame === 0) {
-//         submitGame.click()
-//       }
-//      }
-//       }, 3000);
-// }
+const timerGame = () => {
+  var totaltimeGame = 30;
+  var submitGame = document.getElementById("score_form");
+  function updateGame(percent){
+    var degGame;
+    if(percent<(totaltimeGame/2)){
+      degGame = 90 + (360*percent/totaltimeGame);
+      $('.pie-game').css('background-image',
+        'linear-gradient('+degGame+'deg, transparent 50%, white 50%),linear-gradient(90deg, white 50%, transparent 50%)'
+      );
+    } else if (percent>=(totaltimeGame/2)) {
+      degGame = -90 + (360*percent/totaltimeGame);
+      $('.pie-game').css('background-image',
+        'linear-gradient('+degGame+'deg, transparent 50%, #1fbba6 50%),linear-gradient(90deg, white 50%, transparent 50%)'
+      );
+    }
+  }
 
-// export { timerGame }
+  var countGame = parseInt($('#time-game').text());
+  setInterval(function () {
+    if (countGame > 0) {
+      countGame-=1;
+      $('#time-game').html(countGame);
+      updateGame(countGame);
+    }
+
+    if (countGame==0) {
+      setTimeout(function() {
+        submitGame.submit()
+        }, 1000);
+    };
+  }, 1000);
+}
+
+export { timerGame }

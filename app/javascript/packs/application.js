@@ -6,15 +6,32 @@ import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer
 import "../plugins/quizsubmit";
 
 
-if (document.getElementById('countdown-number')) {
-  // timer();
+let questionSide = document.querySelector('#quiz-container');
+
+const btnLaunch = document.querySelector('.btn-launch');
+if (btnLaunch) {
+  btnLaunch.addEventListener('click', (e) => {
+    timer();
+  })
 }
+// const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
+// if (currentStep > 1) {
+//   timer();
+// }
+
+
 
 const questionFillIn = document.querySelector('.question-fill-in-the-blanks');
 if (questionFillIn) {
   checkFillInTheFormAnswer(questionFillIn);
 }
 
-// if (document.getElementById('countdown-game-boat-number')) {
-//   timerGame();
-// }
+
+if (document.getElementById('countdown-boat-game-number')) {
+  timerGame();
+}
+
+/*
+to modify total time, just input on variable totaltime
+*/
+
