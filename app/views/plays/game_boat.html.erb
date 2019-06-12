@@ -1,32 +1,30 @@
 <!-- <div class="game-boat"> -->
 <div class="blue-sky">
 
+<button> <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat d-none", id:"submit-game" %> </button>
 
-<!--   <button class="btn-game-boat" id="submit-answer-boat-game"><%= link_to "hello", game_plays_path(@game) %></button>
-  <div class="score">
-    <p class="score-text"><%= @play.score %></p>
-   </div> -->
  <!-- <div class="score score-game"> -->
-  <%#= form_tag game_plays_path(@game), method: :get do %>
-    <%#= text_field_tag :score,
-      class: "score-text",
-      value: @play.score
+  <%= form_tag game_plays_path(@game), method: :get, id: "score_form" do %>
+    <%= text_field_tag "score",
+      @play.score,
+      class: "score-text d-none", id: "score_input"
     %>
-  <%# end %>
+  <% end %>
 <!--  </div> -->
-<!--    <div id="countdown-boat-game" style='position: static;'>
-      <div id="countdown-boat-game-number"></div>
-      <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
-      <svg>
-        <circle r="27" cx="30" cy="30"></circle>
-      </svg>
-      </div>
-    </div>
-  </div> -->
 
   <div class="score score-game">
     <p class="score-text"><%= @play.score %></p>
   </div>
+
+   <div id="countdown-boat-game" style='position: relative;'>
+      <div id="countdown-boat-game-number"></div>
+      <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+        <div class="pie-game degree">
+          <span class="block-game"></span>
+          <span id="time-game">30</span>
+        </div>
+      </div>
+    </div>
 
 </div>
 <div class="home-battle">
@@ -97,8 +95,16 @@
       this.speed = 0;
       // Set the location to somewhere way off-screen
       this.y = -1000;
-      let originalScore = Number(document.querySelector(".score-game").innerText)
-      document.querySelector(".score-game").innerText = (originalScore += 1)
+
+      let scoreInput = document.getElementById("score_input");
+      console.log(scoreInput);
+      let originalScore = Number(scoreInput.value);
+      console.log(originalScore);
+      let newScore = originalScore += 1;
+      scoreInput.value = newScore;
+      let scoreStar = document.querySelector(".score-game");
+      scoreStar.innerText = newScore;
+      console.log(newScore);
     }
   }
   // Learning Processing

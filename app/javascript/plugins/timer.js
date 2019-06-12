@@ -50,6 +50,5 @@ const timer = () => {
     };
   }, 1000);
 }
-
 export { timer }
 

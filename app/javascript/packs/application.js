@@ -16,7 +16,7 @@ if (btnLaunch) {
 }
 const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
 if (currentStep > 1) {
-  // timer();
+  timer();
 }
 
 
@@ -26,9 +26,10 @@ if (questionFillIn) {
   checkFillInTheFormAnswer(questionFillIn);
 }
 
-// if (document.getElementById('countdown-game-boat-number')) {
-//   timerGame();
-// }
+
+if (document.getElementById('countdown-boat-game-number')) {
+  timerGame();
+}
 
 /*
 to modify total time, just input on variable totaltime
