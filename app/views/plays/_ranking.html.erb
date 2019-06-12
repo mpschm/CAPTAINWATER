@@ -1,24 +1,36 @@
-  <div class="d-none", id="players-ranking", style="position: relative;">
-    <p>Players ranking</p>
-    <table class="table table-hover">
+<div Class=ranking-page>
 
-      <thead>
-        <tr>
-          <th scope="col">Ranking</th>
-          <th scope="col">Player Name</th>
-          <th scope="col">Score</th>
-        </tr>
-      </thead>
+    <div class="drop-b-happy", style="background-image: url(<%= image_path 'drop-b-happy.png' %>)">
+    </div>
 
-      <tbody>
-        <% @plays.each_with_index do |play, index| %>
-          <tr>
-            <td><%= index + 1 %></td>
-            <td><%= play.user.email %></td>
-            <td><%= play.score %></td>
-          </tr>
-        <% end %>
-      </tbody>
+    <div class="d-none", id="players-ranking" style="position:relative">
+        <h1>Players ranking</h1>
 
-    </table>
-  </div>
+            <table class="table table-hover">
+
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Player Name</th>
+                  <th scope="col">Score</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @plays.each_with_index do |play, index| %>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+
+            </table>
+      </div>
+
+    <div class="drop-b-sad" style="background-image: url(<%= image_path 'drop-b-sad.png' %>)", style="position:relative">
+    </div>
+
+</div>
+

@@ -1,0 +1,8 @@
+# config/meta.yml
+
+meta_product_name: "Captain Water"
+meta_title: "Captain Water - Change your life, impact the future !"
+meta_description: "Change the world with a better understanding of the water we eat, because water resources are limited !"
+meta_image: "LOGO1.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
+
