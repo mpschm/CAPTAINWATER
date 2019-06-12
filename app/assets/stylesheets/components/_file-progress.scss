@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  overflow: visible !important;
+
 }
 .progressbar li{
   float: left;
@@ -11,13 +13,16 @@
   position: relative;
   text-align: center;
   list-style: none;
+  overflow: visible !important;
 }
 .progressbar li{
   content: '';
+  overflow: visible !important;
 }
 .progressbar li:before{
   content:counter(step);
   counter-increment: step;
+  overflow: visible !important;
 
   // width: 30px;
   // height: 30px;

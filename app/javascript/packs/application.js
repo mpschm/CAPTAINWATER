@@ -14,10 +14,10 @@ if (btnLaunch) {
     timer();
   })
 }
-// const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
-// if (currentStep > 1) {
-//   timer();
-// }
+const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
+if (currentStep > 1) {
+  // timer();
+}
 
 
 

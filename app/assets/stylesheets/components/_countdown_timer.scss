@@ -4,6 +4,27 @@
   height: 40px;
   width: 40px;
   text-align: center;
+  overflow: visible !important;
+  > div {
+   overflow: visible !important;
+
+  }
+}
+
+.card-category {
+  overflow: visible !important;
+}
+
+.container-top {
+  overflow: visible !important;
+}
+
+.bottom-container, .active, .pending, .wrong{
+  overflow: visible !important;
+}
+
+.progressbar {
+  overflow: visible !important;
 }
 
 #countdown-number {
@@ -16,6 +37,7 @@ svg {
   width: 100px;
   height: 100px;
   transform: rotateY(-180deg) rotateZ(-90deg);
+  overflow: visible !important;
 }
 
 // #countdown-number svg circle {
@@ -49,6 +71,7 @@ svg {
     border: 2px solid#1fbba6;
     float: left;
     margin: 2em;
+    overflow: visible !important;
   .block{
     position:absolute;
     background:#fff;
