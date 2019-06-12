@@ -1,17 +1,18 @@
 <div class="blue-sky">
 
+
 <!--   <button class="btn-game-boat" id="submit-answer-boat-game"><%= link_to "hello", game_plays_path(@game) %></button>
   <div class="score">
     <p class="score-text"><%= @play.score %></p>
    </div> -->
- <div class="score">
-  <%= form_tag game_plays_path(@game), method: :get do %>
-    <%= text_field_tag :score,
+ <!-- <div class="score score-game"> -->
+  <%#= form_tag game_plays_path(@game), method: :get do %>
+    <%#= text_field_tag :score,
       class: "score-text",
       value: @play.score
     %>
-  <% end %>
- </div>
+  <%# end %>
+<!--  </div> -->
 <!--    <div id="countdown-boat-game" style='position: static;'>
       <div id="countdown-boat-game-number"></div>
       <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
@@ -21,6 +22,10 @@
       </div>
     </div>
   </div> -->
+
+  <div class="score score-game">
+    <p class="score-text">0</p>
+   </div>
 
 </div>
 <div class="home-battle">
