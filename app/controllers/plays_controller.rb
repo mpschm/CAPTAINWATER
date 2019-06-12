@@ -45,5 +45,7 @@ class PlaysController < ApplicationController
 
   def game_boat
     authorize current_user
+    @play = Play.find(params[:id])
+    @game = @play.game
   end
 end

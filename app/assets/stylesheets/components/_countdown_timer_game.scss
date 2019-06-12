@@ -1,0 +1,38 @@
+#countdown-boat-game {
+  position: relative;
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-boat-game-number {
+  color: red;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+#countdown-boat-game-number svg circle {
+  stroke-dasharray: 200px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: red;
+  fill: none;
+  animation: countdownGame 30s linear infinite forwards;
+}
+
+@keyframes countdownGame {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 200px;
+  }
+}

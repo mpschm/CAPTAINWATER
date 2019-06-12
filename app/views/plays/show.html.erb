@@ -25,6 +25,7 @@
 
 <%= render 'plays/questions' %>
 
+
 <% content_for :after_js do %>
   <script>
     App['game_<%= @play.game.id %>'] = App.cable.subscriptions.create(
