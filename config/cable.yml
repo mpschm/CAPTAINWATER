@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://rediscloud:fstUcvPmFaSl9urJYKWFWNtQKLTJAGN4@redis-10551.c73.us-east-1-2.ec2.cloud.redislabs.com:10551
+  url: <%= ENV['REDISCLOUD_URL']%>
   channel_prefix: CAPTAINWATER_production
