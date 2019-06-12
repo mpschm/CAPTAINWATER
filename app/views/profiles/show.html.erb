@@ -1,3 +1,5 @@
+
+<div id="wrong_name" class="d-none"><%= params[:wrong_name] %></div>
 <div class="container bg-white">
  <%= render 'shared/navbar' %>
 
@@ -6,7 +8,7 @@
       <%= image_tag "LOGO1.png", style: "margin-bottom: 50px;" %>
 
 
-      <%= link_to 'Water Footprint', new_water_ft_calculator_path, class: 'btn', id: 'button2' %>
+      <%= link_to 'Water Footprint', new_water_ft_calculator_path, class: 'btn', id: 'button3' %>
       <button type="button" id="button1" data-toggle="modal" data-target="#myModal">
         Play now
       </button>
@@ -38,14 +40,14 @@
               </div>
             </div>
           </div>
-          <button type="button" id="button1" data-toggle="collapse" data-target="#ToggleExternalContent2" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button type="button" id="button2" data-toggle="collapse" data-target="#ToggleExternalContent2" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             Join a game
           </button>
           <div class="pos-f-t">
             <div class="collapse" id="ToggleExternalContent2">
               <div class="inputgame">
                 <%= simple_form_for(:game, url: plays_path, method: :post) do |f| %>
-                  <%= f.input :name, label: 'Enter the name', error: 'Name is mandatory, please specifiy one' %>
+                  <%= f.input :name, label: 'Enter the name', error: 'Name is mandatory, please specifiy one', wrapper_html: { id: "join_game"} %>
                   <%= f.submit "Join", class: "create" %>
                 <% end %>
               </div>

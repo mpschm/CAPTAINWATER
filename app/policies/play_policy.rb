@@ -12,4 +12,8 @@ class PlayPolicy < ApplicationPolicy
   def show?
     record.user == user
   end
+
+  def new?
+    return true
+  end
 end

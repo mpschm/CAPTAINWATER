@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 
 const timerGame = () => {
-  var totaltimeGame = 30;
+  var totaltimeGame = 20;
   var submitGame = document.getElementById("score_form");
   function updateGame(percent){
     var degGame;
