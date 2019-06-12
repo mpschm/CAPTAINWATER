@@ -4,14 +4,6 @@
   flex-direction: column;
 }
 
-.drop-b-happy {
-  z-index: 1000;
-}
-
-.drop-b-sad {
-  z-index: 1000;
-}
-
 .table th {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -39,4 +31,28 @@
   letter-spacing: .10em;
   color: white;
   text-shadow: 1px 1px #979797;
+  position: relative;
+  margin-top: 100px;
 }
+
+.my-custom-scrollbar {
+position: relative;
+height: 309px;
+overflow: auto;
+overflow: auto !important;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+
+.drop-b-happy-ranking img
+{
+height: 20%;
+}
+
+.drop-b-sad-ranking img
+{
+height: 20%;
+}
+
