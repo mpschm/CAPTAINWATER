@@ -4,6 +4,7 @@ class UserAnswersController < ApplicationController
     # redirect vers la show du play + params de la question de l'answer
     #  (pour choisir la prochaine question)
     @answer = params[:user_answer][:answer_id].present? ? Answer.find(params[:user_answer][:answer_id]) : nil
+
     @play = Play.find(params[:play_id])
     @next_step = params[:user_answer][:next_step]
     @user_answer = UserAnswer.new

@@ -6,9 +6,34 @@ import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer
 import "../plugins/quizsubmit";
 
 
-if (document.getElementById('countdown-number')) {
-  // timer();
+let questionSide = document.querySelector('#quiz-container');
+
+console.log(questionSide)
+
+// document.querySelector('.btn-launch').addEventListener('click', (e) => {
+//   questionSide = document.querySelector('#quiz-container');
+//   console.log(questionSide.classList.value === "")
+//   if (questionSide.classList.value === '') {
+//     console.log('timer')
+//     timer();
+//   }
+
+// })
+
+const btnLaunch = document.querySelector('.btn-launch');
+if (btnLaunch) {
+  btnLaunch.addEventListener('click', (e) => {
+    timer();
+  })
 }
+const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
+  console.log('hello');
+  console.log(currentStep);
+if (currentStep > 1) {
+  timer();
+}
+
+
 
 const questionFillIn = document.querySelector('.question-fill-in-the-blanks');
 if (questionFillIn) {
@@ -18,3 +43,8 @@ if (questionFillIn) {
 // if (document.getElementById('countdown-game-boat-number')) {
 //   timerGame();
 // }
+
+/*
+to modify total time, just input on variable totaltime
+*/
+

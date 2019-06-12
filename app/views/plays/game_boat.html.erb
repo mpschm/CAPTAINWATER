@@ -95,8 +95,8 @@
       this.speed = 0;
       // Set the location to somewhere way off-screen
       this.y = -1000;
-      let originalScore = Number(document.querySelector(".score").innerText)
-      document.querySelector(".score").innerText = (originalScore += 1)
+      let originalScore = Number(document.querySelector(".score-game").innerText)
+      document.querySelector(".score-game").innerText = (originalScore += 1)
     }
   }
   // Learning Processing
@@ -119,7 +119,7 @@
     }
 
     display() {
-      stroke(0);
+     stroke(0);
       fill(175);
       ellipse(this.x, this.y, this.r*2, this.r*2);
     }
