@@ -9,10 +9,11 @@
     <%= link_to 'Launch the game', launch_game_path(@game), class: "btn-launch" %>
   <% end %>
 
+
   <div style='position: relative;'>
-    <h1 id='list-of-players'>list of players:</h1>
+<!--     <h1 id='list-of-players'>Players list</h1> -->
     <ul class='list-players', style='position: relative'>
-       <p id="number-players"><%= @game.plays.size %> players</p>
+       <p id="number-players"><%= @game.plays.size %> players ready...</p>
       <% @game.plays.each do |play| %>
         <li class='each-player'><%= play.user.email %></li>
       <% end  %>

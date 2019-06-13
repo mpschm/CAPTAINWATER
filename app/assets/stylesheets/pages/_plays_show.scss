@@ -28,7 +28,6 @@
   }
 }
 
-
 .bottom-container {
   display: flex;
   align-items: flex-end;
@@ -98,4 +97,47 @@
 .card-category {
     position: relative;
     background-color: white;
+}
+
+// Waiting list
+
+#title{
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: .25em;
+    color: #00bcc2;
+  }
+
+#list-of-players {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px #979797;
+}
+
+#number-players {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px #979797;
+}
+
+.container .each-player {
+    width: 100%;
+    background: white;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border: none;
+    box-shadow: 0.7px 0.7px #979797;
+}
+
+.each-player {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .10em;
+    color: #00bcc2;
 }
