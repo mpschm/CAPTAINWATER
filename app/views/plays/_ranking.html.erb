@@ -1,133 +1,140 @@
 <div Class=ranking-page>
-
     <div class="d-none", id="players-ranking" style="position:relative">
-
-        <%= image_tag ('drop-b-happy.png'), class:"drop-b-happy-ranking" %>
-        <h1>Players ranking</h1>
-
-<div class="table table-wrapper-scroll-y my-custom-scrollbar">
-
-  <table class="table table-bordered table-striped mb-0">
-
-    <thead>
-      <tr>
-        <th scope="col">Ranking</th>
-        <th scope="col">Player Name</th>
-        <th scope="col">Score</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @plays.each_with_index do |play, index| %>
-
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-      <tr>
-        <td><%= index + 1 %></td>
-        <td><%= play.user.email %></td>
-        <td><%= play.score %></td>
-      </tr>
-
-      <% end %>
-    </tbody>
-  </table>
-
+<div class="text-center">
+    <h1>Players ranking</h1>
 </div>
+      <div class=drop-b-happy-ranking>
+        <%= image_tag ('drop-b-happy.png'), class: "image-result-drop" %>
+      </div>
 
-      <%= image_tag ('drop-b-sad.png'), class:"drop-b-sad-ranking" %>
+            <div class="table table-wrapper-scroll-y my-custom-scrollbar">
+
+              <table class="table table-bordered table-striped mb-0", id="ranking-table">
+
+                <thead>
+                  <tr>
+                    <th scope="col">Ranking</th>
+                    <th scope="col">Player Name</th>
+                    <th scope="col">Score</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <% @plays.each_with_index do |play, index| %>
+
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= play.user.email %></td>
+                    <td><%= play.score %></td>
+                  </tr>
+
+                  <% end %>
+                </tbody>
+              </table>
+
+            </div>
+
+        <div class="drop-b-happy-ranking" >
+          <%= image_tag ('drop-b-sad.png'), class: "image-result-drop" %>
+        </div>
+        <div class= "button-ranking-go-profile", style="position:relative">
+          <%= link_to 'Play again', profile_path, class: 'btn-go-profile', id:'button1'%>
+        </div>
     </div>
-</div>
 
+</div>

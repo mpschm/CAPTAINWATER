@@ -3,11 +3,11 @@
 
   <div>
     <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Please wait for more players...</h3>
-
   </div>
 
+
   <div style='position: relative;'>
-    <h5>list of players:</h5>
+    <h1 id='list-of-players'>list of players:</h1>
     <ul class='list-players', style='position: relative'>
        <p id="number-players"><%= @game.plays.size %> players</p>
       <% @game.plays.each do |play| %>
@@ -16,12 +16,11 @@
     </ul>
   </div>
 
-
   <% if current_user.admin? %>
     <%= link_to 'Launch the game', launch_game_path(@game), class: "btn-launch" %>
   <% end %>
 
-</div>
+  </div>
 
 <%= render 'plays/questions' %>
 
