@@ -1,3 +1,4 @@
+
 .score-boat-game {
   text-align: center;
   padding-top: 15px;
@@ -63,10 +64,13 @@
   bottom: -10px;
 }
 
+.final-battle {
+  height: 100vh;
+}
 .blue-sky {
-  position: absolute;
-  top: 0px;
-  width: 100vw;
+  position: relative;
+  // top: 0px;
+  // width: 100vw;
   height: 20vh;
   background: linear-gradient(to bottom, blue, #6dd5fa 80%);
 }
@@ -84,10 +88,10 @@ img.water-game {
 
 .score-game {
   background: url(images/star.svg) no-repeat 50%/15%;
-  margin-top: -12px;
-  height: 63px;
+  // margin-top: -12px;
+  // height: 63px;
   text-align: center;
-  padding-top: 18px;
+  // padding-top: 18px;
   font-size: 20px;
   color: #e50000;
 }
@@ -133,8 +137,8 @@ img.water-battle {
 }
 
 .play-index-container {
-  height: 505px;
-  margin-bottom: 55px;
+  // height: 505px;
+  // margin-bottom: 55px;
 }
 
 .cloud-1 {

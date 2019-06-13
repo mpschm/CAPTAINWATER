@@ -40,6 +40,11 @@ svg {
   overflow: visible !important;
 }
 
+#countdown-boat-game {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 // #countdown-number svg circle {
 //   stroke-dasharray: 200px;
 //   stroke-dashoffset: 0px;
@@ -106,7 +111,7 @@ svg {
     background-color:#1fbba6;
     border: 2px solid#1fbba6;
     float: left;
-    margin: 2em;
+    margin: 1em;
     overflow: visible !important;
   .block-game{
     position:absolute;
@@ -120,8 +125,8 @@ svg {
 }
 #time-game{
   font-size: 1.2em;
-  position: fixed;
-  top: 26%;
-  left: 33%;
+  position: absolute;
+  top: 12px;
+  left: 16px;
   color: #999999;
 }
