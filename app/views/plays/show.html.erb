@@ -5,11 +5,10 @@
     <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Please wait for more players...</h3>
   </div>
 
-
   <div style='position: relative;'>
-    <h1 id='list-of-players'>list of players:</h1>
+<!--     <h1 id='list-of-players'>Players list</h1> -->
     <ul class='list-players', style='position: relative'>
-       <p id="number-players"><%= @game.plays.size %> players</p>
+       <p id="number-players"><%= @game.plays.size %> players ready...</p>
       <% @game.plays.each do |play| %>
         <li class='each-player'><%= play.user.email %></li>
       <% end  %>
