@@ -50,7 +50,7 @@ class PlaysController < ApplicationController
 
     ActionCable.server.broadcast("game_#{@game.id}", {
       new_finisher: current_user.email,
-      new_score: current_user.plays.find_by(game: @game).score
+      new_score: params[:score] #current_user.plays.find_by(game: @game).score
       })
   end
 
