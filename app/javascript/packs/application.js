@@ -6,6 +6,8 @@ import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer
 import "../plugins/quizsubmit";
 import { showModalInProfil } from '../components/show_modal_in_profil';
 
+window.timer = timer;
+
 let questionSide = document.querySelector('#quiz-container');
 
 const btnLaunch = document.querySelector('.btn-launch');
@@ -18,7 +20,7 @@ const truc = document.querySelector('[data-current-step]');
 if (truc) {
   const currentStep = truc.dataset.currentStep;
   if (currentStep > 1) {
-    // timer();
+    timer();
   }
 }
 
@@ -31,7 +33,7 @@ if (questionFillIn) {
 
 
 if (document.querySelector('.boat-page')) {
-  // timerGame();
+  timerGame();
 }
 
 /*

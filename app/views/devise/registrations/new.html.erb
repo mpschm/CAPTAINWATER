@@ -1,5 +1,5 @@
-<div class="signin">
-<h2 class="signintitle" style="text-align: center">Log in</h2>
+<div class="signup">
+<h2 class="" style="text-align: center">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs-signin">
@@ -8,13 +8,13 @@
                 autofocus: true,
                 label:false,
                 input_html: { autocomplete: "email" },
-                placeholder: "Enter your email " %>
+                placeholder: "Username" %>
 
     <%= f.input :password,
                 required: false,
                 label:false,
                 input_html: { autocomplete: "current-password" },
-                placeholder: "and password" %>
+                placeholder: "Password" %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
