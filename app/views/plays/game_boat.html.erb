@@ -1,26 +1,24 @@
-<!-- <div class="game-boat"> -->
+<div class="final-battle">
 <div class="blue-sky">
 
   <button>
     <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat d-none", id:"submit-game" %>
   </button>
 
-  <!-- <div class="score score-game"> -->
   <%= form_tag game_plays_path(@game), method: :get, id: "score_form" do %>
     <%= text_field_tag "score",
       @play.score,
       class: "score-text d-none", id: "score_input"
     %>
   <% end %>
-  <!--  </div> -->
 
   <div class="score score-game">
     <p class="score-text"><%= @play.score %></p>
   </div>
 
-  <div id="countdown-boat-game" style='position: relative;'>
+  <div id="countdown-boat-game">
     <div id="countdown-boat-game-number"></div>
-    <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+    <div>
       <div class="pie-game degree">
         <span class="block-game"></span>
         <span id="time-game">20</span>
@@ -47,7 +45,7 @@
   </div>
 </div>
 
-<!-- </div> -->
+</div>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
 <script>
   // Learning Processing
