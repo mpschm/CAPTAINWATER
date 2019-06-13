@@ -31,7 +31,7 @@ if (questionFillIn) {
 
 
 if (document.getElementById('countdown-boat-game-number')) {
-  timerGame();
+  // timerGame();
 }
 
 /*

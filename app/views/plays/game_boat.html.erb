@@ -1,32 +1,35 @@
 <!-- <div class="game-boat"> -->
 <div class="blue-sky">
 
-<button> <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat d-none", id:"submit-game" %> </button>
+  <button>
+    <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat d-none", id:"submit-game" %>
+  </button>
 
- <!-- <div class="score score-game"> -->
+  <!-- <div class="score score-game"> -->
   <%= form_tag game_plays_path(@game), method: :get, id: "score_form" do %>
     <%= text_field_tag "score",
       @play.score,
       class: "score-text d-none", id: "score_input"
     %>
   <% end %>
-<!--  </div> -->
+  <!--  </div> -->
 
   <div class="score score-game">
     <p class="score-text"><%= @play.score %></p>
   </div>
 
-   <div id="countdown-boat-game" style='position: relative;'>
-      <div id="countdown-boat-game-number"></div>
-      <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
-        <div class="pie-game degree">
-          <span class="block-game"></span>
-          <span id="time-game">20</span>
-        </div>
+  <div id="countdown-boat-game" style='position: relative;'>
+    <div id="countdown-boat-game-number"></div>
+    <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+      <div class="pie-game degree">
+        <span class="block-game"></span>
+        <span id="time-game">20</span>
       </div>
     </div>
+  </div>
 
 </div>
+
 <div class="home-battle">
   <div class="d-flex flex-column justify-content-between play-index-container">
     <div class="cloud-container">
@@ -34,7 +37,7 @@
       <%= image_tag "cloud.svg", class:"cloud-2" %>
       <%= image_tag "cloud.svg", class:"cloud-3" %>
     </div>
-    <%= image_tag "boat.svg", class:"game-boat" %>
+    <%= image_tag "boat.svg", class:"game-boat"%>
   </div>
   <div class="game-wave-container">
     <%= image_tag "water_4.svg", class:"water-game water-4" %>

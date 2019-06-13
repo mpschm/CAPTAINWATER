@@ -1,6 +1,6 @@
 <div class="<%= "d-none" if @play.user_answers.empty?  %>" id="quiz-container" data-current-step="<%= @game.current_step %>">
-  <div class="container-top" style='position: absolute;
-    top: 10px;left: 15px; width:375px; width: 90%; justify-content: space-between'>
+  <div class="container-top" style='position: fixed;
+    top: 0px;left: 15px; width: 90%; justify-content: space-between'>
     <div class='d-flex align-items-center justify-content-between' style='width:35%'>
       <div class="cards card-category" style="background-image:white;">
         <div id ="scores"></div>
