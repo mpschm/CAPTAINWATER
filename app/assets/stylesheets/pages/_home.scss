@@ -15,11 +15,24 @@ body {
   // align-items: center;
   // justify-content: center;
   font-family: "Roboto", sans-serif;
-  background-color: blue;
+  background-color: white;
   // overflow: hidden;
   // height: 100vh;
   // width: 100vw;
 }
+
+.container-wave {
+  position: fixed;
+  width: 100vw;
+  top: 15vh;
+  bottom: 0;
+  > div {
+    position: relative;
+    height: 100%;
+  }
+}
+
+
 
 .water-container {
     overflow: hidden;
@@ -30,14 +43,14 @@ body {
 
  img.water {
    position: absolute;
-   bottom: 0;
+   top: 0;
 
   @media (max-height: 812px) {
-    bottom: 0;
+    top: 0;
   }
 
    @media (max-height: 667px) {
-    bottom: -170px;
+    top: 0;
   }
 
  }
