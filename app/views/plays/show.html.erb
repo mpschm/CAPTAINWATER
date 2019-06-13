@@ -5,6 +5,11 @@
     <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Please wait for more players...</h3>
   </div>
 
+  <% if current_user.admin? %>
+    <%= link_to 'Launch the game', launch_game_path(@game), class: "btn-launch" %>
+  <% end %>
+
+
   <div style='position: relative;'>
 <!--     <h1 id='list-of-players'>Players list</h1> -->
     <ul class='list-players', style='position: relative'>
@@ -15,9 +20,7 @@
     </ul>
   </div>
 
-  <% if current_user.admin? %>
-    <%= link_to 'Launch the game', launch_game_path(@game), class: "btn-launch" %>
-  <% end %>
+
 
   </div>
 
@@ -26,6 +29,7 @@
 
 <% content_for :after_js do %>
   <script>
+
     App['game_<%= @play.game.id %>'] = App.cable.subscriptions.create(
       { channel: 'PlayChannel', game_id: <%= @play.game.id %> },
        {
@@ -36,6 +40,7 @@
             quizContainer.classList.remove('d-none');
             let waitingRoom = document.getElementById('waitingroom');
             waitingRoom.classList.add('d-none');
+            timer();
           }
           if (data.new_player) {
             let ul = document.querySelector(".list-players");
