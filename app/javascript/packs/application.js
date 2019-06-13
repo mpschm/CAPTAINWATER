@@ -33,7 +33,7 @@ if (questionFillIn) {
 
 
 if (document.querySelector('.boat-page')) {
-  timerGame();
+  // timerGame();
 }
 
 /*
