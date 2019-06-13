@@ -17,19 +17,27 @@ class PlaysController < ApplicationController
 
   def new
    @play = Play.new
-   authorize current_user
+   raise
+   authorize @play
   end
 
   def create
-    game = Game.find_by(name: params[:game][:name])
-    @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
-    authorize @play
-    unless @play.user.admin?
-      ActionCable.server.broadcast("game_#{game.id}", {
+    if Game.find_by(name: params[:game][:name]).present?
+      game = Game.find_by(name: params[:game][:name])
+      @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
+      authorize @play
+      unless @play.user.admin?
+        ActionCable.server.broadcast("game_#{game.id}", {
         new_player: @play.user.email
       })
+      end
+      redirect_to play_path(@play)
+    else
+      @play = Play.new
+      authorize @play
+      # flash[:alert] = "wrong name... please try again!"
+      redirect_to profile_path(wrong_name: true)
     end
-    redirect_to play_path(@play)
   end
 
   def index

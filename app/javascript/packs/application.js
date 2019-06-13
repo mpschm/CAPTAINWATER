@@ -4,7 +4,7 @@ import { timer } from "../plugins/timer";
 import { timerGame } from "../plugins/timergame";
 import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer';
 import "../plugins/quizsubmit";
-
+import { showModalInProfil } from '../components/show_modal_in_profil';
 
 let questionSide = document.querySelector('#quiz-container');
 
@@ -14,10 +14,13 @@ if (btnLaunch) {
     timer();
   })
 }
-// const currentStep = document.querySelector('[data-current-step]').dataset.currentStep;
-// if (currentStep > 1) {
-//   timer();
-// }
+const truc = document.querySelector('[data-current-step]');
+if (truc) {
+  const currentStep = truc.dataset.currentStep;
+  if (currentStep > 1) {
+    timer();
+  }
+}
 
 
 
@@ -35,3 +38,11 @@ if (document.getElementById('countdown-boat-game-number')) {
 to modify total time, just input on variable totaltime
 */
 
+const wrongName = document.getElementById("wrong_name");
+if (wrongName) {
+  const wrongNameValue = wrongName.innerText;
+  console.log(wrongNameValue);
+  if (wrongNameValue === "true") {
+    showModalInProfil();
+  }
+}

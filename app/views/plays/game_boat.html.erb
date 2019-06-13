@@ -21,7 +21,7 @@
       <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
         <div class="pie-game degree">
           <span class="block-game"></span>
-          <span id="time-game">30</span>
+          <span id="time-game">20</span>
         </div>
       </div>
     </div>
@@ -97,14 +97,11 @@
       this.y = -1000;
 
       let scoreInput = document.getElementById("score_input");
-      console.log(scoreInput);
       let originalScore = Number(scoreInput.value);
-      console.log(originalScore);
       let newScore = originalScore += 1;
       scoreInput.value = newScore;
       let scoreStar = document.querySelector(".score-game");
       scoreStar.innerText = newScore;
-      console.log(newScore);
     }
   }
   // Learning Processing
