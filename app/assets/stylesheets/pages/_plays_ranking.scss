@@ -22,22 +22,52 @@
   text-shadow: 1px 1px #979797;
 }
 
-#players-ranking h1 {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: .10em;
-  color: white;
-  text-shadow: 1px 1px #979797;
-  position: relative;
-  margin-top: 100px;
+ #players-ranking h1 {
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: .25em;
+    color: #00bcc2;
+  }
+
+.button-ranking-go-profile {
+  position: center;
 }
+
+#button1{
+    background: #428BCA;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    width: 100%;
+    opacity: 1;
+  }
+
+// #players-ranking h2 {
+//   text-align: center;
+//   font-family: "Roboto", sans-serif;
+//   font-size: 16px;
+//   font-weight: bold;
+//   text-transform: uppercase;
+//   letter-spacing: .10em;
+//   color: white;
+//   text-shadow: 1px 1px #979797;
+//   position: relative;
+//   margin-top: 100px;
+// }
 
 .my-custom-scrollbar {
 position: relative;
-height: 309px;
+height: 345px;
 overflow: auto;
 overflow: auto !important;
 }
@@ -45,14 +75,20 @@ overflow: auto !important;
 display: block;
 }
 
-
-.drop-b-happy-ranking img
+.drop-b-happy-ranking
 {
-height: 20%;
+height: 80px;
 }
 
-.drop-b-sad-ranking img
+.drop-b-sad-ranking
 {
-height: 20%;
+height: 20px;
 }
 
+.image-result-drop {
+  height: 80px;
+}
+
+.ranking-page .table-bordered th, .table-bordered td {
+  border: 0px !important;
+}

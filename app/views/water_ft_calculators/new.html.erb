@@ -4,13 +4,16 @@
     <h1 class="title-ft-calculators text-center">Water footprint calculator</h1>
     <div>
       <div class="info-calculator">
-        <p>92% of the Global Water Consumption is used in food production. This is the Virtual Water we EAT !</p>
-        <p>How much water do you eat ?</p>
+        <p>92% of Global Water Consumption used in food production. This is Virtual Water!</p>
+        <!-- <p>How much virtual water do you eat?</p> -->
       </div>
       <div class=calculator>
         <!-- <p>Your water footprint is unique ! It is based on your country of residence and the way you live. Knowing more about your personal impact on the planet, you can change the future ! GO ! </p> -->
 
         <%= simple_form_for :calculator, url: water_ft_calculators_path, method: :post do |f| %>
+
+<div id="custom-label">
+
           <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "COUNTRY OF RESIDENCE (> 6 months/year)", selected: "France" %>
           <div class="row" style="padding-left: 15px;">
             <div class="col-xs-6">
@@ -23,6 +26,9 @@
           <%= f.input :dietatary_habit, label: "DIETARY HABIT", as: :radio_buttons, collection: ['Vegan or vegetarian', 'Average meat consumer', 'High meat consumer'], wrapper: :vertical_collection_inline, :value_method => :first %>
           <%= f.button :submit, class: "btn btn-primary" %>
         <% end %>
+
+</div>
+
 
       </div>
     </div>
