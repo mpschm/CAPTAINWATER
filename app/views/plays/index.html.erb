@@ -9,13 +9,13 @@
 
   <div style='position: relative;'>
     <h5>list of players:</h5>
-    <ul style='position: relative'>
+    <ul style='position: relative' class='list-scores'>
 
       <% @game.plays.each do |play| %>
-        <% if play.user_answers.size == 10 %>
-          <div class="list-scores">
+          <!-- <div class=""> -->
+        <% if play.user_answers.size == 5 %>
             <li><%= play.user.email %> - <%= play.score %></li>
-          </div>
+          <!-- </div> -->
         <% end  %>
       <% end  %>
     </ul>
