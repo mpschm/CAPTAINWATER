@@ -257,9 +257,3 @@ correct: false,
 position: 2,
 })
 p answer13
-
-
-
-
-# #<UserAnswer:0x00007fa1372edbe8 id: nil, answer_id: nil, play_id: nil, created_at: nil, updated_at: nil>
-# #Will be generated, no seed required!!!

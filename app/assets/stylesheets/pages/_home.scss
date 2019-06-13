@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden !important;
+  // overflow: hidden !important;
 }
 
 html, body {
@@ -21,6 +21,19 @@ body {
   // width: 100vw;
 }
 
+.container-wave {
+  position: fixed;
+  width: 100vw;
+  top: 15vh;
+  bottom: 0;
+  > div {
+    position: relative;
+    height: 100%;
+  }
+}
+
+
+
 .water-container {
     overflow: hidden;
     position: absolute;
@@ -30,14 +43,14 @@ body {
 
  img.water {
    position: absolute;
-   bottom: 0;
+   top: 0;
 
   @media (max-height: 812px) {
-    bottom: 0;
+    top: 0;
   }
 
    @media (max-height: 667px) {
-    bottom: -170px;
+    top: 0;
   }
 
  }
