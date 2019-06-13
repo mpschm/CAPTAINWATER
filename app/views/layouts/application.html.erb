@@ -24,12 +24,14 @@
   </head>
   <body>
     <%#= render 'shared/navbar' %>
-    <% if params[:action] != "game_boat" %>
-      <div class='water-container d.flex justify-content-center col-12 col-lg-6'>
-        <%= image_tag "water_4.svg", class:"water water-4" %>
-        <%= image_tag "water_3.svg", class:"water water-3" %>
-        <%= image_tag "water_2.svg", class:"water water-2" %>
-        <%= image_tag "water_1.svg", class:"water water-1" %>
+    <% unless ["home", "game_boat"].include?(params[:action]) %>
+     <div class="container-wave">
+        <div>
+          <%= image_tag "water_4.svg", class:"water water-4" %>
+          <%= image_tag "water_3.svg", class:"water water-3" %>
+          <%= image_tag "water_2.svg", class:"water water-2" %>
+          <%= image_tag "water_1.svg", class:"water water-1" %>
+        </div>
       </div>
     <% end %>
 

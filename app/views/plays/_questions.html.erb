@@ -40,10 +40,10 @@
 
     <% @questions.each do |question|  %>
       <% if question.kind == 'multiple-choice'|| question.kind == 'true-false'%>
-        <p>Question</p>
+  <!--       <p>Question</p> -->
         <%= question.content %>
         <%= simple_form_for [@play, @user_answer] do |f| %>
-          <%= f.association :answer, collection: @answers, as: :radio_buttons %>
+          <%= f.association :answer, collection: @answers, as: :radio_buttons, label: false %>
           <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>
           <%= f.submit "Save", id: "submit-answer", class: 'd-none' %>
         <% end %>
