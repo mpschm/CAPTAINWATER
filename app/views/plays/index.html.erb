@@ -12,7 +12,7 @@
     <ul style='position: relative'>
 
       <% @game.plays.each do |play| %>
-        <% if play.user_answers.size == 10 %>
+        <% if play.user_answers.size == 8 %>
           <div class="list-scores">
             <li><%= play.user.email %> - <%= play.score %></li>
           </div>
