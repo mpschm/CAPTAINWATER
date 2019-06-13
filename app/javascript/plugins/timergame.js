@@ -19,11 +19,11 @@ const timerGame = () => {
     }
   }
 
-  var countGame = parseInt($('#time-game').text());
+  var countGame = parseInt($('#time-boat-game').text());
   setInterval(function () {
     if (countGame > 0) {
       countGame-=1;
-      $('#time-game').html(countGame);
+      $('#time-boat-game').html(countGame);
       updateGame(countGame);
     }
 

@@ -1,3 +1,68 @@
+.score-boat-game {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.boat-page .block-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boat-page .pie-game {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
+
+.cloud {
+  position: relative;
+  height: 20vh;
+  z-index: 1;
+  background: linear-gradient(to bottom, blue, #6dd5fa 80%);
+  overflow: visible !important;
+}
+
+.cloud img {
+  position: absolute;
+  bottom: -20px;
+  right: 0vw;
+  &:first-child {
+    left: 0vw;
+  }
+  &:last-child {
+    left: 200px;
+  }
+}
+
+.waves {
+  height: 20vh;
+  z-index: 1;
+}
+
+.boat-page {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.boat {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.boat img {
+  position: absolute;
+  bottom: -10px;
+}
+
 .blue-sky {
   position: absolute;
   top: 0px;
@@ -9,6 +74,12 @@
 img.water-game {
   position: absolute;
   bottom: -610px;
+}
+
+.boat-page img.water-game {
+  position: relative;
+  bottom: auto;
+  top: -12px;
 }
 
 .score-game {

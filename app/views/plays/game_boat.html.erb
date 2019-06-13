@@ -1,55 +1,55 @@
-<!-- <div class="game-boat"> -->
-<div class="blue-sky">
 
-  <button>
-    <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat d-none", id:"submit-game" %>
-  </button>
+<div class="boat-page">
+  <div class="d-none">
+    <button>
+      <%= link_to "stop", game_plays_path(@game), class:"btn-game-boat", id:"submit-game" %>
+    </button>
 
-  <!-- <div class="score score-game"> -->
-  <%= form_tag game_plays_path(@game), method: :get, id: "score_form" do %>
-    <%= text_field_tag "score",
-      @play.score,
-      class: "score-text d-none", id: "score_input"
-    %>
-  <% end %>
-  <!--  </div> -->
+    <!-- <div class="score score-game"> -->
+    <%= form_tag game_plays_path(@game), method: :get, id: "score_form" do %>
+      <%= text_field_tag "score",
+        @play.score,
+        class: "score-text", id: "score_input"
+      %>
+    <% end %>
 
-  <div class="score score-game">
-    <p class="score-text"><%= @play.score %></p>
   </div>
 
-  <div id="countdown-boat-game" style='position: relative;'>
-    <div id="countdown-boat-game-number"></div>
-    <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
-      <div class="pie-game degree">
-        <span class="block-game"></span>
-        <span id="time-game">20</span>
+  <div class="cloud">
+    <div class="score-boat-game">
+      <p class="score-text score-game"><%= @play.score %></p>
+    </div>
+
+    <div class="pie-game degree">
+      <div class="block-game">
+        <div id="time-boat-game">20</div>
       </div>
     </div>
+
+    <%= image_tag "cloud.svg", class:"cloud-1" %>
+    <%= image_tag "cloud.svg", class:"cloud-2" %>
+    <%= image_tag "cloud.svg", class:"cloud-3" %>
   </div>
 
-</div>
-
-<div class="home-battle">
-  <div class="d-flex flex-column justify-content-between play-index-container">
-    <div class="cloud-container">
-      <%= image_tag "cloud.svg", class:"cloud-1" %>
-      <%= image_tag "cloud.svg", class:"cloud-2" %>
-      <%= image_tag "cloud.svg", class:"cloud-3" %>
-    </div>
+  <div class="boat">
     <%= image_tag "boat.svg", class:"game-boat"%>
   </div>
-  <div class="game-wave-container">
+
+  <div class="waves">
     <%= image_tag "water_4.svg", class:"water-game water-4" %>
     <%= image_tag "water_3.svg", class:"water-game water-3" %>
     <%= image_tag "water_2.svg", class:"water-game water-2" %>
     <%= image_tag "water_1.svg", class:"water-game water-1" %>
   </div>
+
 </div>
+
+
 
 <!-- </div> -->
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
 <script>
+
   // Learning Processing
   // Daniel Shiffman
   // http://www.learningprocessing.com
@@ -190,7 +190,7 @@
   var totalDrops = 0; // totalDrops
 
   function setup() {
-    createCanvas(270, 400);
+    createCanvas(document.querySelector("body").offsetWidth, document.querySelector("body").offsetHeight);
     catcher = new Catcher(32); // Create the catcher with a radius of 32
     drops = [];                // Create empty array
     timer = new Timer(300);    // Create a timer that goes off every 300 milliseconds

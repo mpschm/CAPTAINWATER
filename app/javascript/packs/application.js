@@ -30,8 +30,8 @@ if (questionFillIn) {
 }
 
 
-if (document.getElementById('countdown-boat-game-number')) {
-  // timerGame();
+if (document.querySelector('.boat-page')) {
+  timerGame();
 }
 
 /*
