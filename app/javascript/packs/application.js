@@ -20,7 +20,7 @@ const truc = document.querySelector('[data-current-step]');
 if (truc) {
   const currentStep = truc.dataset.currentStep;
   if (currentStep > 1) {
-    timer();
+    // timer();
   }
 }
 
