@@ -160,23 +160,23 @@ played: false,
 })
 p question8
 
-question9 = Question.create!({
-game: game1,
-content: 'A cup of coffee is made of ... glasses of water. Switch to tea which consumes 10 times less :) ',
-kind:'fill-in-the-blancs',
-step: 9,
-played: false,
-})
-p question9
+# question9 = Question.create!({
+# game: game1,
+# content: 'A cup of coffee is made of ... glasses of water. Switch to tea which consumes 10 times less :) ',
+# kind:'fill-in-the-blancs',
+# step: 9,
+# played: false,
+# })
+# p question9
 
-question10 = Question.create!({
-game: game1,
-content: 'We eat ... times more water than what we drink. So let us not throw away food.',
-kind:'fill-in-the-blancs',
-step: 10,
-played: false,
-})
-p question10
+# question10 = Question.create!({
+# game: game1,
+# content: 'We eat ... times more water than what we drink. So let us not throw away food.',
+# kind:'fill-in-the-blancs',
+# step: 10,
+# played: false,
+# })
+# p question10
 
 # question11 = Question.create!({
 # game: game1,
@@ -491,21 +491,21 @@ p answer24
 #step 3 fill-in-the-blancs
 #answers_to_question9 to question12
 
-answer25 = Answer.create!({
-question: question9,
-content: "140",
-correct: true,
-position: 1,
-})
-p answer25
+# answer25 = Answer.create!({
+# question: question9,
+# content: "140",
+# correct: true,
+# position: 1,
+# })
+# p answer25
 
-answer26 = Answer.create!({
-question: question10,
-content: "500",
-correct: true,
-position: 2,
-})
-p answer26
+# answer26 = Answer.create!({
+# question: question10,
+# content: "500",
+# correct: true,
+# position: 2,
+# })
+# p answer26
 
 # answer27 = Answer.create!({
 # question: question11,
