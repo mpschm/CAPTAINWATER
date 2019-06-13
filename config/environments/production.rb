@@ -2,7 +2,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_cable.url = "wss://www.captainwater.me/cable"
-  config.action_cable.allowed_request_origins = [ "http://www.captainwater.me", "https://www.captainwater.me.top" ]
+  config.action_cable.allowed_request_origins = [ "http://www.captainwater.me", "https://www.captainwater.me" ]
   # Code is not reloaded between requests.
   config.cache_classes = true
 
