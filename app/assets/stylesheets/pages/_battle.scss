@@ -115,7 +115,9 @@ img.water-game {
 }
 
 .score-text {
+  background: asset-url('star.svg') no-repeat 50%/15%;
   color: white;
+  height: 60px;
 }
 
 .game-boat {
