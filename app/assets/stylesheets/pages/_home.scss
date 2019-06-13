@@ -10,24 +10,22 @@ html, body {
 }
 
 body {
-  display: flex;
-   position: relative;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  //  position: relative;
+  // align-items: center;
+  // justify-content: center;
   font-family: "Roboto", sans-serif;
   background-color: white;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  // overflow: hidden;
+  // height: 100vh;
+  // width: 100vw;
 }
 
 .water-container {
     overflow: hidden;
-    height: 100%;
-    max-width: 375px;
     position: absolute;
-    width: 375px;
     z-index: 0;
+    height: 110%;
 }
 
  img.water {
