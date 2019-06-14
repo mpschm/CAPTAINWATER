@@ -1,13 +1,56 @@
 <div class="in-progress button-model">
 
-  <div class="container">
+  <div class="container", id="water-ft-example">
     <h1>You "Eat"</h1>
     <div>
-      <h2>9 000 l/day</h2>
-      <p>How much water does the parisian use per day ?</p>
-      <p>900 L Domestic use, 900 L Products (clothes, electronics, furniture), 2700 L Energy (Gasoline, Electricity), 4500 L Food production (farming, food industry) How much water does the parisian use per day ?</p>
+      <h2 class="consumption">9 000 l/ day</h2>
+    </div>
 
-      <%= link_to 'Go to the game', profile_path, class: 'btn-go-profile', id:'button1'%>
+        <div class="water-consumption-table">
+
+              <table class="table table-bordered table-striped mb-0">
+
+                <thead>
+                  <tr>
+                    <th scope="col">Water used by a parisian</th>
+                    <th scope="col">l/ day</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>Domestic use</td>
+                    <td>900</td>
+                  </tr>
+
+                  <tr>
+                    <td>Clothes, electronics, furniture</td>
+                    <td>900</td>
+                  </tr>
+
+                  <tr>
+                    <td>Electricity and gasoline</td>
+                    <td>2700</td>
+                  </tr>
+
+                  <tr>
+                    <td>Food</td>
+                    <td>4500</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+        </div>
+
+      <%= link_to 'Back to the game', profile_path, class: 'btn-go-profile', id:'button-back-game'%>
     </div>
   </div>
 </div>
+
+<!-- 900 L Domestic use,
+900 L clothes, electronics, furniture),
+2700 L Electricity and gasoline
+4500 L Food production (farming, food industry) -->
+

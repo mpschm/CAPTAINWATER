@@ -8,7 +8,7 @@
   </div>
 
   <div style='position: relative;'>
-    <h5>list of players:</h5>
+    <h5 class="list-players-title">Players list</h5>
     <ul style='position: relative' class='list-scores'>
 
       <% @game.plays.each do |play| %>
@@ -22,7 +22,7 @@
   </div>
 
   <% if current_user.admin? %>
-    <%= link_to 'Stop the game', stop_game_path(@game), class: "btn-launch" %>
+    <%= link_to 'Stop the game', stop_game_path(@game), class: "button-stop-game" %>
   <% end %>
 
 </div>
