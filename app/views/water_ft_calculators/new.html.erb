@@ -1,34 +1,31 @@
-
-<div class="water_ft_calculators">
+<div class="header-title">
+  <h1 class="title-ft-calculators text-center">Water footprint calculator</h1>
+  <div class="bg-white"></div>
+</div>
+<div class="water_ft_calculators margin-top-header-title">
   <div class="container">
-    <h1 class="title-ft-calculators text-center">Water footprint calculator</h1>
     <div>
       <div class="info-calculator">
         <p>92% of Global Water Consumption in food production.
         <p> This is Virtual Water!</p>
       </div>
       <div class=calculator>
-
         <%= simple_form_for :calculator, url: water_ft_calculators_path, method: :post do |f| %>
-
-<div id="custom-label">
-
-          <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "Country of residence (> 6 months/year)", selected: "France" %>
-          <div class="row" style="padding-left: 15px;">
-            <div class="col-xs-6">
-              <%= f.input :gender, label: "Gender", as: :select, collection: ["Female", "Male", "Neutral"], selected: "Male" %>
-            </div>
-            <div class="col-xs-6" style="padding-left: 15px;">
-              <%= f.input :income, label: "Annual Income (€/year)", as: :integer, input_html: {value: '30 000'} %>
-            </div>
+          <%= f.input :residence, as: :select, collection: ["France", "Belgium", "Italy", "Germany"], label: "Country of residence", selected: "France" %>
+          <div class="inline-inputs">
+            <%= f.input :gender, label: "Gender", as: :select, collection: ["Female", "Male", "Neutral"], selected: "Male" %>
+            <%= f.input :income, label: "Annual Income (€/year)", as: :integer, input_html: {value: '30 000'} %>
           </div>
-          <%= f.input :dietatary_habit, label: "Dietary Habit", as: :radio_buttons, collection: ['Vegan or vegetarian', 'Average meat consumer', 'High meat consumer'], wrapper: :vertical_collection_inline, :value_method => :first %>
+          <div class="col-form-label pt-0">Dietatary habit:</div>
+          <div class="choices-container">
+            <div class="choice chosen">Vegan or vegetarian</div>
+            <div class="choice">Average meat consumer</div>
+            <div class="choice">High meat consumer</div>
+          </div>
+          <%= f.input :dietatary_habit, wrapper_html: { class: "d-none" } %>
+          <%#= f.input :dietatary_habit, label: "Dietary Habit", as: :radio_buttons, collection: ['Vegan or vegetarian', 'Average meat consumer', 'High meat consumer'], wrapper: :vertical_collection_inline, :value_method => :first %>
           <%= f.button :submit, class: "button-save-waterft-calculator"%>
         <% end %>
-
-</div>
-
-
       </div>
     </div>
   </div>
