@@ -22,3 +22,24 @@
 #button1:hover, #button3:hover {
   opacity: 0.75;
 }
+
+#button4-profile{
+    // margin-top: 30px;
+    // margin-left: 25px;
+    font-size: larger;
+    font-weight: bold;
+    background: linear-gradient(-5deg, #02c1c5, #02c1c5);
+    border-radius: 2px;
+    width: 300px;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+    display: inline-block;
+    text-shadow: 0.7px 0.7px #979797;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
