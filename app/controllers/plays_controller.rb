@@ -42,11 +42,13 @@ class PlaysController < ApplicationController
 
   def index
     @game = Game.find(params[:game_id])
-    @plays = policy_scope(Play).where(game: @game).order(score: :desc)
-    @result = current_user.plays.find_by(game: @game).score
-    @play = @plays.find_by(user_id: current_user.id)
+    # @result = current_user.plays.find_by(game: @game).score
+    @play = @game.plays.find_by(user_id: current_user.id)
     @play.score = params[:score]
+    @play.finished = true
     @play.save
+
+    @plays = policy_scope(Play).where(game: @game).where(finished: true).order(score: :desc)
 
     ActionCable.server.broadcast("game_#{@game.id}", {
       new_finisher: current_user.email,

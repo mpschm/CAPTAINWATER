@@ -36,9 +36,14 @@ class GamesController < ApplicationController
 
   def stop
     @game = Game.find(params[:id])
+    @plays= @game.plays.where(finished: true)
     authorize @game
     ActionCable.server.broadcast("game_#{@game.id}", {
-      game_finished: true
+      game_finished: true,
+      ranking_partial: ApplicationController.renderer.render(
+        partial: "plays/ranking",
+        locals: { message: @plays }
+      ),
     })
     head :no_content
   end
