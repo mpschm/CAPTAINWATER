@@ -17,13 +17,11 @@ class PlaysController < ApplicationController
 
   def new
    @play = Play.new
-   raise
    authorize @play
   end
 
   def create
-    if Game.find_by(name: params[:game][:name]).present?
-      game = Game.find_by(name: params[:game][:name])
+    if game = Game.find_by("lower(name) = ?", params[:game][:name].downcase)
       @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
       authorize @play
       unless @play.user.admin?
