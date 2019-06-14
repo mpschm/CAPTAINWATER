@@ -1,6 +1,6 @@
 // Waiting list
 
-#title {
+#title{
     margin: 20px 0 20px 0;
     text-transform: uppercase;
     font-size: 20px;
@@ -8,7 +8,14 @@
     color: #00bcc2;
   }
 
-#list-of-players {
+.list-players-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px #979797;
+}
+
+.list-scores {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -16,14 +23,7 @@
   text-shadow: 1px 1px #979797;
 }
 
-#number-players {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  color: white;
-  text-shadow: 1px 1px #979797;
-}
-
-.container .each-player {
+.container .list-scores li {
     width: 100%;
     background: white;
     margin-bottom: 8px;
@@ -32,7 +32,7 @@
     box-shadow: 0.7px 0.7px #979797;
 }
 
-.each-player {
+.list-scores li {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -41,178 +41,22 @@
     color: #00bcc2;
 }
 
-// .Players-ranking {
-//     z-index: 1000;
-//     width: 100%;
-// }
-
-// .bubbles {
-//   display: flex;
-//   justify-content: flex-end;
-//   flex-direction: column;
-//   height: 100vh;
-//   background-position: center;
-//   align-items: center;
-// }
-
-// .bubble1 {
-//     background-color: transparent;
-//     border: none;
-//     width: 200px;
-//     height: 200px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 51px;
-//     left: 61px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: black;
-//     font-family: "Roboto", sans-serif;
-//     text-align: center;
-// }
-
-// .bubble1 h1 {
-//   font-size: 24px;
-//   text-transform: uppercase;
-//   letter-spacing: .10em;
-//   color: #00bcc2;
-//   text-shadow: 1px 1px #979797;
-// }
-
-// .bubble1 h2 {
-//   font-size: 32px;
-//   text-transform: uppercase;
-//   letter-spacing: .10em;
-//   color: #00bcc2;
-//   text-shadow: 1px 1px #979797;
-//   font-weight: bold;
-// }
-
-// .bubble2 {
-//     background-color: transparent;
-//     border: none;
-//     width: 121px;
-//     height: 121px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 232px;
-//     left: 203px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: black;
-//     font-family: "Roboto", sans-serif;
-//     text-align: center;
-// }
-
-// .bubble2 h1 {
-//   font-size: 24px;
-//   text-transform: uppercase;
-//   letter-spacing: .10em;
-//   color: #6C6B6B;
-//   text-shadow: 1px 1px #979797;
-// }
-
-// .bubble3 {
-//     background-position: center;
-//     background-size: 150%;
-//     background-color: white;
-//     border: none;
-//     width: 47px;
-//     height: 47px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 200px;
-//     left: 46px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: black;
-//     font-family: "Roboto", sans-serif;
-//     text-align: center;
-//     font-size: 32px;
-//     text-shadow: 1px 1px #979797;
-// }
-
-// .bubble4 {
-//     background-position: center;
-//     background-size: 150%;
-//     background-color: white;
-//     border: none;
-//     width: 47px;
-//     height: 47px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 352px;
-//     left: 260px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: black;
-//     font-family: "Roboto", sans-serif;
-//     text-align: center;
-//     font-size: 32px;
-//     text-shadow: 1px 1px #979797;
-// }
-
-// .bubble5 {
-//     background-position: center;
-//     background-size: 150%;
-//     background-color: white;
-//     border: #979797;
-//     width: 47px;
-//     height: 47px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 421px;
-//     left: 283px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// .bubble6 {
-//     background-position: center;
-//     background-size: 150%;
-//     background-color: white;
-//     border: #979797;
-//     width: 47px;
-//     height: 47px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 456px;
-//     left: 258px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// .battle-button {
-//     z-index: 1000;
-//     margin-bottom: 70px;
-//     height:40px;
-//     width:290px;
-//     background: #428BCA;
-//     color: white;
-//     text-align: center;
-//     box-shadow: 0 5px 15px 0 rgba(255,255,255,0.20);
-//     // border-radius: 34.5px;
-//     font-family: "Roboto", sans-serif;
-//     font-size: 21px;
-//     letter-spacing: 0;
-//     padding: 0px 30px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-// }
-
-// .btn-battle {
-//   color: white;
-// }
-
-// .btn-battle:hover {
-//     opacity: 0.5;
-//     color: white;
-//   }
-
+.button-stop-game {
+    margin-top: 30px;
+    margin-left: 25px;
+    font-size: larger;
+    font-weight: bold;
+    background: linear-gradient(-5deg, #02c1c5, #02c1c5);
+    border-radius: 2px;
+    width: 300px;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+    display: inline-block;
+    text-shadow: 0.7px 0.7px #979797;
+    margin-bottom: 20px;
+}

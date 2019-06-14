@@ -18,10 +18,10 @@ User.destroy_all
 #<User id: nil, email: "", created_at: nil, updated_at: nil, pseudo: nil, age: nil, coliving: nil, country: nil, avatar: nil, waterprint: nil>
 
 user1 = User.create!({
-email: 'toto',
+email: 'captain water',
 password: '123456',
-pseudo: 'toto',
-age: '32',
+pseudo: 'captain water',
+age: '30',
 coliving: 'true',
 country: 'France',
 avatar: 'photo.png',
@@ -30,40 +30,23 @@ admin: true
 })
 p user1
 
-user2 = User.create!({
-email: 'nana',
-password: '234567',
-pseudo: 'nana',
-age: '21',
-coliving: 'false',
-country: 'France',
-avatar: 'picture.png',
-waterprint: '3000',
-})
-p user2
-
-user3 = User.create!({
-email: 'lili',
-password: '345678',
-pseudo: 'lili',
-age: '43',
-coliving: 'true',
-country: 'France',
-avatar: 'image.png',
-waterprint: '7000',
-})
-p user3
-
-
 #<Game:0x00007fa13851a488 id: nil, user_id: nil, name: nil, code: nil, current_step: nil, created_at: nil, updated_at: nil>
 
 game1 = Game.create!({
 user: user1,
-name: 'Water battle',
+name: 'Wagon',
 code: '333',
 current_step: 1
 })
 p game1
+
+game2 = Game.create!({
+user: user1,
+name: 'Water',
+code: '337',
+current_step: 1
+})
+p game2
 
 
 # <Play:0x00007fa1387c2fa0 id: nil, game_id: nil, user_id: nil, score: 0, eliminated: false, created_at: nil, updated_at: nil>
