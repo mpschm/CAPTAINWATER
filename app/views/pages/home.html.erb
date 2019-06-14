@@ -1,7 +1,6 @@
-
 <div class="onboarding">
   <div class="slider">
-    <div class="slide">
+    <div class="slide" data-slide="1">
       <%= image_tag "LOGO1.png", class:"logo" %>
       <%= image_tag "Orion_water.svg", class:"img chat-bubbles" %>
       <p><b>72% of Earth is water-covered</b></p>
@@ -10,7 +9,7 @@
       </p>
     </div>
 
-    <div class="slide">
+    <div class="slide d-none" data-slide="2">
       <%= image_tag "LOGO1.png", class:"logo" %>
       <%= image_tag "Orion_water.svg", class:"img chat-bubbles" %>
       <p><b>2030 : the world will face</b></p>
@@ -19,7 +18,7 @@
       </p>
     </div>
 
-    <div class="slide">
+    <div class="slide d-none" data-slide="3">
       <%= image_tag "LOGO1.png", class:"logo" %>
       <%= image_tag "Orion_water.svg", class:"img chat-bubbles" %>
       <p><b>We can invert the bad trend</b></p>
@@ -77,15 +76,15 @@
   </div>
   <div class="controls">
     <form>
-      <input type="radio" name="page" checked>
+      <input type="radio" name="page" checked data-slide-input="1">
       <label for="page"></label>
-      <input type="radio" name="page">
+      <input type="radio" name="page" data-slide-input="2">
       <label for="page"></label>
-      <input type="radio" name="page">
+      <input type="radio" name="page" data-slide-input="3">
       <label for="page"></label>
     </form>
 
-    <a href="#" class="btn-next">Next</a>
+    <a href="#" class="btn-next" id="btn_next" data-current-slide="1">Next</a>
     <a href="/profile" class="btn-next d-none" id="play">Play now</a>
   </div>
 </div>

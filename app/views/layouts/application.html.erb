@@ -24,7 +24,7 @@
   </head>
   <body>
     <%#= render 'shared/navbar' %>
-    <% unless ["home", "game_boat"].include?(params[:action]) %>
+    <% unless ["game_boat"].include?(params[:action]) %>
      <div class="container-wave">
         <div>
           <%= image_tag "water_4.svg", class:"water water-4" %>
