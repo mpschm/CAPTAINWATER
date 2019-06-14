@@ -1,11 +1,9 @@
-<div Class=ranking-page>
-    <div class="d-none", id="players-ranking" style="position:relative">
-<div class="text-center">
-    <h1>Players ranking</h1>
-</div>
-      <div class=drop-b-happy-ranking>
-        <%= image_tag ('drop-b-happy.png'), class: "image-result-drop" %>
-      </div>
+<div class=ranking-page>
+  <div class="d-none", id="players-ranking" style="position:relative">
+    <h1 class="text-center">Players ranking</h1>
+    <div class=drop-b-happy-ranking>
+      <%= image_tag ('drop-b-happy.png'), class: "image-result-drop" %>
+    </div>
 
             <div class="table table-wrapper-scroll-y my-custom-scrollbar">
 
@@ -20,7 +18,7 @@
                 </thead>
 
                 <tbody>
-                  <% @plays.each_with_index do |play, index| %>
+                  <% plays.each_with_index do |play, index| %>
 
                   <tr>
                     <td><%= index + 1 %></td>

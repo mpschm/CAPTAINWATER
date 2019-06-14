@@ -17,13 +17,11 @@ class PlaysController < ApplicationController
 
   def new
    @play = Play.new
-   raise
    authorize @play
   end
 
   def create
-    if Game.find_by(name: params[:game][:name]).present?
-      game = Game.find_by(name: params[:game][:name])
+    if game = Game.find_by("lower(name) = ?", params[:game][:name].downcase.strip)
       @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
       authorize @play
       unless @play.user.admin?
@@ -42,11 +40,13 @@ class PlaysController < ApplicationController
 
   def index
     @game = Game.find(params[:game_id])
-    @plays = policy_scope(Play).where(game: @game).order(score: :desc)
-    @result = current_user.plays.find_by(game: @game).score
-    @play = @plays.find_by(user_id: current_user.id)
+    # @result = current_user.plays.find_by(game: @game).score
+    @play = @game.plays.find_by(user_id: current_user.id)
     @play.score = params[:score]
+    @play.finished = true
     @play.save
+
+    @plays = policy_scope(Play).where(game: @game).where(finished: true).order(score: :desc)
 
     ActionCable.server.broadcast("game_#{@game.id}", {
       new_finisher: current_user.email,

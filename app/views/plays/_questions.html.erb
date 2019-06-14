@@ -2,19 +2,19 @@
   <div class="container-top" style='position: fixed;
     top: 0px;left: 15px; width: 90%; justify-content: space-between'>
     <div class='d-flex align-items-center justify-content-between' style='width:35%'>
-      <div class="cards card-category" style="background-image:white;">
+      <div class="cards card-category-questions" style="background-image:white;">
         <div id ="scores"></div>
         <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
           <%= image_tag "footprint.png", class:"footprint"%>
-            <p>3,496 L/day</p>
+            <p class="score-footprint">3,496 L/day</p>
           </%>
         </div>
       </div>
     </div>
-    <div class="card-category" style="background-image:white">
+    <div class="card-category-questions" style="background-image:white">
        <div id="countdown" style='position: relative;'>
           <div id="countdown-number"></div>
-          <div style='position:absolute; top: -48px; right: -10px; z-index: 100'>
+          <div style='position:absolute; top: -37px; right: -10px; z-index: 100'>
             <!-- <svg>
               <circle r="27" cx="30" cy="30"></circle>
             </svg> -->
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="card-category" style="background-image:white">
+    <div class="card-category-questions" style="background-image:white">
       <div id ="scores"></div>
       <div style='color:#0099e6; font-size:larger; font-weight:bolder;'>
         <p class="score-question"> <%= @play.score %> </p>
@@ -41,7 +41,7 @@
     <% @questions.each do |question|  %>
       <% if question.kind == 'multiple-choice'|| question.kind == 'true-false'%>
   <!--       <p>Question</p> -->
-        <%= question.content %>
+        <div> <%= question.content %> </div>
         <%= simple_form_for [@play, @user_answer] do |f| %>
           <%= f.association :answer, collection: @answers, as: :radio_buttons, label: false %>
           <%= f.input :next_step, label: false, input_html: { value: @next_step, class: 'd-none'} %>

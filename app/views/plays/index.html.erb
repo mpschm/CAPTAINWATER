@@ -11,12 +11,12 @@
     <h5>list of players:</h5>
     <ul style='position: relative' class='list-scores'>
 
-      <% @game.plays.each do |play| %>
+      <% @plays.each do |play| %>
           <!-- <div class=""> -->
-        <% if play.user_answers.size == 5 %>
+        <%# if play.user_answers.size == 5 %>
             <li><%= play.user.email %> - <%= play.score %></li>
           <!-- </div> -->
-        <% end  %>
+        <%# end  %>
       <% end  %>
     </ul>
   </div>
@@ -27,7 +27,9 @@
 
 </div>
 
-<%= render 'plays/ranking' %>
+<div id="final-ranking">
+  <%= render 'plays/ranking', plays: @plays %>
+</div>
 
 <% content_for :after_js do %>
   <script>
@@ -39,8 +41,10 @@
           if (data.game_finished === true) {
             let waitingRoom2 = document.getElementById('waitingroom2');
             waitingRoom2.classList.add('d-none');
-            let ranking = document.getElementById('players-ranking');
-            ranking.classList.remove('d-none');
+            let ranking = document.getElementById('final-ranking');
+            ranking.innerHTML =data.ranking_partial;
+            let innerRanking = document.getElementById('players-ranking');
+            innerRanking.classList.remove('d-none');
           }
           if (data.new_finisher) {
             let scores = document.querySelector(".list-scores");
