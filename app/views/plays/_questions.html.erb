@@ -75,9 +75,9 @@
 
       <% @play.game.questions.each_with_index do |question, index| %>
       <%= @user_answers %>
-      <% if index < number  - 1%>
+      <% if index < number  - 1 %>
 
-        <% if @play.user_answers[index].answer.present? %>
+        <% if @play.user_answers[index] && @play.user_answers[index].answer.present? %>
           <% if  @play.user_answers[index].answer.correct? %>
             <li class="active"><% question.step %></li>
           <% else %>
