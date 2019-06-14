@@ -1,0 +1,75 @@
+$header-title-height: 20vh;
+.header-title {
+  height: $header-title-height;
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  h1 {
+    // margin: 40px 0 50px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: .25em;
+    color: #00bcc2;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  .bg-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15vh;
+  }
+}
+.margin-top-header-title {
+  margin-top: $header-title-height;
+  padding-top: 20px;
+}
+.water_ft_calculators {
+  // position: absolute;
+  height: calc(100vh - #{$header-title-height});
+  // bottom: 0;
+  // overflow: scroll;
+}
+
+.inline-inputs {
+  display: flex;
+  > div:first-child {
+    flex: 0 0 40%;
+    margin-right: 10px;
+  }
+  > div:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.choices-container {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+  > .choice {
+    flex: 1 0 10%;
+    margin-right: 10px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.choice.chosen {
+  background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+  border: 3px solid white;
+}

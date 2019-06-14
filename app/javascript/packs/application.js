@@ -5,6 +5,9 @@ import { timerGame } from "../plugins/timergame";
 import { checkFillInTheFormAnswer } from '../components/checkFillInTheFormAnswer';
 import "../plugins/quizsubmit";
 import { showModalInProfil } from '../components/show_modal_in_profil';
+import { formChoice } from '../components/form_choice';
+
+formChoice();
 
 window.timer = timer;
 
