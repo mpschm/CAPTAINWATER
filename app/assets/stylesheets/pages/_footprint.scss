@@ -2,6 +2,7 @@ $header-title-height: 20vh;
 .header-title {
   height: $header-title-height;
   position: fixed;
+  top: 0;
   z-index: 10000;
   display: flex;
   align-items: center;

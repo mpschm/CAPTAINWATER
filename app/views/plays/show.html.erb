@@ -1,10 +1,9 @@
 
-<div class="container <%= "d-none" unless @play.user_answers.empty? %>" id="waitingroom">
-
-  <div>
-    <h3 id="title", style='position: fixed; top: 30px; margin: auto; color: #00bcc2; font-family: Roboto, sans-serif; text-align: center'>Please wait for more players...</h3>
+<div class="container <%= "d-none" unless @play.user_answers.empty? %> margin-top-header-title" id="waitingroom">
+  <div class="header-title">
+    <h1 class="title-ft-calculators text-center">Please wait for more players...</h1>
+    <div class="bg-white"></div>
   </div>
-
   <% if current_user.admin? %>
     <%= link_to 'Launch the game', launch_game_path(@game), class: "button-launch-game" %>
   <% end %>

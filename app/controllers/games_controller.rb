@@ -36,7 +36,7 @@ class GamesController < ApplicationController
 
   def stop
     @game = Game.find(params[:id])
-    @plays= @game.plays.where(finished: true)
+    @plays= @game.plays.where(finished: true).order(score: :desc)
     authorize @game
     ActionCable.server.broadcast("game_#{@game.id}", {
       game_finished: true,
