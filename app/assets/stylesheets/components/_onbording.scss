@@ -1,9 +1,9 @@
-:root {
-  // --page-number: 1;
-}
+// :root {
+//   // --page-number: 1;
+// }
 
 .onboarding {
-  background: rgb(57, 168, 227);
+  // background: rgb(57, 168, 227);
   --page-number: 1;
   & {
     width: 100%;
@@ -15,13 +15,13 @@
     // position: initial;
   }
   .slider {
-    width: 300%;
+    // width: 300%;
     // height: 100%;
-    display: flex;
-    margin-left: calc(-100% * (var(--page-number) - 1));
-    transition: margin-left 400ms;
+    // display: flex;
+    // margin-left: calc(-100% * (var(--page-number) - 1));
+    // transition: margin-left 400ms;
     .slide {
-      flex: 0 0 33.33%;
+      // flex: 0 0 33.33%;
       text-align: center;
       height: 100vh;
 
