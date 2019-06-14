@@ -21,7 +21,7 @@ class PlaysController < ApplicationController
   end
 
   def create
-    if game = Game.find_by("lower(name) = ?", params[:game][:name].downcase)
+    if game = Game.find_by("lower(name) = ?", params[:game][:name].downcase.strip)
       @play = Play.where(user_id: current_user.id, game_id: game.id).first_or_create
       authorize @play
       unless @play.user.admin?
