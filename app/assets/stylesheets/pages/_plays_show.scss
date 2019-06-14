@@ -3,7 +3,17 @@
 }
 .container-top {
   display: flex;
-  margin-top:20px;
+  // margin-top:20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  > img {
+    position: relative;
+    z-index: 100;
+  }
+  > div {
+    margin-top: 10px;
+  }
 }
 
 .question {
