@@ -16,7 +16,8 @@
   text-transform: uppercase;
   letter-spacing: .05em;
   color: white;
-  text-shadow: 1px 1px #979797;
+  // text-shadow: 1px 1px #979797;
+  background: rgba(0,0,0,0.15);
 }
 
 .table td {
@@ -24,7 +25,8 @@
   font-size: 12px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 1px 1px #979797;
+  // text-shadow: 1px 1px #979797;
+  background: rgba(0,0,0,0.15);
 }
 
  #players-ranking h1 {
