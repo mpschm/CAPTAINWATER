@@ -42,7 +42,7 @@
             let waitingRoom2 = document.getElementById('waitingroom2');
             waitingRoom2.classList.add('d-none');
             let ranking = document.getElementById('final-ranking');
-            ranking.innerHTML(data.ranking_partial);
+            ranking.innerHTML =data.ranking_partial;
             let innerRanking = document.getElementById('players-ranking');
             innerRanking.classList.remove('d-none');
           }

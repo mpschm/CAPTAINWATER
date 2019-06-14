@@ -42,7 +42,7 @@ class GamesController < ApplicationController
       game_finished: true,
       ranking_partial: ApplicationController.renderer.render(
         partial: "plays/ranking",
-        locals: { message: @plays }
+        locals: { plays: @plays }
       ),
     })
     head :no_content
